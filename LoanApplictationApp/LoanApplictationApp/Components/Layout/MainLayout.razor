@@ -1,0 +1,58 @@
+﻿@inherits LayoutComponentBase
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject UserManager<ApplicationUser> UserManager
+@inject RoleManager<IdentityRole> RoleManager
+@*this is for bootstrap icons*@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+@if (User != null)
+{
+    <nav class="navbar navbar-nav navbar-expand-lg navbar-light" style="background-color:lightseagreen; height:50px">
+        <div class="container-fluid">
+            <div class="navbar-text text-white" style="font-weight: bold">
+                <p>@User.Name @User.Surname</p>
+            </div>
+            <div class="navbar-text text-white mb-2" style="font-weight:bold">
+                @if (Roles != null && Roles.Any())
+                {
+                    @String.Join(" | ",Roles)
+                }
+            </div>
+        </div>
+
+    </nav>
+}
+<div class="page">
+    <div class="sidebar">
+        <NavMenu />
+    </div>
+
+    <main>
+        <div class="top-row px-4">
+            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+        </div>
+
+        <article class="content px-4">
+            @Body
+        </article>
+    </main>
+</div>
+
+@code {
+    private ApplicationUser? User;
+    private List<string> Roles = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+        if (user.Identity.IsAuthenticated)
+        {
+            User = await UserManager.GetUserAsync(user);
+            if(User != null)
+            {
+                Roles = (await UserManager.GetRolesAsync(User)).ToList();
+            }
+        }
+    }
+}

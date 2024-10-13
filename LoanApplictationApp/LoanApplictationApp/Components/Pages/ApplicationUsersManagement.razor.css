@@ -1,0 +1,13 @@
+﻿.fade-message {
+    opacity: 1;
+    transition: opacity 6s ease-out;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 50%;
+}
+
+.fade-out {
+    opacity: 0;
+}

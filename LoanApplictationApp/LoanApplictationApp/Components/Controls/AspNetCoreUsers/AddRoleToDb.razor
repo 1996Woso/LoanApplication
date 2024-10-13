@@ -1,0 +1,107 @@
+﻿@inject RoleManager<IdentityRole> RoleManager
+@inject IJSRuntime IJSRuntime
+<h3>Add Role To Batabase</h3>
+<div class="row">
+    <div class="col-md-12">
+        <EditForm Model="@Role" OnValidSubmit="AddRole" FormName="addRoleToDb">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+
+            <div class="input-group w-50">
+                <InputText @bind-Value="Role.Name" class="form-control" placeholder="Role Name" />
+                <ValidationMessage For="() => Role.Name" class="text-danger" />
+                <button type="submit" class="btn btn-outline-primary">
+                    <i class="bi bi-plus-circle"> Add Role</i>
+                </button>
+            </div>
+        </EditForm>
+
+        @if (!string.IsNullOrEmpty(ErrorMessage))
+        {
+            <div class="alert alert-danger mt-3 fade-message" id="error-div">
+                <h3>❌@ErrorMessage</h3>
+            </div>
+        }
+        else if (!string.IsNullOrEmpty(SuccessMessage))
+        {
+            <div class="alert alert-success mt-3 fade-message" id="success-div">
+                <h3>✅@SuccessMessage</h3>
+
+            </div>
+        }
+    </div>
+</div>
+@code {
+    private IdentityRole? Role = new IdentityRole();
+    private string? ErrorMessage { get; set; }
+    private string? SuccessMessage { get; set; }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (!string.IsNullOrEmpty(ErrorMessage) || !string.IsNullOrEmpty(SuccessMessage))
+        {
+            await IJSRuntime.InvokeVoidAsync("initializeTimeouts");
+        }
+    }
+    private async Task AddRole()
+    {
+        // Ensure Name is bound properly
+        if (Role == null || string.IsNullOrEmpty(Role.Name))
+        {
+            ErrorMessage = "Role name cannot be empty.";
+            return;
+        }
+
+        // Check if Role already exists
+        if (!await RoleManager.RoleExistsAsync(Role.Name))
+        {
+            var identityRole = new IdentityRole(Role.Name);
+
+            var result = await RoleManager.CreateAsync(identityRole);
+
+            if (result.Succeeded)
+            {
+                SuccessMessage = $"Role '{Role.Name}' added successfully.";
+                ErrorMessage = "";
+                Role = new IdentityRole(); // Reset form
+            }
+            else
+            {
+                ErrorMessage = "Error adding Role: " + string.Join(", ", result.Errors.Select(e => e.Description));
+                SuccessMessage = "";
+            }
+        }
+        else
+        {
+            ErrorMessage = $"Role '{Role.Name}' already exists.";
+            SuccessMessage = "";
+        }
+    }
+}
+<script>
+    function initializeTimeouts() {
+        const errorDiv = document.getElementById('error-div');
+        const successDiv = document.getElementById('success-div');
+        if (errorDiv) {
+            errorDiv.classList.remove('fade-out');
+            errorDiv.style.display = 'block';
+            setTimeout(() => {
+                errorDiv.classList.add('fade-out');
+                setTimeout(() => {
+                    errorDiv.style.display = 'none';
+                }, 2500);
+            }, 2500);
+        }
+
+        if (successDiv) {
+            successDiv.classList.remove('fade-out');
+            successDiv.style.display = 'block';
+            setTimeout(() => {
+                successDiv.classList.add('fade-out');
+                setTimeout(() => {
+                    successDiv.style.display = 'none';
+                }, 2500);
+            }, 2500);
+        }
+    }
+</script>

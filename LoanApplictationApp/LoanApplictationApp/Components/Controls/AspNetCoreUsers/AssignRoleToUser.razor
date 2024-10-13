@@ -1,0 +1,140 @@
+﻿@using Microsoft.EntityFrameworkCore
+@inject UserManager<ApplicationUser> UserManager
+@inject RoleManager<IdentityRole> RoleManager
+@inject IJSRuntime IJSRuntime
+<h3>Assign Role To User</h3>
+
+<div class="row w-50">
+    <div class="col-md-12">
+        <EditForm Model="assinRoleModel" OnValidSubmit="AssignRole" FormName="assignRole">
+            <DataAnnotationsValidator />
+            <div class="form-floating mb-3">
+                <InputSelect @bind-Value="assinRoleModel.Email" class="form-control" aria-required="true" placeholder="email">
+                    <option value="">Select Email</option>
+                    @foreach (var email in Emails)
+                    {
+                        <option value="@email">@email</option>
+                    }
+                </InputSelect>
+                <label for="Email">Email</label>
+                <ValidationMessage For ="() => assinRoleModel.Email" class="text-danger" />
+            </div>
+            <div class="form-floating mb-3">
+                <InputSelect @bind-Value="assinRoleModel.Role" class="form-control" aria-required="true" placeholder="role">
+                    <option value="">Select Role</option>
+                    @foreach (var role in Roles)
+                    {
+                        <option value="@role">@role</option>
+                    }
+                </InputSelect>
+                <label for="Role">Role</label>
+                <ValidationMessage For="() => assinRoleModel.Role" class="text-danger" />
+            </div>
+            <button class="btn btn-primary" type="submit">Assign Role</button>
+        </EditForm>
+        @if (!string.IsNullOrEmpty(ErrorMessage))
+        {
+            <div class="alert alert-danger mt-3 fade-message" id="error-div">
+                <h3>❌@ErrorMessage</h3>
+            </div>
+        }
+        else if (!string.IsNullOrEmpty(SuccessMessage))
+        {
+            <div class="alert alert-success mt-3 fade-message" id="success-div">
+                <h3>✅@SuccessMessage</h3>
+
+            </div>
+        }
+    </div>
+</div>
+@code {
+    private AssinRoleModel assinRoleModel = new();
+    private List<string> Roles = new();
+    private List<string> Emails = new();
+    private string? ErrorMessage { get; set; }
+    private string? SuccessMessage { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        Roles = await RoleManager.Roles.Select(x => x.Name).Distinct().ToListAsync();
+        Emails = await UserManager.Users.Select(x => x.UserName).ToListAsync();
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if(!string.IsNullOrEmpty(ErrorMessage) || !string.IsNullOrEmpty(SuccessMessage))
+        {
+            await IJSRuntime.InvokeVoidAsync("initializeTimeouts");
+        }
+    }
+
+    private async Task AssignRole()
+    {
+        var user = await UserManager.FindByEmailAsync(assinRoleModel.Email);
+        if (user != null && !string.IsNullOrEmpty(assinRoleModel.Email))
+        {
+            if(!await UserManager.IsInRoleAsync(user, assinRoleModel.Role))
+            {
+                var result = await UserManager.AddToRoleAsync(user, assinRoleModel.Role);
+                if (result.Succeeded)
+                {
+                    SuccessMessage = $"'{assinRoleModel.Role}' has been added successfully to {user.Name} {user.Surname}.";
+                    ErrorMessage = "";
+                    assinRoleModel = new AssinRoleModel();
+
+                }
+            }
+            else
+            {
+                ErrorMessage = $"'{assinRoleModel.Role}' has already  been assigned  to {user.Name} {user.Surname}.";
+                SuccessMessage = "";
+            }
+
+        }
+
+    }
+
+
+    // [Inject]
+    // private UserManager<ApplicationUser>? UserManager { get; set; }
+
+    // [Inject]
+    // private RoleManager<IdentityRole>? RoleManager { get; set; }
+
+    public class AssinRoleModel
+    {
+        [Required(ErrorMessage ="Email is requred.")]
+        public string? Email { get; set; }
+
+        [Required(ErrorMessage = "Role is requred.")]
+        public string? Role { get; set; }
+    }
+}
+
+<script>
+    function initializeTimeouts() {
+        const errorDiv = document.getElementById('error-div');
+        const successDiv = document.getElementById('success-div');
+        if (errorDiv) {
+            errorDiv.classList.remove('fade-out');
+            errorDiv.style.display = 'block';
+            setTimeout(() => {
+                errorDiv.classList.add('fade-out');
+                setTimeout(() => {
+                    errorDiv.style.display = 'none';
+                }, 2500);
+            }, 2500);
+        }
+
+        if (successDiv) {
+            successDiv.classList.remove('fade-out');
+            successDiv.style.display = 'block';
+            setTimeout(() => {
+                successDiv.classList.add('fade-out');
+                setTimeout(() => {
+                    successDiv.style.display = 'none';
+                }, 2500);
+            }, 2500);
+        }
+    }
+</script>

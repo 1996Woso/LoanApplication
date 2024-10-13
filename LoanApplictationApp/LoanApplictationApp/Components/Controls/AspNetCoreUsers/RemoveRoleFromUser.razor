@@ -1,0 +1,137 @@
+﻿@inject UserManager<ApplicationUser> UserManager
+@inject RoleManager<IdentityRole> RoleManager
+@inject IJSRuntime IJSRuntime
+<h3>Remove Role From User</h3>
+
+<div class="row w-50">
+    <div class="col-md-12">
+        <EditForm Model="model" OnValidSubmit="RemoveRole" FormName="removeRole">
+            <DataAnnotationsValidator />
+            <div class="form-floating mb-3">
+                <InputSelect @bind-Value="model.Email" class="form-control" aria-required="true" placeholder="email">
+                    <option value="">Select Email</option>
+                    @foreach (var email in Emails)
+                    {
+                        <option value="@email">@email</option>
+                    }
+                </InputSelect>
+                <label for="Email">Email</label>
+                <ValidationMessage For="() => model.Email" class="text-danger" />
+            </div>
+            <div class="form-floating mb-3">
+                <InputSelect @bind-Value="model.Role" class="form-control" aria-required="true" placeholder="role">
+                    <option value="">Select Role</option>
+                    @foreach (var role in Roles)
+                    {
+                        <option value="@role">@role</option>
+                    }
+                </InputSelect>
+                <label for="Role">Role</label>
+                <ValidationMessage For="() => model.Role" class="text-danger" />
+            </div>
+            <button class="btn btn-primary" type="submit">Assign Role</button>
+        </EditForm>
+        @if (!string.IsNullOrEmpty(ErrorMessage))
+        {
+            <div class="alert alert-danger mt-3 fade-message" id="error-div">
+                <h3>❌@ErrorMessage</h3>
+            </div>
+        }
+        else if (!string.IsNullOrEmpty(SuccessMessage))
+        {
+            <div class="alert alert-success mt-3 fade-message" id="success-div">
+                <h3>✅@SuccessMessage</h3>
+
+            </div>
+        }
+    </div>
+</div>
+
+@code {
+    private RemoveRoleModel model = new();
+    private ApplicationUser? User;
+    private List<string> Roles = new();
+    private List<string> Emails = new();
+    private string? ErrorMessage { get; set; }
+    private string? SuccessMessage { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        if(User != null)
+        {
+            Roles = (await UserManager.GetRolesAsync(User)).ToList();
+        }
+        else
+        {
+            Roles = await RoleManager.Roles.Select(x => x.Name).ToListAsync();
+        }
+        Emails = await UserManager.Users.Select(x => x.UserName).ToListAsync();
+    }
+    protected override async Task OnAfterRenderAsync(bool firsRender)
+    {
+        if(!string.IsNullOrEmpty(ErrorMessage) || !string.IsNullOrEmpty(SuccessMessage))
+        {
+            await IJSRuntime.InvokeVoidAsync("initializeTimeouts");
+        }
+    }
+    private async Task RemoveRole()
+    {
+        User = await UserManager.FindByEmailAsync(model.Email);
+        if(User != null && !string.IsNullOrEmpty(model.Role))
+        {
+            var result = await UserManager.RemoveFromRoleAsync(User, model.Role);
+            if (result.Succeeded)
+            {
+                ErrorMessage = "";
+                SuccessMessage = $"'{model.Role}' has been removed successfully from {User.Name} {User.Surname}.";
+            }
+            else if(!await UserManager.IsInRoleAsync(User, model.Role))
+            {
+                SuccessMessage = "";
+                ErrorMessage = $"{User.Name} {User.Surname} is not in role '{model.Role}'.";
+            }
+            else
+            {
+                SuccessMessage = "";
+                ErrorMessage = result.Errors.ToString();
+            }
+        }
+    }
+    public class RemoveRoleModel
+    {
+        [Required(ErrorMessage = "Email is requred.")]
+        public string? Email { get; set; }
+
+        [Required(ErrorMessage = "Role is requred.")]
+        public string? Role { get; set; }
+    }
+}
+
+
+<script>
+    function initializeTimeouts() {
+        const errorDiv = document.getElementById('error-div');
+        const successDiv = document.getElementById('success-div');
+        if (errorDiv) {
+            errorDiv.classList.remove('fade-out');
+            errorDiv.style.display = 'block';
+            setTimeout(() => {
+                errorDiv.classList.add('fade-out');
+                setTimeout(() => {
+                    errorDiv.style.display = 'none';
+                }, 2500);
+            }, 2500);
+        }
+
+        if (successDiv) {
+            successDiv.classList.remove('fade-out');
+            successDiv.style.display = 'block';
+            setTimeout(() => {
+                successDiv.classList.add('fade-out');
+                setTimeout(() => {
+                    successDiv.style.display = 'none';
+                }, 2500);
+            }, 2500);
+        }
+    }
+</script>

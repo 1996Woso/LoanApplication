@@ -1,0 +1,66 @@
+﻿@page "/users-management"
+
+@inject RoleManager<IdentityRole> RoleManager
+@rendermode InteractiveServer
+@inject IJSRuntime JSRuntime
+<h3>Users Management</h3>
+
+<br />
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <button class="btn btn-success w-100" @onclick="ShowAssignRoleToUser">Assign Role To User</button>
+        </div>
+        <div class="col-md-4">
+            <button class="btn btn-success w-100" @onclick="ShowAddRoleToDb">Add Role To Bb</button>
+        </div>
+        <div class="col-md-4">
+            <button class="btn btn-success w-100" @onclick="ShowRemoveRoleFromUser">Remove Role From User</button>
+        </div>
+    </div>
+</div>
+
+@if (showAssignRoleToUser)
+{
+    <AssignRoleToUser />
+}
+else if (showAddRoleToDb)
+{
+    <AddRoleToDb />
+}
+else if (showRemoveRoleFromUser)
+{
+    <RemoveRoleFromUser />
+}
+
+
+
+
+
+@code {
+    private bool showAssignRoleToUser = false;
+    private bool showAddRoleToDb = false;
+    private bool showRemoveRoleFromUser = false;
+
+    private void ShowAssignRoleToUser()
+    {
+        showAddRoleToDb = false;
+        showRemoveRoleFromUser = false;
+        showAssignRoleToUser = true;
+    }
+    private void ShowAddRoleToDb()
+    {
+        showAssignRoleToUser = false;
+        showRemoveRoleFromUser = false;
+        showAddRoleToDb = true;
+    }
+
+    private void ShowRemoveRoleFromUser()
+    {
+        showAssignRoleToUser = false;
+        showAddRoleToDb = false;
+        showRemoveRoleFromUser = true;
+    }
+}
+
+
