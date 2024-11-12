@@ -1,6 +1,7 @@
 using LoanApplictationApp.Components;
 using LoanApplictationApp.Components.Account;
 using LoanApplictationApp.Data;
+using LoanApplictationApp.Models;
 using LoanApplictationApp.Services;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.Server;
@@ -36,8 +37,10 @@ builder.Services.AddIdentity<ApplicationUser,IdentityRole>(options => options.Si
     .AddEntityFrameworkStores<ApplicationDbContext>()
     .AddSignInManager()
     .AddDefaultTokenProviders();
-
+builder.Services.Configure<SmtpSettings>(builder.Configuration.GetSection("SMTP"));
 builder.Services.AddSingleton<IEmailSender<ApplicationUser>, IdentityNoOpEmailSender>();
+builder.Services.AddScoped<SmtpEmailSender>();
+
 
 var app = builder.Build();
 

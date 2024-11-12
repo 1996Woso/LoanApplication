@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "d/MBMro0Ah+8jcc/F4U9B+N3aTr3ep8iBi1pRDYfId0=",
+  "Hash": "GVV/rkqweeKeqt1q3CvQXjV4et1qx6YFdeRGGcFEHSo=",
   "Source": "LoanApplictationApp",
   "BasePath": "_content/LoanApplictationApp",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "LoanApplictationApp\\wwwroot",
       "Source": "LoanApplictationApp",
-      "ContentRoot": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\",
       "BasePath": "_content/LoanApplictationApp",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplictationApp\\LoanApplictationApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\LoanApplictationApp.styles.css",
+      "Identity": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\LoanApplictationApp.styles.css",
       "SourceId": "LoanApplictationApp",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplictationApp\\LoanApplictationApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/LoanApplictationApp",
       "RelativePath": "LoanApplictationApp.styles.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplictationApp\\LoanApplictationApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\LoanApplictationApp.styles.css"
+      "OriginalItemSpec": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\LoanApplictationApp.styles.css"
     },
     {
-      "Identity": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplictationApp\\LoanApplictationApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\LoanApplictationApp.bundle.scp.css",
+      "Identity": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\LoanApplictationApp.bundle.scp.css",
       "SourceId": "LoanApplictationApp",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplictationApp\\LoanApplictationApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/LoanApplictationApp",
       "RelativePath": "LoanApplictationApp.bundle.scp.css",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplictationApp\\LoanApplictationApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\LoanApplictationApp.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\LoanApplictationApp.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\app.css",
+      "Identity": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\app.css",
       "SourceId": "LoanApplictationApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\",
       "BasePath": "_content/LoanApplictationApp",
       "RelativePath": "app.css",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\app.css"
     },
     {
-      "Identity": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\bootstrap\\bootstrap.min.css",
       "SourceId": "LoanApplictationApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\",
       "BasePath": "_content/LoanApplictationApp",
       "RelativePath": "bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "LoanApplictationApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\",
       "BasePath": "_content/LoanApplictationApp",
       "RelativePath": "bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\favicon.png",
+      "Identity": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\favicon.png",
       "SourceId": "LoanApplictationApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\",
       "BasePath": "_content/LoanApplictationApp",
       "RelativePath": "favicon.png",
       "AssetKind": "All",
@@ -129,6 +129,63 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.png"
+    },
+    {
+      "Identity": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\Images\\Add Role.png",
+      "SourceId": "LoanApplictationApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\",
+      "BasePath": "_content/LoanApplictationApp",
+      "RelativePath": "Images/Add Role.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Add Role.png"
+    },
+    {
+      "Identity": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\Images\\Assing Role.png",
+      "SourceId": "LoanApplictationApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\",
+      "BasePath": "_content/LoanApplictationApp",
+      "RelativePath": "Images/Assing Role.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Assing Role.png"
+    },
+    {
+      "Identity": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\Images\\Remove Role.png",
+      "SourceId": "LoanApplictationApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\",
+      "BasePath": "_content/LoanApplictationApp",
+      "RelativePath": "Images/Remove Role.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Remove Role.png"
     }
   ]
 }

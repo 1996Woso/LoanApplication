@@ -1,10 +1,11 @@
 ﻿@inject UserManager<ApplicationUser> UserManager
 @inject RoleManager<IdentityRole> RoleManager
 @inject IJSRuntime IJSRuntime
-<h3>Remove Role From User</h3>
 
-<div class="row w-50">
-    <div class="col-md-12">
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <h3 class="text-center"><u>Remove Role From User</u></h3>
         <EditForm Model="model" OnValidSubmit="RemoveRole" FormName="removeRole">
             <DataAnnotationsValidator />
             <div class="form-floating mb-3">
@@ -29,19 +30,18 @@
                 <label for="Role">Role</label>
                 <ValidationMessage For="() => model.Role" class="text-danger" />
             </div>
-            <button class="btn btn-primary" type="submit">Assign Role</button>
+            <button class="btn btn-primary w-100" type="submit">Assign Role</button>
         </EditForm>
         @if (!string.IsNullOrEmpty(ErrorMessage))
         {
-            <div class="alert alert-danger mt-3 fade-message" id="error-div">
-                <h3>❌@ErrorMessage</h3>
+            <div class="fade-message" id="error-div">
+               <ErrorMessage Message="@ErrorMessage" />
             </div>
         }
         else if (!string.IsNullOrEmpty(SuccessMessage))
         {
-            <div class="alert alert-success mt-3 fade-message" id="success-div">
-                <h3>✅@SuccessMessage</h3>
-
+            <div class="fade-message" id="success-div">
+                <SuccessMessage Message="@SuccessMessage" />
             </div>
         }
     </div>

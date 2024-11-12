@@ -63,3 +63,26 @@ h1:focus {
 .fade-out {
     opacity: 0;
 }
+/*-----------------------*/
+.header {
+    background-color:darkgray;
+    color:black;
+    padding: 0.9rem;
+    text-align: center;
+    margin-top: 1.25rem;
+    border-radius: 0.9rem;
+}
+.grid-container {
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(8rem,1fr));
+    gap: 1rem;
+    justify-content:center;
+}
+.grid {
+    transition: transform 1s, box-shadow 0.3s, opacity 0.3s;
+    opacity: 1;
+}
+/*.grid:hover{
+    transform: scale(1.5);
+    box-shadow: 0 4px 20px rgba(0,120,0,0.2);
+}*/

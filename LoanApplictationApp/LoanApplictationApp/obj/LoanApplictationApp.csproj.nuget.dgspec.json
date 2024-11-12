@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplictationApp\\LoanApplictationApp\\LoanApplictationApp.csproj": {}
+    "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\LoanApplictationApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplictationApp\\LoanApplictationApp\\LoanApplictationApp.csproj": {
+    "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\LoanApplictationApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplictationApp\\LoanApplictationApp\\LoanApplictationApp.csproj",
+        "projectUniqueName": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\LoanApplictationApp.csproj",
         "projectName": "LoanApplictationApp",
-        "projectPath": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplictationApp\\LoanApplictationApp\\LoanApplictationApp.csproj",
+        "projectPath": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\LoanApplictationApp.csproj",
         "packagesPath": "C:\\Users\\10114629\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplictationApp\\LoanApplictationApp\\obj\\",
+        "outputPath": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\10114629\\AppData\\Roaming\\NuGet\\NuGet.Config",

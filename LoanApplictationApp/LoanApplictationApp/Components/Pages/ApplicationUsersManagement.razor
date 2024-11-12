@@ -3,26 +3,26 @@
 @inject RoleManager<IdentityRole> RoleManager
 @rendermode InteractiveServer
 @inject IJSRuntime JSRuntime
-<h3>Users Management</h3>
-
-<br />
-<div class="container">
-    <div class="row">
-        <div class="col-md-4">
-            <button class="btn btn-success w-100" @onclick="ShowAssignRoleToUser">Assign Role To User</button>
+<div class="card">
+    <div class="card-header" style="background-color:floralwhite;color:black">
+        <div class="col-md-12 text-md-center">
+            <h1>Users Management</h1>
         </div>
-        <div class="col-md-4">
-            <button class="btn btn-success w-100" @onclick="ShowAddRoleToDb">Add Role To Bb</button>
-        </div>
-        <div class="col-md-4">
-            <button class="btn btn-success w-100" @onclick="ShowRemoveRoleFromUser">Remove Role From User</button>
+    </div>
+    <div class="card-body">
+        <div class="grid-container">
+            <button class="btn btn-success" @onclick="ShowAssignRoleToUser">Assign Role To User</button>
+            <button class="btn btn-success" @onclick="ShowAddRoleToDb">Add Role To Bb</button>
+            <button class="btn btn-success" @onclick="ShowRemoveRoleFromUser">Remove Role From User</button>
         </div>
     </div>
 </div>
 
 @if (showAssignRoleToUser)
 {
-    <AssignRoleToUser />
+    <div class="container">
+        <AssignRoleToUser />
+    </div>
 }
 else if (showAddRoleToDb)
 {
@@ -32,10 +32,6 @@ else if (showRemoveRoleFromUser)
 {
     <RemoveRoleFromUser />
 }
-
-
-
-
 
 @code {
     private bool showAssignRoleToUser = false;
