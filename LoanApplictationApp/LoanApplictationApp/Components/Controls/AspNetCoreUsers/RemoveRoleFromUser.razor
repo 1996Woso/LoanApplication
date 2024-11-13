@@ -9,7 +9,7 @@
         <EditForm Model="model" OnValidSubmit="RemoveRole" FormName="removeRole">
             <DataAnnotationsValidator />
             <div class="form-floating mb-3">
-                <InputSelect @bind-Value="model.Email" class="form-control" aria-required="true" placeholder="email">
+                <InputSelect @bind-Value="model.Email" class="form-control" aria-required="true" placeholder="email" @onchange="ClearMessages">
                     <option value="">Select Email</option>
                     @foreach (var email in Emails)
                     {
@@ -20,7 +20,7 @@
                 <ValidationMessage For="() => model.Email" class="text-danger" />
             </div>
             <div class="form-floating mb-3">
-                <InputSelect @bind-Value="model.Role" class="form-control" aria-required="true" placeholder="role">
+                <InputSelect @bind-Value="model.Role" class="form-control" aria-required="true" placeholder="role" @onchange = "ClearMessages">
                     <option value="">Select Role</option>
                     @foreach (var role in Roles)
                     {
@@ -30,18 +30,26 @@
                 <label for="Role">Role</label>
                 <ValidationMessage For="() => model.Role" class="text-danger" />
             </div>
-            <button class="btn btn-primary w-100" type="submit">Assign Role</button>
+            <button class="btn btn-danger w-100" type="submit">
+                <i class="bi bi-x-circle"></i> Remove Role
+            </button>
         </EditForm>
-        @if (!string.IsNullOrEmpty(ErrorMessage))
+        @if (!string.IsNullOrEmpty(ErrorMessage) && IsFormSubmitted)
         {
-            <div class="fade-message" id="error-div">
-               <ErrorMessage Message="@ErrorMessage" />
+            <div class="fade-message w-100" id="error-div">
+               <ErrorMessage Message="@ErrorMessage" IsDivDisplayed ="true"/>
             </div>
         }
-        else if (!string.IsNullOrEmpty(SuccessMessage))
+        else if (!string.IsNullOrEmpty(SuccessMessage) && IsFormSubmitted)
         {
-            <div class="fade-message" id="success-div">
-                <SuccessMessage Message="@SuccessMessage" />
+            <div class="fade-message w-100" id="success-div">
+                <SuccessMessage Message="@SuccessMessage" IsDivDisplayed ="true"/>
+            </div>
+        }
+        else if (!string.IsNullOrEmpty(InfoMessage) && IsFormSubmitted)
+        {
+            <div class="fade-message w-100" id="info-div">
+                <InfoMessage Message="@InfoMessage" IsDivDisplayed ="true"/>
             </div>
         }
     </div>
@@ -54,6 +62,8 @@
     private List<string> Emails = new();
     private string? ErrorMessage { get; set; }
     private string? SuccessMessage { get; set; }
+    private string? InfoMessage { get; set; }
+    private bool IsFormSubmitted = false;
 
     protected override async Task OnInitializedAsync()
     {
@@ -63,39 +73,52 @@
         }
         else
         {
-            Roles = await RoleManager.Roles.Select(x => x.Name).ToListAsync();
+            Roles = await RoleManager.Roles.Select(x => x.Name ?? "").ToListAsync();
         }
-        Emails = await UserManager.Users.Select(x => x.UserName).ToListAsync();
+        Emails = await UserManager.Users.Select(x => x.UserName ?? "").ToListAsync();
     }
-    protected override async Task OnAfterRenderAsync(bool firsRender)
-    {
-        if(!string.IsNullOrEmpty(ErrorMessage) || !string.IsNullOrEmpty(SuccessMessage))
-        {
-            await IJSRuntime.InvokeVoidAsync("initializeTimeouts");
-        }
-    }
+    // protected override async Task OnAfterRenderAsync(bool firsRender)
+    // {
+    //     if (!string.IsNullOrEmpty(ErrorMessage) || !string.IsNullOrEmpty(SuccessMessage) || !string.IsNullOrEmpty(InfoMessage))
+    //     {
+    //         await IJSRuntime.InvokeVoidAsync("initializeTimeouts");
+    //         IsFormSubmitted = false;
+    //     }
+    // }
     private async Task RemoveRole()
     {
-        User = await UserManager.FindByEmailAsync(model.Email);
+        IsFormSubmitted = true;
+        User = await UserManager.FindByEmailAsync(model.Email ?? "");
+        if (!await UserManager.IsInRoleAsync(User, model.Role))
+        {
+            InfoMessage = $"'{User.Name} {User.Surname}' is not in role '{model.Role}'.";
+            SuccessMessage = "";
+            ErrorMessage = "";
+            return;
+        }
         if(User != null && !string.IsNullOrEmpty(model.Role))
         {
             var result = await UserManager.RemoveFromRoleAsync(User, model.Role);
             if (result.Succeeded)
             {
-                ErrorMessage = "";
                 SuccessMessage = $"'{model.Role}' has been removed successfully from {User.Name} {User.Surname}.";
-            }
-            else if(!await UserManager.IsInRoleAsync(User, model.Role))
-            {
-                SuccessMessage = "";
-                ErrorMessage = $"{User.Name} {User.Surname} is not in role '{model.Role}'.";
+                ErrorMessage = "";
+                InfoMessage = "";
+                return;
             }
             else
             {
-                SuccessMessage = "";
                 ErrorMessage = result.Errors.ToString();
-            }
+                SuccessMessage = "";
+                InfoMessage = "";
+                return;
+            }  
         }
+    }
+    private void ClearMessages()
+    {
+        InfoMessage = string.Empty;
+        SuccessMessage = string.Empty;
     }
     public class RemoveRoleModel
     {
@@ -112,6 +135,7 @@
     function initializeTimeouts() {
         const errorDiv = document.getElementById('error-div');
         const successDiv = document.getElementById('success-div');
+        const infoDiv = document.getElementById('info-div');
         if (errorDiv) {
             errorDiv.classList.remove('fade-out');
             errorDiv.style.display = 'block';
@@ -130,6 +154,17 @@
                 successDiv.classList.add('fade-out');
                 setTimeout(() => {
                     successDiv.style.display = 'none';
+                }, 2500);
+            }, 2500);
+        }
+
+        if (infoDiv) {
+            infoDiv.classList.remove('fade-out');
+            infoDiv.style.display = 'block';
+            setTimeout(() => {
+                infoDiv.classList.add('fade-out');
+                setTimeout(() => {
+                    infoDiv.style.display = 'none';
                 }, 2500);
             }, 2500);
         }

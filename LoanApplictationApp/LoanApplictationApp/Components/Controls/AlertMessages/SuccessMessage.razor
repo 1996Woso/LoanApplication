@@ -1,8 +1,15 @@
-﻿<div class="alert alert-success mt-3">
-    <h6>✅ @Message</h6>
-</div>
+﻿@if (IsDivDisplayed)
+{
+    <div class="alert alert-success mt-3 w-100 d-flex justify-content-between align-items-center">
+        <h6>✅ @Message</h6>
+        <button class="btn btn-close" @onclick = "() => IsDivDisplayed = !IsDivDisplayed"></button>
+    </div>
+}
 
 @code {
     [Parameter]
     public string? Message { get; set; }
+
+    [Parameter]
+    public bool IsDivDisplayed { get; set; } = true;
 }

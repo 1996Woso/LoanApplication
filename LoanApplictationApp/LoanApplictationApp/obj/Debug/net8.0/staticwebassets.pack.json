@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\LoanApplictationApp.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\Images\\Access Denied.png",
+      "PackagePath": "staticwebassets\\Images\\Access Denied.png"
+    },
+    {
       "Id": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\Images\\Add Role.png",
       "PackagePath": "staticwebassets\\Images\\Add Role.png"
     },
@@ -15,6 +19,10 @@
     {
       "Id": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\Images\\Remove Role.png",
       "PackagePath": "staticwebassets\\Images\\Remove Role.png"
+    },
+    {
+      "Id": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\Images\\Unauthorised.PNG",
+      "PackagePath": "staticwebassets\\Images\\Unauthorised.PNG"
     },
     {
       "Id": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\app.css",

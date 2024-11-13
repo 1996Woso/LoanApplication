@@ -10,7 +10,7 @@
         <EditForm Model="assinRoleModel" OnValidSubmit="AssignRole" FormName="assignRole">
             <DataAnnotationsValidator />
             <div class="form-floating mb-3">
-                <InputSelect @bind-Value="assinRoleModel.Email" class="form-control" aria-required="true" placeholder="email">
+                <InputSelect @bind-Value="assinRoleModel.Email" class="form-control" aria-required="true" placeholder="email" id="email" @onchange="ClearMessages">
                     <option value="">Select Email</option>
                     @foreach (var email in Emails)
                     {
@@ -21,7 +21,7 @@
                 <ValidationMessage For ="() => assinRoleModel.Email" class="text-danger" />
             </div>
             <div class="form-floating mb-3">
-                <InputSelect @bind-Value="assinRoleModel.Role" class="form-control" aria-required="true" placeholder="role">
+                <InputSelect @bind-Value="assinRoleModel.Role" class="form-control" aria-required="true" placeholder="role" id="role" @onchange = "ClearMessages">
                     <option value="">Select Role</option>
                     @foreach (var role in Roles)
                     {
@@ -31,18 +31,20 @@
                 <label for="Role">Role</label>
                 <ValidationMessage For="() => assinRoleModel.Role" class="text-danger" />
             </div>
-            <button class="btn btn-primary w-100" type="submit">Assign Role</button>
+            <button class="btn btn-primary w-100" type="submit">
+                <i class="bi bi-plus-circle"></i> Assign Role
+            </button>
         </EditForm>
-        @if (!string.IsNullOrEmpty(ErrorMessage))
+        @if (!string.IsNullOrEmpty(InfoMessage) && IsFormSubmitted)
         {
-            <div class="fade-message" id="error-div">
-                <ErrorMessage Message="@ErrorMessage" />
+            <div class="fade-message w-100" id="info-div">
+                <InfoMessage Message="@InfoMessage" IsDivDisplayed ="true"/>
             </div>
         }
-        else if (!string.IsNullOrEmpty(SuccessMessage))
+        else if (!string.IsNullOrEmpty(SuccessMessage) && IsFormSubmitted)
         {
-            <div class="fade-message" id="success-div">
-                <SuccessMessage Message="@SuccessMessage" />
+            <div class="fade-message w-100" id="success-div">
+                <SuccessMessage Message="@SuccessMessage" IsDivDisplayed="true"/>
             </div>
         }
     </div>
@@ -53,40 +55,44 @@
     private List<string> Emails = new();
     private string? ErrorMessage { get; set; }
     private string? SuccessMessage { get; set; }
+    private string? InfoMessage { get; set; }
+    private bool IsFormSubmitted = false;
 
     protected override async Task OnInitializedAsync()
     {
-        Roles = await RoleManager.Roles.Select(x => x.Name).Distinct().ToListAsync();
-        Emails = await UserManager.Users.Select(x => x.UserName).ToListAsync();
+        Roles = await RoleManager.Roles.Select(x => x.Name ?? "").Distinct().ToListAsync();
+        Emails = await UserManager.Users.Select(x => x.UserName ?? "").ToListAsync();
     }
 
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        if(!string.IsNullOrEmpty(ErrorMessage) || !string.IsNullOrEmpty(SuccessMessage))
-        {
-            await IJSRuntime.InvokeVoidAsync("initializeTimeouts");
-        }
-    }
+    // protected override async Task OnAfterRenderAsync(bool firstRender)
+    // {
+    //     if (!string.IsNullOrEmpty(SuccessMessage) || !string.IsNullOrEmpty(InfoMessage))
+    //     {
+    //         await IJSRuntime.InvokeVoidAsync("initializeTimeouts");
+    //         IsFormSubmitted = false;
+    //     }
+    // }
 
     private async Task AssignRole()
     {
-        var user = await UserManager.FindByEmailAsync(assinRoleModel.Email);
+        IsFormSubmitted = true;
+        var user = await UserManager.FindByEmailAsync(assinRoleModel.Email ?? "");
         if (user != null && !string.IsNullOrEmpty(assinRoleModel.Email))
         {
-            if(!await UserManager.IsInRoleAsync(user, assinRoleModel.Role))
+            if(!await UserManager.IsInRoleAsync(user, assinRoleModel.Role ?? ""))
             {
-                var result = await UserManager.AddToRoleAsync(user, assinRoleModel.Role);
+                var result = await UserManager.AddToRoleAsync(user, assinRoleModel.Role ?? "");
                 if (result.Succeeded)
                 {
                     SuccessMessage = $"'{assinRoleModel.Role}' has been added successfully to {user.Name} {user.Surname}.";
-                    ErrorMessage = "";
+                    InfoMessage = "";
                     assinRoleModel = new AssinRoleModel();
 
                 }
             }
             else
             {
-                ErrorMessage = $"'{assinRoleModel.Role}' has already  been assigned  to {user.Name} {user.Surname}.";
+                InfoMessage = $"'{assinRoleModel.Role}' has already  been assigned  to {user.Name} {user.Surname}.";
                 SuccessMessage = "";
             }
 
@@ -94,7 +100,11 @@
 
     }
 
-
+    private void ClearMessages()
+    {
+        InfoMessage = string.Empty;
+        SuccessMessage = string.Empty;
+    }
     // [Inject]
     // private UserManager<ApplicationUser>? UserManager { get; set; }
 
@@ -115,6 +125,7 @@
     function initializeTimeouts() {
         const errorDiv = document.getElementById('error-div');
         const successDiv = document.getElementById('success-div');
+        const infoDiv = document.getElementById('info-div');
         if (errorDiv) {
             errorDiv.classList.remove('fade-out');
             errorDiv.style.display = 'block';
@@ -122,6 +133,7 @@
                 errorDiv.classList.add('fade-out');
                 setTimeout(() => {
                     errorDiv.style.display = 'none';
+                    // location.reload();
                 }, 2500);
             }, 2500);
         }
@@ -133,6 +145,19 @@
                 successDiv.classList.add('fade-out');
                 setTimeout(() => {
                     successDiv.style.display = 'none';
+                    // location.reload();
+                }, 2500);
+            }, 2500);
+        }
+
+        if (infoDiv) {
+            infoDiv.classList.remove('fade-out');
+            infoDiv.style.display = 'block';
+            setTimeout(() => {
+                infoDiv.classList.add('fade-out');
+                setTimeout(() => {
+                    infoDiv.style.display = 'none';
+                    // location.reload();
                 }, 2500);
             }, 2500);
         }

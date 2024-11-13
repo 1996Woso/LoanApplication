@@ -417,6 +417,9 @@ C:\Users\10114629\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApp
 C:\Users\10114629\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplictationApp\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.LoanApplictationApp.props
 C:\Users\10114629\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplictationApp\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.LoanApplictationApp.props
 C:\Users\10114629\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplictationApp\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\10114629\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplictationApp\obj\Debug\net8.0\scopedcss\Components\Controls\AlertMessages\ErrorMessage.razor.rz.scp.css
+C:\Users\10114629\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplictationApp\obj\Debug\net8.0\scopedcss\Components\Controls\AlertMessages\InfoMessage.razor.rz.scp.css
+C:\Users\10114629\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplictationApp\obj\Debug\net8.0\scopedcss\Components\Controls\AlertMessages\SuccessMessage.razor.rz.scp.css
 C:\Users\10114629\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplictationApp\obj\Debug\net8.0\scopedcss\Components\Layout\MainLayout.razor.rz.scp.css
 C:\Users\10114629\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplictationApp\obj\Debug\net8.0\scopedcss\Components\Layout\NavMenu.razor.rz.scp.css
 C:\Users\10114629\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplictationApp\obj\Debug\net8.0\scopedcss\Components\Pages\ApplicationUsersManagement.razor.rz.scp.css
@@ -428,6 +431,3 @@ C:\Users\10114629\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApp
 C:\Users\10114629\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplictationApp\obj\Debug\net8.0\LoanApplictationApp.pdb
 C:\Users\10114629\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplictationApp\obj\Debug\net8.0\LoanApplictationApp.genruntimeconfig.cache
 C:\Users\10114629\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplictationApp\obj\Debug\net8.0\ref\LoanApplictationApp.dll
-C:\Users\10114629\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplictationApp\obj\Debug\net8.0\scopedcss\Components\Controls\AlertMessages\ErrorMessage.razor.rz.scp.css
-C:\Users\10114629\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplictationApp\obj\Debug\net8.0\scopedcss\Components\Controls\AlertMessages\InfoMessage.razor.rz.scp.css
-C:\Users\10114629\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplictationApp\obj\Debug\net8.0\scopedcss\Components\Controls\AlertMessages\SuccessMessage.razor.rz.scp.css

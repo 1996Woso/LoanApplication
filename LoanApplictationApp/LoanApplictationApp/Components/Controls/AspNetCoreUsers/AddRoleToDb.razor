@@ -9,7 +9,7 @@
             <ValidationSummary />
 
             <div class="input-group">
-                <InputText @bind-Value="Role.Name" class="form-control" placeholder="Role Name" />
+                <InputText @bind-Value="Role.Name" class="form-control" placeholder="Role Name" @onchange = "ClearMessages"/>
                 <ValidationMessage For="() => Role.Name" class="text-danger" />
                 <button type="submit" class="btn btn-outline-primary">
                     <i class="bi bi-plus-circle"> Add Role</i>
@@ -17,17 +17,26 @@
             </div>
         </EditForm>
 
-        @if (!string.IsNullOrEmpty(ErrorMessage))
+        @if (!string.IsNullOrEmpty(ErrorMessage) && IsFormSubmitted)
         {
-            <div class="fade-message" id="error-div">
-                <ErrorMessage Message="@ErrorMessage" />
+            <div class="fade-message w-100" id="error-div">
+                <ErrorMessage Message="@ErrorMessage" IsDivDisplayed="true"/>
             </div>
+           @*  return; *@
         }
-        else if (!string.IsNullOrEmpty(SuccessMessage))
+        else if (!string.IsNullOrEmpty(SuccessMessage) && IsFormSubmitted)
         {
-            <div class="fade-message" id="success-div">
-                <SuccessMessage Message="@SuccessMessage" />
+            <div class="fade-message w-100" id="success-div">
+                <SuccessMessage Message="@SuccessMessage" IsDivDisplayed="true"/>
             </div>
+  @*           return; *@
+        }
+        else if (!string.IsNullOrEmpty(InfoMessage) && IsFormSubmitted)
+        {
+            <div class="fade-message w-100" id="info-div">
+                <InfoMessage Message="@InfoMessage" IsDivDisplayed ="true" />
+            </div>
+        @*     return; *@
         }
     </div>
 </div>
@@ -35,20 +44,24 @@
     private IdentityRole? Role = new IdentityRole();
     private string? ErrorMessage { get; set; }
     private string? SuccessMessage { get; set; }
+    private string? InfoMessage { get; set; }
+    private bool IsFormSubmitted = false;
 
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        if (!string.IsNullOrEmpty(ErrorMessage) || !string.IsNullOrEmpty(SuccessMessage))
-        {
-            await IJSRuntime.InvokeVoidAsync("initializeTimeouts");
-        }
-    }
+    // protected override async Task OnAfterRenderAsync(bool firstRender)
+    // {
+    //     if (!string.IsNullOrEmpty(ErrorMessage) || !string.IsNullOrEmpty(SuccessMessage) || !string.IsNullOrEmpty(InfoMessage))
+    //     {
+    //         await IJSRuntime.InvokeVoidAsync("initializeTimeouts");
+    //         IsFormSubmitted = false;
+    //     }
+    // }
     private async Task AddRole()
     {
+        IsFormSubmitted = true;
         // Ensure Name is bound properly
         if (Role == null || string.IsNullOrEmpty(Role.Name))
         {
-            ErrorMessage = "Role name cannot be empty.";
+            InfoMessage = "Role name cannot be empty.";
             return;
         }
 
@@ -63,25 +76,35 @@
             {
                 SuccessMessage = $"Role '{Role.Name}' added successfully.";
                 ErrorMessage = "";
+                InfoMessage = "";
                 Role = new IdentityRole(); // Reset form
             }
             else
             {
                 ErrorMessage = "Error adding Role: " + string.Join(", ", result.Errors.Select(e => e.Description));
                 SuccessMessage = "";
+                InfoMessage = "";
             }
         }
         else
         {
-            ErrorMessage = $"Role '{Role.Name}' already exists.";
+            InfoMessage = $"Role '{Role.Name}' already exists.";
             SuccessMessage = "";
+            ErrorMessage = "";
         }
+    }
+    private void ClearMessages()
+    {
+        InfoMessage = string.Empty;
+        SuccessMessage = string.Empty;
+        ErrorMessage = string.Empty;
     }
 }
 <script>
     function initializeTimeouts() {
         const errorDiv = document.getElementById('error-div');
         const successDiv = document.getElementById('success-div');
+        const infoDiv = document.getElementById('info-div');
         if (errorDiv) {
             errorDiv.classList.remove('fade-out');
             errorDiv.style.display = 'block';
@@ -100,6 +123,17 @@
                 successDiv.classList.add('fade-out');
                 setTimeout(() => {
                     successDiv.style.display = 'none';
+                }, 2500);
+            }, 2500);
+        }
+
+        if (infoDiv) {
+            infoDiv.classList.remove('fade-out');
+            infoDiv.style.display = 'block';
+            setTimeout(() => {
+                infoDiv.classList.add('fade-out');
+                setTimeout(() => {
+                    infoDiv.style.display = 'none';
                 }, 2500);
             }, 2500);
         }

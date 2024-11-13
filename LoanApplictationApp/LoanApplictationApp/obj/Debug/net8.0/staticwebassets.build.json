@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "GVV/rkqweeKeqt1q3CvQXjV4et1qx6YFdeRGGcFEHSo=",
+  "Hash": "GFSH6d34dux1QdMvXJdjx3F4ogzjK7UBrcqmbzllOPs=",
   "Source": "LoanApplictationApp",
   "BasePath": "_content/LoanApplictationApp",
   "Mode": "Default",
@@ -131,6 +131,25 @@
       "OriginalItemSpec": "wwwroot\\favicon.png"
     },
     {
+      "Identity": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\Images\\Access Denied.png",
+      "SourceId": "LoanApplictationApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\",
+      "BasePath": "_content/LoanApplictationApp",
+      "RelativePath": "Images/Access Denied.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Access Denied.png"
+    },
+    {
       "Identity": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\Images\\Add Role.png",
       "SourceId": "LoanApplictationApp",
       "SourceType": "Discovered",
@@ -186,6 +205,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\Remove Role.png"
+    },
+    {
+      "Identity": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\Images\\Unauthorised.PNG",
+      "SourceId": "LoanApplictationApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\",
+      "BasePath": "_content/LoanApplictationApp",
+      "RelativePath": "Images/Unauthorised.PNG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Unauthorised.PNG"
     }
   ]
 }
