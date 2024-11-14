@@ -17,6 +17,14 @@
       "PackagePath": "staticwebassets\\Images\\Assing Role.png"
     },
     {
+      "Id": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\Images\\House Hands.png",
+      "PackagePath": "staticwebassets\\Images\\House Hands.png"
+    },
+    {
+      "Id": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\Images\\House.jpeg",
+      "PackagePath": "staticwebassets\\Images\\House.jpeg"
+    },
+    {
       "Id": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\Images\\Remove Role.png",
       "PackagePath": "staticwebassets\\Images\\Remove Role.png"
     },

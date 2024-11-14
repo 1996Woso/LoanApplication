@@ -10,6 +10,16 @@ body[b-jwt6g77h0x] {
 .success-message[b-jwt6g77h0x]{
 
 }
+/* _content/LoanApplictationApp/Components/Controls/Calculators/Repayment.razor.rz.scp.css */
+.container-div[b-chghasy8ny]{
+   /* background-color:whitesmoke*/
+}
+label[b-chghasy8ny]{
+    font-weight: bold !important;
+}
+input[b-chghasy8ny]{
+    background-color:ghostwhite !important;
+}
 /* _content/LoanApplictationApp/Components/Layout/MainLayout.razor.rz.scp.css */
 .page[b-78rsiozk5i] {
     position: relative;

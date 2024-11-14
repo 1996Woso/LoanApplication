@@ -186,8 +186,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDb250cm9sc1xBc3BOZXRDb3JlVXNlcnNcUmVtb3ZlUm9sZUZyb21Vc2VyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/10114629/source/repos/Eviwe/LoanApplication/LoanApplictationApp/LoanApplictationApp/Components/Controls/Calculators/HomeLoanCalculator.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDb250cm9sc1xDYWxjdWxhdG9yc1xIb21lTG9hbkNhbGN1bGF0b3IucmF6b3I=
+[C:/Users/10114629/source/repos/Eviwe/LoanApplication/LoanApplictationApp/LoanApplictationApp/Components/Controls/Calculators/Affordabilityt.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDb250cm9sc1xDYWxjdWxhdG9yc1xBZmZvcmRhYmlsaXR5dC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/10114629/source/repos/Eviwe/LoanApplication/LoanApplictationApp/LoanApplictationApp/Components/Pages/Auth.razor]
@@ -225,6 +225,10 @@ build_metadata.AdditionalFiles.CssScope = b-s153zijqye
 [C:/Users/10114629/source/repos/Eviwe/LoanApplication/LoanApplictationApp/LoanApplictationApp/Components/Controls/AlertMessages/SuccessMessage.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDb250cm9sc1xBbGVydE1lc3NhZ2VzXFN1Y2Nlc3NNZXNzYWdlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-jwt6g77h0x
+
+[C:/Users/10114629/source/repos/Eviwe/LoanApplication/LoanApplictationApp/LoanApplictationApp/Components/Controls/Calculators/Repayment.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDb250cm9sc1xDYWxjdWxhdG9yc1xSZXBheW1lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-chghasy8ny
 
 [C:/Users/10114629/source/repos/Eviwe/LoanApplication/LoanApplictationApp/LoanApplictationApp/Components/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==

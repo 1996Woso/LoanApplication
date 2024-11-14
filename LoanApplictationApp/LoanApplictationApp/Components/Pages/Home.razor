@@ -2,7 +2,59 @@
 
 <PageTitle>Home</PageTitle>
 
-<h1>Hello, world!</h1>
+@* <h1>Hello, world!</h1>
 
-Welcome to your new app.
-<HomeLoanCalculator />
+Welcome to your new app. *@
+<style>
+    .bg-container {
+        background-image: url('https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg');
+        height: 100vh;
+        width:100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position:relative;
+      /*   text-align: center; */
+        color:palevioletred;
+        padding-top:4rem;
+    }
+
+    .card {
+        background-color: transparent !important; /* Make the card background transparent */
+        border: none !important; /* Remove the card border */
+        box-shadow: none !important; /* Remove the card shadow */
+    }
+
+    .card-header-tabs {
+        background-color: transparent !important; /* Make the card header background transparent */
+        border-bottom: none !important; /* Remove the card header border */
+    }
+
+    .card-body {
+        color: whitesmoke !important; /* Ensure text color is visible on the background */
+    }
+</style>
+<div class="bg-container mt-0 w-100">
+    <div class="row mb-3">
+        <div class="col-md-6" style="padding-left:10rem">
+            <h1>Use our Home Loan Calculator to find out how much your home loan will cost.</h1>
+        </div>
+        <div class="col-md-6">
+            <button class="btn btn-secondary w-100">Want to apply for a loan</button><br /><br />
+            <button class="btn btn-secondary w-100">Why Us?</button>
+        </div>
+    </div>
+    <hr style="height: 0.2rem;background-color:azure" />
+    <div class="card">
+        <div class="card-header-tabs">
+            <div class="row justify-content-center border-1">
+                <button class="btn btn-success w-25"> Repayable</button> &nbsp;&nbsp;
+                <button class="btn btn-success w-25"> Affordability</button>
+            </div>
+           
+        </div>
+        <div class="card-body">
+            <Repayment />
+        </div>
+    </div>
+</div>
