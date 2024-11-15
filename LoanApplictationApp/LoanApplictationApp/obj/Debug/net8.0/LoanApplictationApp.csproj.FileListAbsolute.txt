@@ -432,3 +432,5 @@ C:\Users\10114629\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApp
 C:\Users\10114629\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplictationApp\obj\Debug\net8.0\LoanApplictationApp.genruntimeconfig.cache
 C:\Users\10114629\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplictationApp\obj\Debug\net8.0\ref\LoanApplictationApp.dll
 C:\Users\10114629\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplictationApp\obj\Debug\net8.0\scopedcss\Components\Controls\Calculators\Repayment.razor.rz.scp.css
+C:\Users\10114629\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplictationApp\obj\Debug\net8.0\scopedcss\Components\Pages\Home.razor.rz.scp.css
+C:\Users\10114629\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplictationApp\obj\Debug\net8.0\scopedcss\Components\Controls\Calculators\Affordability.razor.rz.scp.css

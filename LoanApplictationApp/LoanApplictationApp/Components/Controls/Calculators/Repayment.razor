@@ -1,8 +1,9 @@
 ﻿@rendermode InteractiveServer
 <div class="container w-50 container-div">
-    <div class="col-md-12 text-md-center">
-        <h3>Bond Repayment Calculator</h3>
+    <div class="col-md-12 text-md-center" style="background-color:lightblue">
+        <h2>Bond Repayment Calculator</h2>
     </div>
+    <hr style="height:0.5rem;"/>
     <EditForm Model="loan">
         <div class="container">
             <div class="row mb-3">
@@ -74,7 +75,7 @@
 
 
 @code {
-    private HomeLoan? loan = new HomeLoan();
+    private PresentValue? loan = new PresentValue();
 
     public void Amount()
     {
@@ -84,7 +85,7 @@
             decimal i = (loan.i.Value / 100) / 12;
             decimal exp = (decimal)Math.Pow((double)(1 + i), -n);//(1+i)^(-n)
             decimal x = loan.x.Value;
-            loan.P = Math.Round((x * (1 - exp)) / i,2);
+            loan.P = Math.Round((x * (1 - exp)) / i,2);//P = x(1-(1+i)^-n)/i
         }
     }
     public void Payment()
@@ -95,7 +96,7 @@
             decimal i = (loan.i.Value / 100) / 12;
             decimal exp = (decimal)Math.Pow((double)(1+i),-n);//(1+i)^(-n)
             decimal P = loan.P.Value;
-            loan.x = Math.Round((P * i) / (1 - exp),2);
+            loan.x = Math.Round((P * i) / (1 - exp), 2);//x = P*i/((1-(1+i)^-n))
         }
     }
 
@@ -112,32 +113,8 @@
             decimal x = loan.x.Value;
             decimal val1 = (decimal)Math.Log(1-(double)((P*i)/x));// log(1-(P*i)/x)
             decimal val2 = (decimal)Math.Log((double)(1+i));// log(1+i)
-            decimal n= Math.Round((decimal)((-val1/val2)/12),0);
+            decimal n= Math.Round((decimal)((-val1/val2)/12),0);//n = -log(1-(p*i)/x)/log(1+i)
             loan.n = (int)n;
         }
-    }
-
-    // public void TotalPayment()
-    // {
-    //     if (loan.x.HasValue && loan.n.HasValue)
-    //     {
-    //         loan.T = loan.x*loan.n*12; 
-    //     }
-
-    //     if(loan.P.HasValue && loan.T.HasValue)
-    //     {
-    //         loan.I = loan.T - loan.P;
-    //     }
-
-    // }
-    private sealed class HomeLoan
-    {
-        public decimal? P { get; set; }//Purchase price
-        public decimal? x { get; set; }//Monthly payment
-        public int? n { get; set; }//Number of years
-        public decimal? i { get; set; }//Interest rate
-        public decimal? T { get; set; }//Total payment
-        public decimal? I { get; set; }//Interest Payed
-        public decimal? D { get; set; }//Deposit
     }
 }

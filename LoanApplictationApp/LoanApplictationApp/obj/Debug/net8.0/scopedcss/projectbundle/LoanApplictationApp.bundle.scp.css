@@ -10,6 +10,16 @@ body[b-jwt6g77h0x] {
 .success-message[b-jwt6g77h0x]{
 
 }
+/* _content/LoanApplictationApp/Components/Controls/Calculators/Affordability.razor.rz.scp.css */
+body[b-26j9hufh6z] {
+}
+label[b-26j9hufh6z] {
+    font-weight: bold !important;
+}
+
+input[b-26j9hufh6z] {
+    background-color: ghostwhite !important;
+}
 /* _content/LoanApplictationApp/Components/Controls/Calculators/Repayment.razor.rz.scp.css */
 .container-div[b-chghasy8ny]{
    /* background-color:whitesmoke*/
@@ -34,13 +44,13 @@ main[b-78rsiozk5i] {
 .sidebar[b-78rsiozk5i] {
     background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
 }
-
+/*Header or top row*/
 .top-row[b-78rsiozk5i] {
     background-color: #f7f7f7;
     border-bottom: 1px solid #d6d5d5;
-    justify-content: flex-end;
+    justify-content:space-between;
     height: 3.5rem;
-    display: flex;
+    display:flex; /*Displays items horizontal*/
     align-items: center;
 }
 
@@ -58,13 +68,43 @@ main[b-78rsiozk5i] {
         overflow: hidden;
         text-overflow: ellipsis;
     }
+/*Footer or bottom row*/
+.bottom-row[b-78rsiozk5i] {
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #d6d5d5;
+    justify-content:left;
+    height: 3.5rem;
+    display: flex; /*Displays items horizontal*/
+    align-items: center;
+}
 
+    .bottom-row[b-78rsiozk5i]  a, .bottom-row[b-78rsiozk5i]  .btn-link {
+        white-space: nowrap;
+        margin-left: 1.5rem;
+        text-decoration: none;
+    }
+
+        .bottom-row[b-78rsiozk5i]  a:hover, .bottom-row[b-78rsiozk5i]  .btn-link:hover {
+            text-decoration: underline;
+        }
+
+        .bottom-row[b-78rsiozk5i]  a:first-child {
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
 @media (max-width: 640.98px) {
     .top-row[b-78rsiozk5i] {
         justify-content: space-between;
     }
 
     .top-row[b-78rsiozk5i]  a, .top-row[b-78rsiozk5i]  .btn-link {
+        margin-left: 0;
+    }
+    .bottom-row[b-78rsiozk5i] {
+        justify-content: space-between;
+    }
+
+    .bottom-row[b-78rsiozk5i]  a, .bottom-row[b-78rsiozk5i]  .btn-link {
         margin-left: 0;
     }
 }
@@ -96,6 +136,24 @@ main[b-78rsiozk5i] {
     .top-row[b-78rsiozk5i], article[b-78rsiozk5i] {
         padding-left: 2rem !important;
         padding-right: 1.5rem !important;
+    }
+
+    .bottom-row[b-78rsiozk5i] {
+        position: sticky;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    .bottom-row.auth[b-78rsiozk5i]  a:first-child {
+        flex: 1;
+        text-align: right;
+        width: 0;
+    }
+    /*This manages space between Side-bar and top row*/
+    article[b-78rsiozk5i] {
+        padding-left: 0rem !important;
+        padding-right: 0rem !important;
+        padding-top: 0rem !important;
     }
 }
 
@@ -259,4 +317,21 @@ main[b-78rsiozk5i] {
 
 .fade-out[b-pe3kif3ybg] {
     opacity: 0;
+}
+/* _content/LoanApplictationApp/Components/Pages/Home.razor.rz.scp.css */
+body[b-nlbqh7o17r] {
+}
+button[b-nlbqh7o17r]{
+    border-radius: 0px !important;
+    width: 25%;
+    height: 3rem;
+    background-color:black;
+    color:aliceblue;
+    font-weight: bold;
+}
+
+button:hover[b-nlbqh7o17r]{
+    background-color:darkseagreen;
+    color:whitesmoke;
+    transform: scale(1.01);
 }

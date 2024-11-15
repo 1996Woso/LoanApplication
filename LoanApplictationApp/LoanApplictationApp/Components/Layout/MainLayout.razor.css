@@ -11,13 +11,13 @@ main {
 .sidebar {
     background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
 }
-
+/*Header or top row*/
 .top-row {
     background-color: #f7f7f7;
     border-bottom: 1px solid #d6d5d5;
-    justify-content: flex-end;
+    justify-content:space-between;
     height: 3.5rem;
-    display: flex;
+    display:flex; /*Displays items horizontal*/
     align-items: center;
 }
 
@@ -35,13 +35,43 @@ main {
         overflow: hidden;
         text-overflow: ellipsis;
     }
+/*Footer or bottom row*/
+.bottom-row {
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #d6d5d5;
+    justify-content:left;
+    height: 3.5rem;
+    display: flex; /*Displays items horizontal*/
+    align-items: center;
+}
 
+    .bottom-row ::deep a, .bottom-row ::deep .btn-link {
+        white-space: nowrap;
+        margin-left: 1.5rem;
+        text-decoration: none;
+    }
+
+        .bottom-row ::deep a:hover, .bottom-row ::deep .btn-link:hover {
+            text-decoration: underline;
+        }
+
+        .bottom-row ::deep a:first-child {
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
 @media (max-width: 640.98px) {
     .top-row {
         justify-content: space-between;
     }
 
     .top-row ::deep a, .top-row ::deep .btn-link {
+        margin-left: 0;
+    }
+    .bottom-row {
+        justify-content: space-between;
+    }
+
+    .bottom-row ::deep a, .bottom-row ::deep .btn-link {
         margin-left: 0;
     }
 }
@@ -73,6 +103,24 @@ main {
     .top-row, article {
         padding-left: 2rem !important;
         padding-right: 1.5rem !important;
+    }
+
+    .bottom-row {
+        position: sticky;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    .bottom-row.auth ::deep a:first-child {
+        flex: 1;
+        text-align: right;
+        width: 0;
+    }
+    /*This manages space between Side-bar and top row*/
+    article {
+        padding-left: 0rem !important;
+        padding-right: 0rem !important;
+        padding-top: 0rem !important;
     }
 }
 

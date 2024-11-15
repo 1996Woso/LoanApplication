@@ -1,0 +1,16 @@
+﻿body {
+}
+button{
+    border-radius: 0px !important;
+    width: 25%;
+    height: 3rem;
+    background-color:black;
+    color:aliceblue;
+    font-weight: bold;
+}
+
+button:hover{
+    background-color:darkseagreen;
+    color:whitesmoke;
+    transform: scale(1.01);
+}
