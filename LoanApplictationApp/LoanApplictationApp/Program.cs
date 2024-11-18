@@ -40,6 +40,7 @@ builder.Services.AddIdentity<ApplicationUser,IdentityRole>(options => options.Si
 builder.Services.Configure<SmtpSettings>(builder.Configuration.GetSection("SMTP"));
 builder.Services.AddSingleton<IEmailSender<ApplicationUser>, IdentityNoOpEmailSender>();
 builder.Services.AddScoped<SmtpEmailSender>();
+builder.Services.AddScoped<Calculations>();
 
 
 var app = builder.Build();

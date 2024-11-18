@@ -1,5 +1,6 @@
-﻿@using LoanApplictationApp.Migrations
-@rendermode InteractiveServer
+﻿@rendermode InteractiveServer
+@inject Services.Calculations calculate
+
 <div class="container w-50 container-div">
     <div class="col-md-12 text-md-center" style="background-color:lightblue">
         <h2>Bond Affordability Calculator</h2>
@@ -10,22 +11,44 @@
             <div class="row mb-3">
                 <div class="col-md-4">
                     <label>Gross Monthly Income (R)</label>
-                    <input type="number" @bind="model.GrossIncome" @bind:event="oninput" class="form-control" id="p" />
+                    <input type="number" @bind="model.GrossIncome" @bind:event="oninput" class="form-control"/>
                 </div>
                 <div class="col-md-4">
                     <label>Interest Rate (%)</label>
-                    <input type="number" @bind="model.i" @bind:event="oninput" class="form-control" id="i" />
+                    <input type="number" @bind="model.i" @bind:event="oninput" class="form-control"/>
                 </div>
                 <div class="col-md-4">
                     <label>Period (years)</label>
-                    <input type="number" @bind="model.n" @bind:event="oninput" class="form-control" id="i" />
+                    <input type="number" @bind="model.n" @bind:event="oninput" class="form-control" />
                 </div>
             </div>
         </div>
+        @if(model.GrossIncome.HasValue && model.i.HasValue && model.n.HasValue)
+        {
+            <button class="btn btn-success" @onclick="Calculate">Calculate</button>
+            @if(model.MaxAffordLoan.HasValue && model.MaxAffordInstall.HasValue)
+            {
+                <div class="mt-3 alert alert-info">
+                    <pre>
+                    <i>Maximum affordable loan        :R @model.MaxAffordLoan</i>
+                        </pre>
+                    <pre>
+                    <i>Maximum affordable installment :R @model.MaxAffordInstall</i>
+                        </pre>
+                </div>
+            }
+        }
     </EditForm>
 </div>
 
 @code {
     private Models.Affordability? model = new Models.Affordability();
-
+    private async void Calculate()
+    {
+        if (model.GrossIncome.HasValue && model.n.HasValue && model.i.HasValue)
+        {
+            model.MaxAffordInstall = (decimal)0.3 * model.GrossIncome.Value;
+            model.MaxAffordLoan = await calculate.PresentValue(model.n.Value, model.i.Value, model.MaxAffordInstall.Value);
+        }
+    }
 }

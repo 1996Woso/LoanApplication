@@ -1,4 +1,5 @@
 ﻿@rendermode InteractiveServer
+@inject Services.Calculations calculate
 <div class="container w-50 container-div">
     <div class="col-md-12 text-md-center" style="background-color:lightblue">
         <h2>Bond Repayment Calculator</h2>
@@ -77,26 +78,18 @@
 @code {
     private PresentValue? loan = new PresentValue();
 
-    public void Amount()
+    public async void Amount()
     {
         if(loan.x.HasValue && loan.n.HasValue && loan.i.HasValue)
         {
-            int n = loan.n.Value * 12;
-            decimal i = (loan.i.Value / 100) / 12;
-            decimal exp = (decimal)Math.Pow((double)(1 + i), -n);//(1+i)^(-n)
-            decimal x = loan.x.Value;
-            loan.P = Math.Round((x * (1 - exp)) / i,2);//P = x(1-(1+i)^-n)/i
+            loan.P = await calculate.PresentValue(loan.n.Value, loan.i.Value, loan.x.Value);
         }
     }
-    public void Payment()
+    public async void Payment()
     {
         if(loan.P.HasValue && loan.n.HasValue && loan.i.HasValue)
         {
-            int n = loan.n.Value * 12;
-            decimal i = (loan.i.Value / 100) / 12;
-            decimal exp = (decimal)Math.Pow((double)(1+i),-n);//(1+i)^(-n)
-            decimal P = loan.P.Value;
-            loan.x = Math.Round((P * i) / (1 - exp), 2);//x = P*i/((1-(1+i)^-n))
+            loan.x = await calculate.MonthlyPayment(loan.n.Value, loan.i.Value, loan.P.Value);
         }
     }
 
@@ -104,17 +97,11 @@
     {
     }
 
-    public void Years()
+    public async void Years()
     {
         if(loan.P.HasValue && loan.x.HasValue && loan.i.HasValue)
         {
-            decimal i = (loan.i.Value / 100) / 12;
-            decimal P = loan.P.Value;
-            decimal x = loan.x.Value;
-            decimal val1 = (decimal)Math.Log(1-(double)((P*i)/x));// log(1-(P*i)/x)
-            decimal val2 = (decimal)Math.Log((double)(1+i));// log(1+i)
-            decimal n= Math.Round((decimal)((-val1/val2)/12),0);//n = -log(1-(p*i)/x)/log(1+i)
-            loan.n = (int)n;
+            loan.n = await calculate.Period(loan.x.Value,loan.i.Value,loan.P.Value);
         }
     }
 }
