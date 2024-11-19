@@ -6,71 +6,85 @@
     </div>
     <hr style="height:0.5rem;"/>
     <EditForm Model="loan">
-        <div class="container">
-            <div class="row mb-3">
-                <div class="col-md-6">
-                    <label>Purchase Price (R)</label>
-                    <input type="number" @bind="loan.P" @bind:event ="oninput" class="form-control" id="p" />
+        <DataAnnotationsValidator />
+        @if(loan != null)
+        {
+            <div class="container">
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label>Purchase Price (R)</label>
+                        @* <input type="number" @bind="loan.P" @bind:event ="oninput" class="form-control"/> *@
+                        <InputNumber @bind-Value="loan.P" @oninput="@(e => calculate.OnInputDecimal(e, value => loan.P = value))" class="form-control" />
+                        <ValidationMessage For="() => loan.P" class="text-danger" />
+                    </div>
+                    <div class="col-md-6">
+                        <label>Monthly Payment (R)</label>
+                        @* <input type="number" @bind="loan.x" @bind:event ="oninput" class="form-control"/> *@
+                        <InputNumber @bind-Value="loan.x" @oninput="@(e => calculate.OnInputDecimal(e, value => loan.x = value))" class="form-control" />
+                        <ValidationMessage For="() => loan.x" class="text-danger" />
+                    </div>
                 </div>
-                <div class="col-md-6">
-                    <label>Monthly Payment (R)</label>
-                    <input type="number" @bind="loan.x" @bind:event ="oninput" class="form-control" id="x" />
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label>Period (Years)</label>
+                        @* <input @bind="loan.n" @bind:event ="oninput" class="form-control"/> *@
+                        <InputNumber @bind-Value="loan.n" @oninput="OnInputYears" class="form-control" />
+                        <ValidationMessage For="() => loan.n" class="text-danger" />
+                    </div>
+                    <div class="col-md-6">
+                        <label>Interest Rate (%)</label>
+                        @* <input type="number" @bind="loan.i" @bind:event="oninput" class="form-control"/> *@
+                        <InputNumber @bind-Value="loan.i" @oninput="@(e => calculate.OnInputDecimal(e, value => loan.i = value))" class="form-control" />
+                        <ValidationMessage For="() => loan.i" class="text-danger" />
+                    </div>
                 </div>
-            </div>
-            <div class="row mb-3">
-                <div class="col-md-6">
-                    <label>Period (Years)</label>
-                    <input @bind="loan.n" @bind:event ="oninput" class="form-control" id="n" />
+                <div class="row mb-3">
+                    <div class="col-md-12">
+                        <label>Deposit (R)</label>
+                        @*  <input type="number" @bind ="@loan.D" @bind:event = "oninput" class="form-control"/> *@
+                        <InputNumber @bind-Value="loan.D" class="form-control" />
+                        <ValidationMessage For="() => loan.D" class="text-danger" />
+                    </div>
                 </div>
-                <div class="col-md-6">
-                    <label>Interest Rate (%)</label>
-                    <input type="number" @bind="loan.i" @bind:event="oninput" class="form-control" id="i" />
-                </div>
-            </div>
-            <div class="row mb-3">
-                <div class="col-md-12">
-                    <label>Deposit (R)</label>
-                    <input type="number" @bind ="@loan.D" @bind:event = "oniput" class="form-control" />
-                </div>
-            </div>
 
-            <div>
-                @* <p>Calculate:</p> *@
-                @if (loan.x.HasValue && loan.n.HasValue && loan.i.HasValue)
-                {
-                    <button class="btn btn-success mb-2" @onclick="Amount">Purchase Price</button>
-                }
-                else if (loan.x.HasValue && loan.n.HasValue && loan.P.HasValue)
-                {
-                    <button class="btn btn-success mb-2" @onclick="Interest">Interest Rate</button>
-                }
-                else if (loan.P.HasValue && loan.n.HasValue && loan.i.HasValue)
-                {
-                    <button class="btn btn-success mb-2" @onclick="Payment">Monthly Payment</button>
-                }
-                else if (loan.x.HasValue && loan.P.HasValue && loan.i.HasValue)
-                {
-                    <button class="btn btn-success mb-2" @onclick="Years">Period</button>
-                }
-                @if (loan.x.HasValue && loan.n.HasValue && loan.P.HasValue)
-                {
-                    loan.T = Math.Round((decimal)(loan.x * loan.n * 12),2);
-                    loan.I = Math.Round((decimal)(loan.T - loan.P), 2);
-                    @if(loan.T.HasValue && loan.I.HasValue)
+                <div>
+                    @* <p>Calculate:</p> *@
+                    @if (loan.x.HasValue && loan.n.HasValue && loan.i.HasValue)
                     {
-                        <div class="alert alert-info">
-                            <pre>
-                                <i>Total amount repayable</i>  :<b>R @loan.T</b>
-                            </pre>
-                            <pre>
-                                <i>Total interest repayable</i>:<b>R @loan.I</b>
-                            </pre>
-                        </div>
+                        <button class="btn btn-success mb-2" @onclick="Amount">Purchase Price</button>
                     }
-                }
-                
+                    else if (loan.x.HasValue && loan.n.HasValue && loan.P.HasValue)
+                    {
+                        <button class="btn btn-success mb-2" @onclick="Interest">Interest Rate</button>
+                    }
+                    else if (loan.P.HasValue && loan.n.HasValue && loan.i.HasValue)
+                    {
+                        <button class="btn btn-success mb-2" @onclick="Payment">Monthly Payment</button>
+                    }
+                    else if (loan.x.HasValue && loan.P.HasValue && loan.i.HasValue)
+                    {
+                        <button class="btn btn-success mb-2" @onclick="Years">Period</button>
+                    }
+                    @if (loan.x.HasValue && loan.n.HasValue && loan.P.HasValue)
+                    {
+                        loan.T = Math.Round((decimal)(loan.x * loan.n * 12), 2);
+                        loan.I = Math.Round((decimal)(loan.T - loan.P), 2);
+                        @if (loan.T.HasValue && loan.I.HasValue)
+                        {
+                            <div class="alert alert-info">
+                                <pre>
+                                <i>Total amount repayable</i>  :<b>R @loan.T</b>
+                                        </pre>
+                                <pre>
+                                <i>Total interest repayable</i>:<b>R @loan.I</b>
+                                        </pre>
+                            </div>
+                        }
+                    }
+
+                </div>
             </div>
-        </div>
+        }
     </EditForm>
 </div>
 
@@ -80,16 +94,22 @@
 
     public async void Amount()
     {
-        if(loan.x.HasValue && loan.n.HasValue && loan.i.HasValue)
+        if(loan != null)
         {
-            loan.P = await calculate.PresentValue(loan.n.Value, loan.i.Value, loan.x.Value);
+            if (loan.x.HasValue && loan.n.HasValue && loan.i.HasValue)
+            {
+                loan.P = await calculate.PresentValue(loan.n.Value, loan.i.Value, loan.x.Value);
+            }
         }
     }
     public async void Payment()
     {
-        if(loan.P.HasValue && loan.n.HasValue && loan.i.HasValue)
+        if(loan != null)
         {
-            loan.x = await calculate.MonthlyPayment(loan.n.Value, loan.i.Value, loan.P.Value);
+            if (loan.P.HasValue && loan.n.HasValue && loan.i.HasValue && loan.D.HasValue)
+            {
+                loan.x = await calculate.MonthlyPayment(loan.n.Value, loan.i.Value, loan.P.Value - loan.D.Value);
+            }
         }
     }
 
@@ -99,9 +119,27 @@
 
     public async void Years()
     {
-        if(loan.P.HasValue && loan.x.HasValue && loan.i.HasValue)
+        if(loan != null)
         {
-            loan.n = await calculate.Period(loan.x.Value,loan.i.Value,loan.P.Value);
+            if (loan.P.HasValue && loan.x.HasValue && loan.i.HasValue && loan.D.HasValue)
+            {
+                loan.n = await calculate.Period(loan.x.Value, loan.i.Value, loan.P.Value - loan.D.Value);
+            }
+        }
+    }
+
+    private void OnInputYears(ChangeEventArgs e)
+    {
+        if(loan != null)
+        {
+            if (string.IsNullOrEmpty(e.Value?.ToString()))
+            {
+                loan.n = null;
+            }
+            if (int.TryParse(e.Value!.ToString(), out int result))
+            {
+                loan.n = result;
+            }
         }
     }
 }

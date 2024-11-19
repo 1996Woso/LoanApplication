@@ -1,4 +1,6 @@
-﻿namespace LoanApplictationApp.Services
+﻿using Microsoft.AspNetCore.Components;
+
+namespace LoanApplictationApp.Services
 {
     public class Calculations
     {
@@ -23,6 +25,21 @@
             decimal val2 = (decimal)Math.Log((double)(1 + i));// log(1+i)
             decimal n = Math.Round((decimal)((-val1 / val2) / 12), 0);//n = -log(1-(p*i)/x)/log(1+i)
             return (int)n;
+        }
+
+        public void OnInputDecimal(ChangeEventArgs e, Action<decimal?> updateProperty)
+        {
+            if(e != null && updateProperty != null)
+            {
+                if (string.IsNullOrEmpty(e.Value?.ToString()))
+                {
+                    updateProperty(null);
+                }
+                else if(decimal.TryParse(e.Value!.ToString(), out decimal result))
+                {
+                    updateProperty(result);
+                }
+            }
         }
     }
 }
