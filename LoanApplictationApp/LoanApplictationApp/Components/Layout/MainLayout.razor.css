@@ -142,3 +142,13 @@ main {
         right: 0.75rem;
         top: 0.5rem;
     }
+
+    .user-name-roles{
+        background-color: none
+    }
+    .user-name-roles:hover{
+        background-color: darkcyan;
+        color: black;
+        border-radius: 0.2rem;
+        height:2.5rem;
+    }

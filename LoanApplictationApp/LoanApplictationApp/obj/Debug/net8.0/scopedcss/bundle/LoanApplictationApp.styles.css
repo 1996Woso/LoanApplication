@@ -175,6 +175,16 @@ main[b-78rsiozk5i] {
         right: 0.75rem;
         top: 0.5rem;
     }
+
+    .user-name-roles[b-78rsiozk5i]{
+        background-color: none
+    }
+    .user-name-roles:hover[b-78rsiozk5i]{
+        background-color: darkcyan;
+        color: black;
+        border-radius: 0.2rem;
+        height:2.5rem;
+    }
 /* _content/LoanApplictationApp/Components/Layout/NavMenu.razor.rz.scp.css */
 .navbar-toggler[b-nsx5yt4hhp] {
     appearance: none;

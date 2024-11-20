@@ -6,28 +6,37 @@
 
 @if (User != null)
 {
-    <nav class="navbar navbar-nav navbar-expand-lg navbar-light" style="background-color:lightseagreen; height:50px">
+    <nav class="navbar navbar-nav navbar-expand-lg navbar-light" style="background-color:lightseagreen;height:4rem">
         <div class="container-fluid">
-            <div class="navbar-text text-white" style="font-weight: bold">
-                <p>@User.Name @User.Surname</p>
+            <div class="navbar-text text-white user-name-roles" style="font-weight: bold">
+                <p>
+                    Hello  @User.Name @User.Surname <i class="bi bi-person fs-5"></i>
+                </p>
             </div>
-            <div class="navbar-text text-white mb-2" style="font-weight:bold">
-                @if (Roles != null && Roles.Any())
-                {
-                    @String.Join(" | ",Roles)
-                }
+            <div class="navbar-text text-white mb-2 user-name-roles" style="font-weight:bold">
+                <p>
+                    Role(s):
+                    @if (Roles != null && Roles.Any())
+                    {
+                        @String.Join(" | ", Roles)
+                    }
+                </p>
             </div>
         </div>
     </nav>
 }
 <div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
+    @if(User != null)
+    {
+        <div class="sidebar">
+            <NavMenu />
+        </div>
+    }
 
     <main>
         <div class="top-row px-4">
             <a href="" target="_blank">Apply for a loan</a>
+            <a href="/Account/Login">Login</a>
             <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About us?</a>
             @* <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a> *@
         </div>

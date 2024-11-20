@@ -73,7 +73,9 @@
                         <label for="confirm-password">Confirm Password</label>
                         <ValidationMessage For="() => Input.ConfirmPassword" class="text-danger" />
                     </div>
-                    <button type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
+                    <button type="submit" class="w-100 btn btn-lg btn-primary">
+                        <i class="bi bi-pencil"></i> Register
+                    </button>
                 </EditForm>
             </div>
         </div>
@@ -170,9 +172,10 @@
             NavigationManager.ToAbsoluteUri("Account/ConfirmEmail").AbsoluteUri,
             new Dictionary<string, object?> { ["userId"] = userId, ["code"] = code, ["returnUrl"] = ReturnUrl });
         //Sending email
-        await emailService.SendEmailAsync(user.Email,
-            "Confirm email",
-             $"Please click this link to confirm your email: {callbackUrl}");
+        var body = $@"Good day {user.Name} {user.Surname},<br><br>
+                       Please click this link to confirm your email:<br>
+                       <a href = '{callbackUrl}'> Confirm Email </a>";
+        await emailService.SendEmailAsync(user.Email ?? "","Confirm email",body);
         if (UserManager.Options.SignIn.RequireConfirmedAccount)
         {
             RedirectManager.RedirectTo(

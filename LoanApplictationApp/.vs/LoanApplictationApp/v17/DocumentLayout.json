@@ -3,44 +3,56 @@
   "WorkspaceRootPath": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\loanapplication\\loanapplictationapp\\loanapplictationapp\\components\\account\\pages\\registerconfirmation.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|solutionrelative:loanapplictationapp\\components\\account\\pages\\registerconfirmation.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\loanapplication\\loanapplictationapp\\loanapplictationapp\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|solutionrelative:loanapplictationapp\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\loanapplication\\loanapplictationapp\\loanapplictationapp\\components\\account\\pages\\forgotpasswordconfirmation.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|solutionrelative:loanapplictationapp\\components\\account\\pages\\forgotpasswordconfirmation.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\loanapplication\\loanapplictationapp\\loanapplictationapp\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|solutionrelative:loanapplictationapp\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\loanapplication\\loanapplictationapp\\loanapplictationapp\\components\\account\\pages\\resendemailconfirmation.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|solutionrelative:loanapplictationapp\\components\\account\\pages\\resendemailconfirmation.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\loanapplication\\loanapplictationapp\\loanapplictationapp\\components\\layout\\mainlayout.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|solutionrelative:loanapplictationapp\\components\\layout\\mainlayout.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\loanapplication\\loanapplictationapp\\loanapplictationapp\\components\\account\\pages\\forgotpassword.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|solutionrelative:loanapplictationapp\\components\\account\\pages\\forgotpassword.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\loanapplication\\loanapplictationapp\\loanapplictationapp\\services\\calculations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|solutionrelative:loanapplictationapp\\services\\calculations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\loanapplication\\loanapplictationapp\\loanapplictationapp\\components\\controls\\calculators\\repayment.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|solutionrelative:loanapplictationapp\\components\\controls\\calculators\\repayment.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\loanapplication\\loanapplictationapp\\loanapplictationapp\\components\\controls\\calculators\\affordability.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|solutionrelative:loanapplictationapp\\components\\controls\\calculators\\affordability.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\loanapplication\\loanapplictationapp\\loanapplictationapp\\components\\account\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|solutionrelative:loanapplictationapp\\components\\account\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\loanapplication\\loanapplictationapp\\loanapplictationapp\\components\\account\\pages\\register.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|solutionrelative:loanapplictationapp\\components\\account\\pages\\register.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\loanapplication\\loanapplictationapp\\loanapplictationapp\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|solutionrelative:loanapplictationapp\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\loanapplication\\loanapplictationapp\\loanapplictationapp\\components\\controls\\alertmessages\\successmessage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|solutionrelative:loanapplictationapp\\components\\controls\\alertmessages\\successmessage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\loanapplication\\loanapplictationapp\\loanapplictationapp\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|solutionrelative:loanapplictationapp\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\loanapplication\\loanapplictationapp\\loanapplictationapp\\components\\account\\pages\\resetpasswordconfirmation.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|solutionrelative:loanapplictationapp\\components\\account\\pages\\resetpasswordconfirmation.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\loanapplication\\loanapplictationapp\\loanapplictationapp\\components\\account\\pages\\registerconfirmation.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|solutionrelative:loanapplictationapp\\components\\account\\pages\\registerconfirmation.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\loanapplication\\loanapplictationapp\\loanapplictationapp\\components\\account\\pages\\resendemailconfirmation.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|solutionrelative:loanapplictationapp\\components\\account\\pages\\resendemailconfirmation.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\loanapplication\\loanapplictationapp\\loanapplictationapp\\components\\account\\pages\\resetpassword.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|solutionrelative:loanapplictationapp\\components\\account\\pages\\resetpassword.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\loanapplication\\loanapplictationapp\\loanapplictationapp\\components\\account\\pages\\forgotpasswordconfirmation.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|solutionrelative:loanapplictationapp\\components\\account\\pages\\forgotpasswordconfirmation.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\loanapplication\\loanapplictationapp\\loanapplictationapp\\components\\controls\\calculators\\affordability.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|solutionrelative:loanapplictationapp\\components\\controls\\calculators\\affordability.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\loanapplication\\loanapplictationapp\\loanapplictationapp\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|solutionrelative:loanapplictationapp\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\loanapplication\\loanapplictationapp\\loanapplictationapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -51,24 +63,8 @@
       "RelativeMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|solutionrelative:loanapplictationapp\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\loanapplication\\loanapplictationapp\\loanapplictationapp\\models\\presentvalue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|solutionrelative:loanapplictationapp\\models\\presentvalue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\loanapplication\\loanapplictationapp\\loanapplictationapp\\models\\affordability.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|solutionrelative:loanapplictationapp\\models\\affordability.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\loanapplication\\loanapplictationapp\\loanapplictationapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|solutionrelative:loanapplictationapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\loanapplication\\loanapplictationapp\\loanapplictationapp\\models\\smtpsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|solutionrelative:loanapplictationapp\\models\\smtpsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\loanapplication\\loanapplictationapp\\loanapplictationapp\\components\\pages\\home.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|solutionrelative:loanapplictationapp\\components\\pages\\home.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\loanapplication\\loanapplictationapp\\loanapplictationapp\\components\\layout\\navmenu.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -82,11 +78,75 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "MainLayout.razor.css",
+              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\Components\\Layout\\MainLayout.razor.css",
+              "RelativeDocumentMoniker": "LoanApplictationApp\\Components\\Layout\\MainLayout.razor.css",
+              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\Components\\Layout\\MainLayout.razor.css",
+              "RelativeToolTip": "LoanApplictationApp\\Components\\Layout\\MainLayout.razor.css",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAAAJcAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-11-20T11:35:09.88Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\Components\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "LoanApplictationApp\\Components\\Layout\\MainLayout.razor",
+              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\Components\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "LoanApplictationApp\\Components\\Layout\\MainLayout.razor",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACYAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T11:26:07.406Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ResetPasswordConfirmation.razor",
+              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\Components\\Account\\Pages\\ResetPasswordConfirmation.razor",
+              "RelativeDocumentMoniker": "LoanApplictationApp\\Components\\Account\\Pages\\ResetPasswordConfirmation.razor",
+              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\Components\\Account\\Pages\\ResetPasswordConfirmation.razor",
+              "RelativeToolTip": "LoanApplictationApp\\Components\\Account\\Pages\\ResetPasswordConfirmation.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T06:29:41.806Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ResetPassword.razor",
+              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\Components\\Account\\Pages\\ResetPassword.razor",
+              "RelativeDocumentMoniker": "LoanApplictationApp\\Components\\Account\\Pages\\ResetPassword.razor",
+              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\Components\\Account\\Pages\\ResetPassword.razor",
+              "RelativeToolTip": "LoanApplictationApp\\Components\\Account\\Pages\\ResetPassword.razor",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAqwBIAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T06:29:22.715Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RegisterConfirmation.razor",
+              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\Components\\Account\\Pages\\RegisterConfirmation.razor",
+              "RelativeDocumentMoniker": "LoanApplictationApp\\Components\\Account\\Pages\\RegisterConfirmation.razor",
+              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\Components\\Account\\Pages\\RegisterConfirmation.razor",
+              "RelativeToolTip": "LoanApplictationApp\\Components\\Account\\Pages\\RegisterConfirmation.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-19T08:34:02.34Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "ForgotPasswordConfirmation.razor",
               "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\Components\\Account\\Pages\\ForgotPasswordConfirmation.razor",
               "RelativeDocumentMoniker": "LoanApplictationApp\\Components\\Account\\Pages\\ForgotPasswordConfirmation.razor",
@@ -94,88 +154,23 @@
               "RelativeToolTip": "LoanApplictationApp\\Components\\Account\\Pages\\ForgotPasswordConfirmation.razor",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-19T13:37:38.908Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-19T13:37:38.908Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ForgotPassword.razor",
-              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\Components\\Account\\Pages\\ForgotPassword.razor",
-              "RelativeDocumentMoniker": "LoanApplictationApp\\Components\\Account\\Pages\\ForgotPassword.razor",
-              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\Components\\Account\\Pages\\ForgotPassword.razor",
-              "RelativeToolTip": "LoanApplictationApp\\Components\\Account\\Pages\\ForgotPassword.razor",
-              "ViewState": "AgIAADwAAAAAAAAAAAAAAEQAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-19T13:07:50.471Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "RegisterConfirmation.razor",
-              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\Components\\Account\\Pages\\RegisterConfirmation.razor",
-              "RelativeDocumentMoniker": "LoanApplictationApp\\Components\\Account\\Pages\\RegisterConfirmation.razor",
-              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\Components\\Account\\Pages\\RegisterConfirmation.razor",
-              "RelativeToolTip": "LoanApplictationApp\\Components\\Account\\Pages\\RegisterConfirmation.razor",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-19T08:34:02.34Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Calculations.cs",
-              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\Services\\Calculations.cs",
-              "RelativeDocumentMoniker": "LoanApplictationApp\\Services\\Calculations.cs",
-              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\Services\\Calculations.cs",
-              "RelativeToolTip": "LoanApplictationApp\\Services\\Calculations.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAowCcAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T13:04:14.18Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Affordability.cs",
-              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\Models\\Affordability.cs",
-              "RelativeDocumentMoniker": "LoanApplictationApp\\Models\\Affordability.cs",
-              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\Models\\Affordability.cs",
-              "RelativeToolTip": "LoanApplictationApp\\Models\\Affordability.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T14:49:03.015Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "PresentValue.cs",
-              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\Models\\PresentValue.cs",
-              "RelativeDocumentMoniker": "LoanApplictationApp\\Models\\PresentValue.cs",
-              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\Models\\PresentValue.cs",
-              "RelativeToolTip": "LoanApplictationApp\\Models\\PresentValue.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T14:16:20.042Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "ResendEmailConfirmation.razor",
               "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\Components\\Account\\Pages\\ResendEmailConfirmation.razor",
               "RelativeDocumentMoniker": "LoanApplictationApp\\Components\\Account\\Pages\\ResendEmailConfirmation.razor",
               "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\Components\\Account\\Pages\\ResendEmailConfirmation.razor",
               "RelativeToolTip": "LoanApplictationApp\\Components\\Account\\Pages\\ResendEmailConfirmation.razor",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAGAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-15T12:14:11.05Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-15T12:14:11.05Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "App.razor",
               "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\Components\\App.razor",
               "RelativeDocumentMoniker": "LoanApplictationApp\\Components\\App.razor",
@@ -187,32 +182,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Repayment.razor",
-              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\Components\\Controls\\Calculators\\Repayment.razor",
-              "RelativeDocumentMoniker": "LoanApplictationApp\\Components\\Controls\\Calculators\\Repayment.razor",
-              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\Components\\Controls\\Calculators\\Repayment.razor",
-              "RelativeToolTip": "LoanApplictationApp\\Components\\Controls\\Calculators\\Repayment.razor",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAAAEYAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-15T08:03:55.409Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "SmtpSettings.cs",
-              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\Models\\SmtpSettings.cs",
-              "RelativeDocumentMoniker": "LoanApplictationApp\\Models\\SmtpSettings.cs",
-              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\Models\\SmtpSettings.cs",
-              "RelativeToolTip": "LoanApplictationApp\\Models\\SmtpSettings.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T12:33:23.813Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\Program.cs",
               "RelativeDocumentMoniker": "LoanApplictationApp\\Program.cs",
@@ -224,19 +194,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
+              "Title": "Home.razor",
+              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\Components\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "LoanApplictationApp\\Components\\Pages\\Home.razor",
+              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\Components\\Pages\\Home.razor",
+              "RelativeToolTip": "LoanApplictationApp\\Components\\Pages\\Home.razor",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAFEAAABaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-13T06:50:00.933Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SuccessMessage.razor",
+              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\Components\\Controls\\AlertMessages\\SuccessMessage.razor",
+              "RelativeDocumentMoniker": "LoanApplictationApp\\Components\\Controls\\AlertMessages\\SuccessMessage.razor",
+              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\Components\\Controls\\AlertMessages\\SuccessMessage.razor",
+              "RelativeToolTip": "LoanApplictationApp\\Components\\Controls\\AlertMessages\\SuccessMessage.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T07:16:07.103Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Login.razor",
+              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\Components\\Account\\Pages\\Login.razor",
+              "RelativeDocumentMoniker": "LoanApplictationApp\\Components\\Account\\Pages\\Login.razor",
+              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\Components\\Account\\Pages\\Login.razor",
+              "RelativeToolTip": "LoanApplictationApp\\Components\\Account\\Pages\\Login.razor",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADQAAABmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T11:11:26.272Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Register.razor",
               "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\Components\\Account\\Pages\\Register.razor",
               "RelativeDocumentMoniker": "LoanApplictationApp\\Components\\Account\\Pages\\Register.razor",
               "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\Components\\Account\\Pages\\Register.razor",
               "RelativeToolTip": "LoanApplictationApp\\Components\\Account\\Pages\\Register.razor",
-              "ViewState": "AgIAAKoAAAAAAAAAAABBwKwAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAEwAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-15T12:17:40.713Z"
+              "WhenOpened": "2024-11-15T12:17:40.713Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "_Imports.razor",
               "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\Components\\_Imports.razor",
               "RelativeDocumentMoniker": "LoanApplictationApp\\Components\\_Imports.razor",
@@ -248,7 +258,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\appsettings.json",
               "RelativeDocumentMoniker": "LoanApplictationApp\\appsettings.json",
@@ -260,7 +270,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "Affordability.razor",
               "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\Components\\Controls\\Calculators\\Affordability.razor",
               "RelativeDocumentMoniker": "LoanApplictationApp\\Components\\Controls\\Calculators\\Affordability.razor",
@@ -272,19 +282,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Home.razor",
-              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\Components\\Pages\\Home.razor",
-              "RelativeDocumentMoniker": "LoanApplictationApp\\Components\\Pages\\Home.razor",
-              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\Components\\Pages\\Home.razor",
-              "RelativeToolTip": "LoanApplictationApp\\Components\\Pages\\Home.razor",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAiwFEAAABaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-13T06:50:00.933Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 16,
               "Title": "NavMenu.razor.css",
               "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\Components\\Layout\\NavMenu.razor.css",
               "RelativeDocumentMoniker": "LoanApplictationApp\\Components\\Layout\\NavMenu.razor.css",
@@ -293,18 +291,6 @@
               "ViewState": "AgIAAIAAAAAAAAAAAAAAAEUAAAD3AwAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-11-13T11:01:26.228Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Home.razor.css",
-              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\Components\\Pages\\Home.razor.css",
-              "RelativeDocumentMoniker": "LoanApplictationApp\\Components\\Pages\\Home.razor.css",
-              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\Components\\Pages\\Home.razor.css",
-              "RelativeToolTip": "LoanApplictationApp\\Components\\Pages\\Home.razor.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-15T07:47:46.154Z"
             }
           ]
         }

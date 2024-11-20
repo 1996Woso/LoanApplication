@@ -284,13 +284,6 @@ C:\Users\10114629\source\repos\Eviwe\LoanApplictationApp\LoanApplictationApp\obj
 C:\Users\10114629\source\repos\Eviwe\LoanApplictationApp\LoanApplictationApp\obj\Debug\net8.0\LoanApplictationApp.pdb
 C:\Users\10114629\source\repos\Eviwe\LoanApplictationApp\LoanApplictationApp\obj\Debug\net8.0\LoanApplictationApp.genruntimeconfig.cache
 C:\Users\10114629\source\repos\Eviwe\LoanApplictationApp\LoanApplictationApp\obj\Debug\net8.0\ref\LoanApplictationApp.dll
-C:\Users\10114629\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplictationApp\obj\Debug\net8.0\LoanApplictationApp.csproj.AssemblyReference.cache
-C:\Users\10114629\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplictationApp\obj\Debug\net8.0\LoanApplictationApp.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\10114629\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplictationApp\obj\Debug\net8.0\LoanApplictationApp.AssemblyInfoInputs.cache
-C:\Users\10114629\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplictationApp\obj\Debug\net8.0\LoanApplictationApp.AssemblyInfo.cs
-C:\Users\10114629\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplictationApp\obj\Debug\net8.0\LoanApplictationApp.csproj.CoreCompileInputs.cache
-C:\Users\10114629\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplictationApp\obj\Debug\net8.0\LoanApplictationApp.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\10114629\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplictationApp\obj\Debug\net8.0\LoanApplictationApp.sourcelink.json
 C:\Users\10114629\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplictationApp\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\10114629\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplictationApp\bin\Debug\net8.0\appsettings.json
 C:\Users\10114629\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplictationApp\bin\Debug\net8.0\LoanApplictationApp.staticwebassets.runtime.json
@@ -410,6 +403,13 @@ C:\Users\10114629\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApp
 C:\Users\10114629\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplictationApp\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 C:\Users\10114629\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplictationApp\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\10114629\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplictationApp\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\10114629\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplictationApp\obj\Debug\net8.0\LoanApplictationApp.csproj.AssemblyReference.cache
+C:\Users\10114629\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplictationApp\obj\Debug\net8.0\LoanApplictationApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\10114629\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplictationApp\obj\Debug\net8.0\LoanApplictationApp.AssemblyInfoInputs.cache
+C:\Users\10114629\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplictationApp\obj\Debug\net8.0\LoanApplictationApp.AssemblyInfo.cs
+C:\Users\10114629\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplictationApp\obj\Debug\net8.0\LoanApplictationApp.csproj.CoreCompileInputs.cache
+C:\Users\10114629\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplictationApp\obj\Debug\net8.0\LoanApplictationApp.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\10114629\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplictationApp\obj\Debug\net8.0\LoanApplictationApp.sourcelink.json
 C:\Users\10114629\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplictationApp\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\10114629\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplictationApp\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\10114629\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplictationApp\obj\Debug\net8.0\staticwebassets\msbuild.LoanApplictationApp.Microsoft.AspNetCore.StaticWebAssets.props

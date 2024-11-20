@@ -85,10 +85,11 @@ else if (!string.IsNullOrEmpty(successMessage))
         }
         else
         {
+            var body = $@"Good day {user.Name} {user.Surname},<br><br>
+                       Please click this link to confirm your email:<br>
+                       <a href = '{callbackUrl}'> Confirm Email </a>";
             //Sending email
-            await emailService.SendEmailAsync(user.Email ?? "",
-                "Confirm email",
-                 $"Please click this link to confirm your email: {callbackUrl}");
+            await emailService.SendEmailAsync(user.Email ?? "","Confirm email",body);
 
             successMessage = "Verification email sent. Please check your email.";
         }
