@@ -2,7 +2,7 @@
 
 namespace LoanApplictationApp.Models
 {
-    public class PresentValue
+    public class Repayable
     {
         [Range(0,5000000,ErrorMessage ="Loan amount must be between 0 and 5000000")]
         public decimal? P { get; set; }//Purchase price

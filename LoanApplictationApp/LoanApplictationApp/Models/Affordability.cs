@@ -1,6 +1,6 @@
 ﻿namespace LoanApplictationApp.Models
 {
-    public class Affordability:PresentValue
+    public class Affordability:Repayable
     {
         public decimal? GrossIncome { get; set; } //Monthly gross salary
         public  decimal? MaxAffordInstall { get; set; }
