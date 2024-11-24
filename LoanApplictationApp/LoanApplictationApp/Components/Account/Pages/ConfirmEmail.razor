@@ -19,8 +19,8 @@
         @*class="card-body alert @(string.IsNullOrEmpty(successMessage)? "alert-danger":"alert-success")"*@
         @if (!string.IsNullOrEmpty(successMessage))
         {
-            <SuccessMessage Message="@successMessage" />
-            <a class="btn-link" href="/Account/Login">Login</a>
+            <SuccessMessage MarkupMessage="@MarkupMessage" />
+            @*<a class="btn-link" href="/Account/Login">Login</a>*@
         }
         else if (!string.IsNullOrEmpty(errorMessage))
         {
@@ -33,7 +33,8 @@
 
 @code {
     private string? errorMessage;
-    private string? successMessage;
+    private string? successMessage = "";
+    private MarkupString MarkupMessage = (MarkupString)@"{successMessage}. Please <a href='Account/Login'> click here to log in </a>.";
     [CascadingParameter]
     private HttpContext HttpContext { get; set; } = default!;
 
