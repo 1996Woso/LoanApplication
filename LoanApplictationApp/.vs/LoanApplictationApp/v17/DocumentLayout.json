@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\10114629\\AppData\\Local\\SourceServer\\db6e67c5a997ca02ccfb0718037c82a0993dcdbeeb1cbcff5968c74bd6bbe5b8\\src\\Components\\Components\\src\\ComponentBase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\loanapplication\\loanapplictationapp\\loanapplictationapp\\components\\account\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|solutionrelative:loanapplictationapp\\components\\account\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\10114629\\AppData\\Local\\SourceServer\\db6e67c5a997ca02ccfb0718037c82a0993dcdbeeb1cbcff5968c74bd6bbe5b8\\src\\Components\\Components\\src\\ComponentBase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F9E70548-3417-4FEE-921D-32E12EDAD876}|LoanApplictationApp\\LoanApplictationApp.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\loanapplication\\loanapplictationapp\\loanapplictationapp\\components\\pages\\home.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -101,7 +101,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
@@ -114,18 +114,17 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-13T06:50:00.933Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ComponentBase.cs",
               "DocumentMoniker": "C:\\Users\\10114629\\AppData\\Local\\SourceServer\\db6e67c5a997ca02ccfb0718037c82a0993dcdbeeb1cbcff5968c74bd6bbe5b8\\src\\Components\\Components\\src\\ComponentBase.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\AppData\\Local\\SourceServer\\db6e67c5a997ca02ccfb0718037c82a0993dcdbeeb1cbcff5968c74bd6bbe5b8\\src\\Components\\Components\\src\\ComponentBase.cs",
               "ToolTip": "C:\\Users\\10114629\\AppData\\Local\\SourceServer\\db6e67c5a997ca02ccfb0718037c82a0993dcdbeeb1cbcff5968c74bd6bbe5b8\\src\\Components\\Components\\src\\ComponentBase.cs",
               "RelativeToolTip": "..\\..\\..\\..\\..\\AppData\\Local\\SourceServer\\db6e67c5a997ca02ccfb0718037c82a0993dcdbeeb1cbcff5968c74bd6bbe5b8\\src\\Components\\Components\\src\\ComponentBase.cs",
-              "ViewState": "AgIAAPAAAAAAAAAAAAAlwAYBAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAOoAAAAAAAAAAAAlwBABAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-28T07:05:21.233Z",
               "EditorCaption": ""
@@ -140,8 +139,7 @@
               "RelativeToolTip": "LoanApplictationApp\\Components\\Controls\\AlertMessages\\SuccessMessage.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-28T06:04:20.391Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-28T06:04:20.391Z"
             },
             {
               "$type": "Document",
@@ -153,18 +151,17 @@
               "RelativeToolTip": "LoanApplictationApp\\Components\\Pages\\Home.razor.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-28T05:47:49.893Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-28T05:47:49.893Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Login.razor",
               "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\Components\\Account\\Pages\\Login.razor",
               "RelativeDocumentMoniker": "LoanApplictationApp\\Components\\Account\\Pages\\Login.razor",
               "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\Components\\Account\\Pages\\Login.razor",
               "RelativeToolTip": "LoanApplictationApp\\Components\\Account\\Pages\\Login.razor",
-              "ViewState": "AgIAADoAAAAAAAAAAAAjwFAAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-26T10:28:19.738Z",
               "EditorCaption": ""
@@ -179,8 +176,7 @@
               "RelativeToolTip": "LoanApplictationApp\\Components\\Layout\\MainLayout.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-20T11:26:07.406Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T11:26:07.406Z"
             },
             {
               "$type": "Document",
@@ -192,8 +188,7 @@
               "RelativeToolTip": "LoanApplictationApp\\Components\\Layout\\MainLayout.razor.css",
               "ViewState": "AgIAAH4AAAAAAAAAAAAAAJkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-20T11:35:09.88Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T11:35:09.88Z"
             },
             {
               "$type": "Document",
@@ -217,8 +212,7 @@
               "RelativeToolTip": "LoanApplictationApp\\wwwroot\\app.css",
               "ViewState": "AgIAAA4AAAAAAAAAAAAAAA8AAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-27T12:51:32.744Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T12:51:32.744Z"
             },
             {
               "$type": "Document",
