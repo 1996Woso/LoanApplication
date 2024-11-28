@@ -1,2 +1,13 @@
 body[b-s153zijqye] {
 }
+
+.btn-close[b-s153zijqye] {
+    width: 2rem;           
+    height: 2rem;           
+    border-radius: 50%;     
+}
+
+.btn-close:hover[b-s153zijqye] {
+    background-color: darkgray;  
+    color: white;                
+}

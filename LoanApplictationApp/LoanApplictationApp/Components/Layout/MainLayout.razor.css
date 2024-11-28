@@ -144,11 +144,11 @@ main {
     }
 
     .user-name-roles{
+        height:2.5rem;
         background-color: none
     }
     .user-name-roles:hover{
         background-color: darkcyan;
         color: black;
         border-radius: 0.2rem;
-        height:2.5rem;
     }

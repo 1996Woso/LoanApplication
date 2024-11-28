@@ -144,11 +144,11 @@ main[b-78rsiozk5i] {
     }
 
     .user-name-roles[b-78rsiozk5i]{
+        height:2.5rem;
         background-color: none
     }
     .user-name-roles:hover[b-78rsiozk5i]{
         background-color: darkcyan;
         color: black;
         border-radius: 0.2rem;
-        height:2.5rem;
     }

@@ -1,2 +1,12 @@
 body[b-8fbxsxx1ie] {
 }
+.btn-close[b-8fbxsxx1ie] {
+    width: 2rem;           
+    height: 2rem;           
+    border-radius: 50%;     
+}
+
+.btn-close:hover[b-8fbxsxx1ie] {
+    background-color: darkgray;  
+    color: white;                
+}

@@ -1,14 +1,45 @@
 /* _content/LoanApplictationApp/Components/Controls/AlertMessages/ErrorMessage.razor.rz.scp.css */
 body[b-8fbxsxx1ie] {
 }
+.btn-close[b-8fbxsxx1ie] {
+    width: 2rem;           
+    height: 2rem;           
+    border-radius: 50%;     
+}
+
+.btn-close:hover[b-8fbxsxx1ie] {
+    background-color: darkgray;  
+    color: white;                
+}
 /* _content/LoanApplictationApp/Components/Controls/AlertMessages/InfoMessage.razor.rz.scp.css */
 body[b-s153zijqye] {
+}
+
+.btn-close[b-s153zijqye] {
+    width: 2rem;           
+    height: 2rem;           
+    border-radius: 50%;     
+}
+
+.btn-close:hover[b-s153zijqye] {
+    background-color: darkgray;  
+    color: white;                
 }
 /* _content/LoanApplictationApp/Components/Controls/AlertMessages/SuccessMessage.razor.rz.scp.css */
 body[b-jwt6g77h0x] {
 }
 .success-message[b-jwt6g77h0x]{
 
+}
+.btn-close[b-jwt6g77h0x] {
+    width: 2rem;           
+    height: 2rem;           
+    border-radius: 50%;     
+}
+
+.btn-close:hover[b-jwt6g77h0x] {
+    background-color: darkgray;  
+    color: white;                
 }
 /* _content/LoanApplictationApp/Components/Controls/Calculators/Affordability.razor.rz.scp.css */
 body[b-26j9hufh6z] {
@@ -177,13 +208,13 @@ main[b-78rsiozk5i] {
     }
 
     .user-name-roles[b-78rsiozk5i]{
+        height:2.5rem;
         background-color: none
     }
     .user-name-roles:hover[b-78rsiozk5i]{
         background-color: darkcyan;
         color: black;
         border-radius: 0.2rem;
-        height:2.5rem;
     }
 /* _content/LoanApplictationApp/Components/Layout/NavMenu.razor.rz.scp.css */
 .navbar-toggler[b-nsx5yt4hhp] {
@@ -331,17 +362,70 @@ main[b-78rsiozk5i] {
 /* _content/LoanApplictationApp/Components/Pages/Home.razor.rz.scp.css */
 body[b-nlbqh7o17r] {
 }
-button[b-nlbqh7o17r]{
+button[b-nlbqh7o17r] {
     border-radius: 0px !important;
     width: 25%;
     height: 3rem;
-    background-color:black;
-    color:aliceblue;
+    background-color: black;
+    color: aliceblue;
     font-weight: bold;
+/*    outline: none !important;
+    border:none !important;*/
 }
 
 button:hover[b-nlbqh7o17r]{
     background-color:darkseagreen;
     color:whitesmoke;
     transform: scale(1.01);
+}
+button:focus[b-nlbqh7o17r]{
+    outline:none !important;
+}
+/*button:active{
+    border: 2px solid white !important;
+}*/
+.bg-container[b-nlbqh7o17r] {
+    background-image: url('https://images.pexels.com/photos/8293720/pexels-photo-8293720.jpeg');
+    min-height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    /*   text-align: center; */
+    color: black;
+    padding-top: 4rem;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: flex-start; 
+}
+
+.card[b-nlbqh7o17r] {
+    background-color: transparent !important; /* Make the card background transparent */
+    border: none !important; /* Remove the card border */
+    box-shadow: none !important; /* Remove the card shadow */
+}
+
+.card-header-tabs[b-nlbqh7o17r] {
+    background-color: transparent !important; /* Make the card header background transparent */
+    border-bottom: none !important; /* Remove the card header border */
+}
+
+.card-body[b-nlbqh7o17r] {
+    color: black !important; /* Ensure text color is visible on the background */
+}
+.content[b-nlbqh7o17r]{
+    flex-grow:1;
+}
+.social-media-links[b-nlbqh7o17r] {
+  /*  position: absolute;
+    left: 50%;
+    transform: translateX(-50%);*/
+    bottom: 1rem; 
+    text-align: center;
+}
+.social-media-links a[b-nlbqh7o17r] {
+        margin: 0 0.5rem;
+        color: black; /* Ensure icons are visible */
+        font-size: 1.5rem; /* Adjust icon size */
 }

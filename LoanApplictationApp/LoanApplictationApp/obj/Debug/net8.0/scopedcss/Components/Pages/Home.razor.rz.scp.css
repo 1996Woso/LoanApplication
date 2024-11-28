@@ -1,16 +1,69 @@
 body[b-nlbqh7o17r] {
 }
-button[b-nlbqh7o17r]{
+button[b-nlbqh7o17r] {
     border-radius: 0px !important;
     width: 25%;
     height: 3rem;
-    background-color:black;
-    color:aliceblue;
+    background-color: black;
+    color: aliceblue;
     font-weight: bold;
+/*    outline: none !important;
+    border:none !important;*/
 }
 
 button:hover[b-nlbqh7o17r]{
     background-color:darkseagreen;
     color:whitesmoke;
     transform: scale(1.01);
+}
+button:focus[b-nlbqh7o17r]{
+    outline:none !important;
+}
+/*button:active{
+    border: 2px solid white !important;
+}*/
+.bg-container[b-nlbqh7o17r] {
+    background-image: url('https://images.pexels.com/photos/8293720/pexels-photo-8293720.jpeg');
+    min-height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    /*   text-align: center; */
+    color: black;
+    padding-top: 4rem;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: flex-start; 
+}
+
+.card[b-nlbqh7o17r] {
+    background-color: transparent !important; /* Make the card background transparent */
+    border: none !important; /* Remove the card border */
+    box-shadow: none !important; /* Remove the card shadow */
+}
+
+.card-header-tabs[b-nlbqh7o17r] {
+    background-color: transparent !important; /* Make the card header background transparent */
+    border-bottom: none !important; /* Remove the card header border */
+}
+
+.card-body[b-nlbqh7o17r] {
+    color: black !important; /* Ensure text color is visible on the background */
+}
+.content[b-nlbqh7o17r]{
+    flex-grow:1;
+}
+.social-media-links[b-nlbqh7o17r] {
+  /*  position: absolute;
+    left: 50%;
+    transform: translateX(-50%);*/
+    bottom: 1rem; 
+    text-align: center;
+}
+.social-media-links a[b-nlbqh7o17r] {
+        margin: 0 0.5rem;
+        color: black; /* Ensure icons are visible */
+        font-size: 1.5rem; /* Adjust icon size */
 }

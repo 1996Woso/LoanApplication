@@ -6,7 +6,10 @@
         <h6>
             <span style="border:2px solid white; border-radius:25%; padding:5px;background-color:white">ℹ️</span> @Message
         </h6>
-        <button class="btn btn-close" @onclick="() => IsDivDisplayed = !IsDivDisplayed"></button>
+        <div class="hover-btn">
+            <button class="btn btn-close" @onclick="() => IsDivDisplayed = !IsDivDisplayed"></button>
+            <span>Dismiss</span>
+        </div>
     </div>
 }
 

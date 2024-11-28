@@ -1,4 +1,5 @@
 ﻿@page "/Account/ResendEmailConfirmation"
+@rendermode InteractiveServer
 
 @using System.ComponentModel.DataAnnotations
 @using System.Text
@@ -44,15 +45,15 @@
 </div>
 @if (!string.IsNullOrEmpty(errorMessage))
 {
-    <ErrorMessage Message="@errorMessage" />
+    <ErrorMessage Message="@errorMessage" IsDivDisplayed="true" />
 }
 else if (!string.IsNullOrEmpty(infoMessage))
 {
-    <InfoMessage Message="@infoMessage" />
+    <InfoMessage Message="@infoMessage" IsDivDisplayed="true" />
 }
 else if (!string.IsNullOrEmpty(successMessage))
 {
-    <SuccessMessage Message="@successMessage" />
+    <SuccessMessage Message="@successMessage" IsDivDisplayed ="true"/>
 }
 
 
