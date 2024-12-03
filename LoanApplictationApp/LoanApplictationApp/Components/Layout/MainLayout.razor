@@ -13,15 +13,14 @@
                     Hello  @User.Name @User.Surname <i class="bi bi-person fs-5"></i>
                 </p>
             </div>
-            <div class="navbar-text text-white mb-2 user-name-roles" style="font-weight:bold">
-                <p>
-                    Role(s):
-                    @if (Roles != null && Roles.Any())
-                    {
-                        @String.Join(" | ", Roles)
-                    }
-                </p>
-            </div>
+            @if (Roles != null && Roles.Any())
+            {
+                <div class="navbar-text text-white mb-2 user-name-roles" style="font-weight:bold">
+                    <p>
+                        Role(s):@String.Join(" | ", Roles)
+                    </p>
+                </div>
+            }
         </div>
     </nav>
 }
@@ -36,7 +35,10 @@
     <main>
         <div class="top-row px-4">
             <a href="" target="_blank">Apply for a loan</a>
-            <a href="/Account/Login">Login</a>
+            @if (User == null)
+            {
+                <a href="/Account/Login">Login</a>
+            }
             <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About us?</a>
             @* <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a> *@
         </div>

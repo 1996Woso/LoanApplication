@@ -1,52 +1,56 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\LoanApplictationApp.bundle.scp.css",
-      "PackagePath": "staticwebassets\\LoanApplictationApp.bundle.scp.css"
+      "Id": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\LoanApplictationApp.bundle.scp.css",
+      "PackagePath": "staticwebassets\\LoanApplictationApp.nqx3hwlxtn.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\Images\\Access Denied.png",
+      "Id": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\Images\\Access Denied.png",
       "PackagePath": "staticwebassets\\Images\\Access Denied.png"
     },
     {
-      "Id": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\Images\\Add Role.png",
+      "Id": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\Images\\Add Role.png",
       "PackagePath": "staticwebassets\\Images\\Add Role.png"
     },
     {
-      "Id": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\Images\\Assing Role.png",
+      "Id": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\Images\\Assing Role.png",
       "PackagePath": "staticwebassets\\Images\\Assing Role.png"
     },
     {
-      "Id": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\Images\\House Hands.png",
+      "Id": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\Images\\House Hands.png",
       "PackagePath": "staticwebassets\\Images\\House Hands.png"
     },
     {
-      "Id": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\Images\\House.jpeg",
+      "Id": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\Images\\House.jpeg",
       "PackagePath": "staticwebassets\\Images\\House.jpeg"
     },
     {
-      "Id": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\Images\\Remove Role.png",
+      "Id": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\Images\\Remove Role.png",
       "PackagePath": "staticwebassets\\Images\\Remove Role.png"
     },
     {
-      "Id": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\Images\\Unauthorised.PNG",
+      "Id": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\Images\\Unauthorised.PNG",
       "PackagePath": "staticwebassets\\Images\\Unauthorised.PNG"
     },
     {
-      "Id": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\app.css",
+      "Id": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\app.css",
       "PackagePath": "staticwebassets\\app.css"
     },
     {
-      "Id": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Id": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\10114629\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\favicon.png",
+      "Id": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.LoanApplictationApp.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.LoanApplictationApp.Microsoft.AspNetCore.StaticWebAssets.props",

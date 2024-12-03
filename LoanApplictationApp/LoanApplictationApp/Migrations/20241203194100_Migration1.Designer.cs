@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LoanApplictationApp.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241012112126_AddedAppicationUser")]
-    partial class AddedAppicationUser
+    [Migration("20241203194100_Migration1")]
+    partial class Migration1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

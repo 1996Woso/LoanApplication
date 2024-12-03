@@ -134,3 +134,38 @@ h1:focus {
     visibility:visible;
     opacity:1;
 }
+/*-------------------*/
+/* Ensure the card is centered and responsive */
+.responsive-card {
+    max-width: 600px; /* Set maximum width for larger screens */
+    margin: 20px auto; /* Center the card with margin */
+    padding: 20px;
+}
+
+/* Responsive buttons */
+.responsive-btn {
+    font-size: 1rem; /* Default button text size */
+    padding: 10px 20px; /* Default padding for buttons */
+    flex-grow: 1; /* Allow buttons to stretch evenly */
+    min-width: 120px; /* Minimum width for buttons */
+}
+
+/* Adjustments for larger screens */
+@media (min-width: 768px) {
+    .responsive-btn {
+        font-size: 1.2rem; /* Increase font size */
+        padding: 15px 25px; /* Add more padding */
+    }
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 576px) {
+    .responsive-card {
+        padding: 10px; /* Reduce card padding */
+    }
+
+    .responsive-btn {
+        font-size: 0.9rem; /* Decrease font size */
+        padding: 8px 15px; /* Reduce padding */
+    }
+}

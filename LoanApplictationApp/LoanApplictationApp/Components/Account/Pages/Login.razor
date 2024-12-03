@@ -11,57 +11,64 @@
 @inject IdentityRedirectManager RedirectManager
 
 <PageTitle>Log in</PageTitle>
-<div class="card">
-    <div class="card-header" style="background-color:floralwhite;color:black">
-        <div class="col-md-12 text-md-center">
-            <h1>Log in</h1>
-        </div>
+<div class="card mx-auto" style="max-width: 400px; margin-top: 50px;">
+    <div class="card-header text-center" style="background-color: floralwhite; color:black;">
+        <h5>Log in</h5>
     </div>
     <div class="card-body">
-        <div class="row justify-content-center">
-            <div class="col-md-4">
-                <section>
-                    <StatusMessage Message="@errorMessage" />
-                    <EditForm Model="Input" method="post" OnValidSubmit="LoginUser" FormName="login">
-                        <DataAnnotationsValidator />
-                        <h2><u>Use a local account to log in.</u></h2>
-                        <ValidationSummary class="text-danger" role="alert" />
-                        <div class="form-floating mb-3">
-                            <InputText @bind-Value="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
-                            <label for="email" class="form-label">Email</label>
-                            <ValidationMessage For="() => Input.Email" class="text-danger" />
-                        </div>
-                        <div class="form-floating mb-3">
-                            <InputText type="password" @bind-Value="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" placeholder="password" />
-                            <label for="password" class="form-label">Password</label>
-                            <ValidationMessage For="() => Input.Password" class="text-danger" />
-                        </div>
-                        <div class="checkbox mb-3">
-                            <label class="form-label">
-                                <InputCheckbox @bind-Value="Input.RememberMe" class="darker-border-checkbox form-check-input" />
-                                Remember me
-                            </label>
-                        </div>
-                        <div>
-                            <button type="submit" class="w-100 btn btn-lg btn-primary">Log in</button>
-                        </div>
-                        <div class="mt-3">
-                            <p>
-                                Forgot your password? <a class="btn btn-link" href="Account/ForgotPassword">Reset</a>
-                            </p>
-                            <p>
-                                Don't have an account? <a class="btn btn-link" href="Account/Register">Sign Up</a>
-                            </p>
-                            <p>
-                                Didn't recieve confirmation email? <a class="btn btn-link" href="Account/ResendEmailConfirmation">Resend</a>
-                            </p>
-                        </div>
-                    </EditForm>
-                </section>
-            </div>
-        </div>
+        <section>
+            <StatusMessage Message="@errorMessage" />
+            <EditForm Model="Input" method="post" OnValidSubmit="LoginUser" FormName="login">
+                <DataAnnotationsValidator />
+                <div class="text-center mb-3">
+                    <h6><u>Use a local account to log in.</u></h6>
+                </div>
+                <ValidationSummary class="text-danger" role="alert" />
+                <div class="form-floating mb-3">
+                    <InputText @bind-Value="Input.Email"
+                               class="form-control"
+                               autocomplete="username"
+                               placeholder="name@example.com" />
+                    <label for="email" class="form-label">Email</label>
+                    <ValidationMessage For="() => Input.Email" class="text-danger" />
+                </div>
+                <div class="form-floating mb-3">
+                    <InputText type="password"
+                               @bind-Value="Input.Password"
+                               class="form-control"
+                               autocomplete="current-password"
+                               placeholder="password" />
+                    <label for="password" class="form-label">Password</label>
+                    <ValidationMessage For="() => Input.Password" class="text-danger" />
+                </div>
+                <div class="form-check mb-3">
+                    <InputCheckbox @bind-Value="Input.RememberMe" class="form-check-input" />
+                    <label class="form-check-label">
+                        Remember me
+                    </label>
+                </div>
+                <div>
+                    <button type="submit" class="w-100 btn btn-lg btn-primary">Log in</button>
+                </div>
+                <div class="mt-3 text-center">
+                    <p>
+                        Forgot your password?
+                        <a class="btn btn-link p-0" href="Account/ForgotPassword">Reset</a>
+                    </p>
+                    <p>
+                        Don't have an account?
+                        <a class="btn btn-link p-0" href="Account/Register">Sign Up</a>
+                    </p>
+                    <p>
+                        Didn't receive confirmation email?
+                        <a class="btn btn-link p-0" href="Account/ResendEmailConfirmation">Resend</a>
+                    </p>
+                </div>
+            </EditForm>
+        </section>
     </div>
 </div>
+
 
 @code {
     private string? errorMessage;
