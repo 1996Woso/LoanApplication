@@ -34,12 +34,23 @@
 
     <main>
         <div class="top-row px-4">
-            <a href="" target="_blank">Apply for a loan</a>
+            <a href="/" class="text-black">
+                <span class="bi bi-house-door-fill"> Home</span>
+            </a>
+            <a href="" target="_blank" class="text-black">Apply for a loan</a>
+            <a href="https://learn.microsoft.com/aspnet/core/" class="text-black" target="_blank">About us?</a>
             @if (User == null)
             {
-                <a href="/Account/Login">Login</a>
+                <div class="btn-group">
+                    <a href="/Account/Login" class="btn text-black">
+                        <span class="bi bi-person-fill"> Log in</span>
+                    </a>
+                    <a href="/Account/Register" class="btn text-black">
+                        <span class="bi bi-person-fill-add"> Sign up</span>
+                    </a>
+                </div>
+               
             }
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About us?</a>
             @* <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a> *@
         </div>
         <article class="content px-4">

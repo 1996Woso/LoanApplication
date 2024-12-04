@@ -169,3 +169,7 @@ h1:focus {
         padding: 8px 15px; /* Reduce padding */
     }
 }
+/*Set label's font to small*/
+label{
+    font-size: small !important;
+}

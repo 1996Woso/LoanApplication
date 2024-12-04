@@ -1,6 +1,6 @@
 ﻿@rendermode InteractiveServer
 @inject Services.Calculations calculate
-<div class="container w-50 container-div">
+<div class="container w-50 mx-auto" style="min-width:25rem">
     <div class="col-md-12 text-md-center" style="background-color:lightblue">
         <h2>Bond Repayment Calculator</h2>
     </div>
@@ -11,34 +11,30 @@
         {
             <div class="container">
                 <div class="row mb-3">
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <label>Purchase Price (R)</label>
                         @* <input type="number" @bind="model.P" @bind:event ="oninput" class="form-control"/> *@
                         <InputNumber @bind-Value="model.P" @oninput="@(e => calculate.OnInputDecimal(e, value => model.P = value,model))" class="form-control" />
                         <ValidationMessage For="() => model.P" class="text-danger" />
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <label>Monthly Payment (R)</label>
                         @* <input type="number" @bind="model.x" @bind:event ="oninput" class="form-control"/> *@
                         <InputNumber @bind-Value="model.x" @oninput="@(e => calculate.OnInputDecimal(e, value => model.x = value,model))" class="form-control" />
                         <ValidationMessage For="() => model.x" class="text-danger" />
                     </div>
-                </div>
-                <div class="row mb-3">
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <label>Period (Years)</label>
                         @* <input @bind="model.n" @bind:event ="oninput" class="form-control"/> *@
                         <InputNumber @bind-Value="model.n" @oninput="@(e => calculate.OnInputInteger(e, value => model.n = value,model))" class="form-control" />
                         <ValidationMessage For="() => model.n" class="text-danger" />
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <label>Interest Rate (%)</label>
                         @* <input type="number" @bind="model.i" @bind:event="oninput" class="form-control"/> *@
                         <InputNumber @bind-Value="model.i" @oninput="@(e => calculate.OnInputDecimal(e, value => model.i = value,model))" class="form-control" />
                         <ValidationMessage For="() => model.i" class="text-danger" />
                     </div>
-                </div>
-                <div class="row mb-3">
                     <div class="col-md-12">
                         <label>Deposit (R)</label>
                         @*  <input type="number" @bind ="@model.D" @bind:event = "oninput" class="form-control"/> *@
@@ -46,7 +42,6 @@
                         <ValidationMessage For="() => model.D" class="text-danger" />
                     </div>
                 </div>
-
                 <div>
                     @* <p>Calculate:</p> *@
                     @if (model.x.HasValue && model.n.HasValue && model.i.HasValue)

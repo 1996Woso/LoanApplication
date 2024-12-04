@@ -42,8 +42,7 @@ body[b-jwt6g77h0x] {
     color: white;                
 }
 /* _content/LoanApplictationApp/Components/Controls/Calculators/Affordability.razor.rz.scp.css */
-body[b-26j9hufh6z] {
-}
+
 label[b-26j9hufh6z] {
     font-weight: bold !important;
 }
@@ -52,9 +51,7 @@ input[b-26j9hufh6z] {
     background-color: ghostwhite !important;
 }
 /* _content/LoanApplictationApp/Components/Controls/Calculators/Repayment.razor.rz.scp.css */
-.container-div[b-chghasy8ny]{
-   /* background-color:whitesmoke*/
-}
+
 label[b-chghasy8ny]{
     font-weight: bold !important;
 }
