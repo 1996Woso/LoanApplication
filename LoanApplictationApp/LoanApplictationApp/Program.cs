@@ -3,6 +3,7 @@ using LoanApplictationApp.Components.Account;
 using LoanApplictationApp.Data;
 using LoanApplictationApp.Models;
 using LoanApplictationApp.Services;
+using LoanApplictationApp.Components;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.Server;
 using Microsoft.AspNetCore.Identity;
@@ -29,12 +30,12 @@ builder.Services.AddAuthorization();
 //    .AddIdentityCookies();
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
+builder.Services.AddDbContext<IdentityContext>(options =>
     options.UseSqlServer(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddIdentity<ApplicationUser,IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
-    .AddEntityFrameworkStores<ApplicationDbContext>()
+    .AddEntityFrameworkStores<IdentityContext>()
     .AddSignInManager()
     .AddDefaultTokenProviders();
 builder.Services.Configure<SmtpSettings>(builder.Configuration.GetSection("SMTP"));

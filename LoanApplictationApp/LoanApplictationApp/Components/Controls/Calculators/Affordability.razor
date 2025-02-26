@@ -1,60 +1,65 @@
 ﻿@rendermode InteractiveServer
 @inject Services.Calculations calculate
 
-<div class="container w-50 mx-auto" style="min-width:25rem">
-    <div class="col-md-12 text-md-center" style="background-color:lightblue">
+<div class="card w-50 mx-auto" style="min-width:25rem">
+    <div class="card-header text-center" style="background-color:lightblue">
         <h2>Bond Affordability Calculator</h2>
+        @* <hr style="height:0.5rem;" /> *@
     </div>
-    <hr style="height:0.5rem;" />
-    @if(model != null)
-    {
-        <EditForm Model="model">
-            <div class="container">
-                <div class="row mb-3">
-                    <div class="col-md-12">
-                        <label>Gross Monthly Income (R)</label>
-                        @*  <input type="number" @bind="model.GrossIncome" @bind:event="oninput" class="form-control"/> *@
-                        <InputNumber @bind-Value="model.GrossIncome" class="form-control" @oninput="@(e => calculate.OnInputDecimal(e,value => model.GrossIncome = value,model))" />
-                        <ValidationMessage For="() => model.GrossIncome" class="text-danger" />
+    <div class="card-body">
+        @if (model != null)
+        {
+            <EditForm Model="model">
+                <div class="container">
+                    <div class="row mb-2">
+                        <div class="mb-2 col-md-6 form-floating">
+                            @*  <input type="number" @bind="model.GrossIncome" @bind:event="oninput" class="form-control"/> *@
+                            <InputNumber @bind-Value="model.GrossIncome" class="form-control" @oninput="@(e => calculate.OnInputDecimal(e,value => model.GrossIncome = value,model))" />
+                            <label>Gross Monthly Income (R)</label>
+                            <ValidationMessage For="() => model.GrossIncome" class="text-danger" />
+                        </div>
+                        <div class="mb-2 col-md-6 form-floating">
+                            @* <input type="number" @bind="model.i" @bind:event="oninput" class="form-control" /> *@
+                            <InputNumber @bind-Value="model.i" @oninput="@(e => calculate.OnInputDecimal(e, value => model.i = value,model))" class="form-control" />
+                            <label>Interest Rate (%)</label>
+                        </div>
+                        <div class="col-md-12 form-floating">
+                            @* <input type="number" @bind="model.n" @bind:event="oninput" class="form-control" /> *@
+                            <InputNumber @bind-Value="model.n" class="form-control" @oninput="@(e => calculate.OnInputInteger(e,value => model.n = value,model))" />
+                            <label>Period (Years)</label>
+                            <ValidationMessage For="() => model.n" class="text-danger" />
+                        </div>
                     </div>
-                    <div class="col-md-12">
-                        <label>Interest Rate (%)</label>
-                        @* <input type="number" @bind="model.i" @bind:event="oninput" class="form-control" /> *@
-                        <InputNumber @bind-Value ="model.i" @oninput = "@(e => calculate.OnInputDecimal(e, value => model.i = value,model))" class="form-control" />
-                    </div>
-                    <div class="col-md-12">
-                        <label>Period (years)</label>
-                        @* <input type="number" @bind="model.n" @bind:event="oninput" class="form-control" /> *@
-                        <InputNumber @bind-Value="model.n" class="form-control" @oninput="@(e => calculate.OnInputInteger(e,value => model.n = value,model))" />
-                        <ValidationMessage For="() => model.n" class="text-danger" />
+                    <div>
+                        @if (model.GrossIncome.HasValue && model.i.HasValue && model.n.HasValue)
+                        {
+                            @if (model.MaxAffordLoan.HasValue && model.MaxAffordInstall.HasValue)
+                            {
+                                <div class="alert alert-info">
+                                    <pre>
+                                    <i>Gross Monthly Income           :R @model.GrossIncome</i>
+                                                </pre>
+                                    <pre>
+                                    <i>Interest Rate                  :% @model.i</i>
+                                                </pre>
+                                    <pre>
+                                    <i>Number Of Years                :@model.n years</i>
+                                                </pre>
+                                    <pre>
+                                    <i>Maximum affordable loan        :R @model.MaxAffordLoan</i>
+                                                </pre>
+                                    <pre>
+                                    <i>Maximum affordable installment :R @model.MaxAffordInstall</i>
+                                                </pre>
+                                </div>
+                            }
+                        }
                     </div>
                 </div>
-            </div>
-            @if (model.GrossIncome.HasValue && model.i.HasValue && model.n.HasValue)
-            {
-                @if (model.MaxAffordLoan.HasValue && model.MaxAffordInstall.HasValue)
-                {
-                    <div class="mt-3 alert alert-info">
-                         <pre>
-                            <i>Gross Monthly Income           :R @model.GrossIncome</i>
-                        </pre>
-                         <pre>
-                            <i>Interest Rate                  :R @model.i</i>
-                        </pre>
-                         <pre>
-                            <i>Number Of Years                :R @model.n</i>
-                        </pre>
-                        <pre>
-                            <i>Maximum affordable loan        :R @model.MaxAffordLoan</i>
-                        </pre>
-                        <pre>
-                            <i>Maximum affordable installment :R @model.MaxAffordInstall</i>
-                        </pre>
-                    </div>
-                }
-            }
-        </EditForm>
-    }
+                
+            </EditForm>
+        }
+    </div>
 </div>
 
 @code {

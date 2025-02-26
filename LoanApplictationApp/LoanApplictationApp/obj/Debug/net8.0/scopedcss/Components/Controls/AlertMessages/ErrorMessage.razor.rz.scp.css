@@ -10,3 +10,25 @@ body[b-8fbxsxx1ie] {
     background-color: darkgray;  
     color: white;                
 }
+.alert-box[b-8fbxsxx1ie] {
+    background-color: white;
+    border: 2px solid cadetblue;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.alert-icon[b-8fbxsxx1ie] {
+    display: inline-block;
+    border: 2px solid cadetblue;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+    .alert-icon img[b-8fbxsxx1ie] {
+        opacity: 0.7; /* Adjust transparency */
+    }
+
+.alert-message[b-8fbxsxx1ie] {
+    font-size: small;
+    text-align: center;
+}

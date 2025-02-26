@@ -11,6 +11,28 @@ body[b-8fbxsxx1ie] {
     background-color: darkgray;  
     color: white;                
 }
+.alert-box[b-8fbxsxx1ie] {
+    background-color: white;
+    border: 2px solid cadetblue;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.alert-icon[b-8fbxsxx1ie] {
+    display: inline-block;
+    border: 2px solid cadetblue;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+    .alert-icon img[b-8fbxsxx1ie] {
+        opacity: 0.7; /* Adjust transparency */
+    }
+
+.alert-message[b-8fbxsxx1ie] {
+    font-size: small;
+    text-align: center;
+}
 /* _content/LoanApplictationApp/Components/Controls/AlertMessages/InfoMessage.razor.rz.scp.css */
 body[b-s153zijqye] {
 }
@@ -24,6 +46,28 @@ body[b-s153zijqye] {
 .btn-close:hover[b-s153zijqye] {
     background-color: darkgray;  
     color: white;                
+}
+.alert-box[b-s153zijqye] {
+    background-color: white;
+    border: 2px solid cadetblue;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.alert-icon[b-s153zijqye] {
+    display: inline-block;
+    border: 2px solid cadetblue;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+    .alert-icon img[b-s153zijqye] {
+        opacity: 0.7; /* Adjust transparency */
+    }
+
+.alert-message[b-s153zijqye] {
+    font-size: small;
+    text-align: center;
 }
 /* _content/LoanApplictationApp/Components/Controls/AlertMessages/SuccessMessage.razor.rz.scp.css */
 body[b-jwt6g77h0x] {
@@ -41,22 +85,80 @@ body[b-jwt6g77h0x] {
     background-color: darkgray;  
     color: white;                
 }
+.alert-box[b-jwt6g77h0x] {
+    background-color: white;
+    border: 2px solid cadetblue;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.alert-icon[b-jwt6g77h0x] {
+    display: inline-block;
+    border: 2px solid cadetblue;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+    .alert-icon img[b-jwt6g77h0x] {
+        opacity: 0.7; /* Adjust transparency */
+    }
+
+.alert-message[b-jwt6g77h0x] {
+    font-size: small;
+    text-align: center;
+}
 /* _content/LoanApplictationApp/Components/Controls/Calculators/Affordability.razor.rz.scp.css */
 
 label[b-26j9hufh6z] {
     font-weight: bold !important;
+    font-size: small !important;
 }
 
 input[b-26j9hufh6z] {
     background-color: ghostwhite !important;
 }
+.card[b-26j9hufh6z] {
+    background-color: transparent !important; /* Make the card background transparent */
+    border: none !important; /* Remove the card border */
+    box-shadow: none !important; /* Remove the card shadow */
+}
+.card-header[b-26j9hufh6z] {
+    background-color: transparent !important; /* Make the card header background transparent */
+    border-bottom: none !important; /* Remove the card header border */
+    height: 2.5rem !important;
+}
+
+.card-body[b-26j9hufh6z] {
+    color: black !important; /* Ensure text color is visible on the background */
+}
+h2[b-26j9hufh6z]{
+    color:orange;
+}
 /* _content/LoanApplictationApp/Components/Controls/Calculators/Repayment.razor.rz.scp.css */
 
 label[b-chghasy8ny]{
     font-weight: bold !important;
+    font-size: small !important;
 }
 input[b-chghasy8ny]{
     background-color:ghostwhite !important;
+}
+.card[b-chghasy8ny] {
+    background-color: transparent !important; /* Make the card background transparent */
+    border: none !important; /* Remove the card border */
+    box-shadow: none !important; /* Remove the card shadow */
+}
+.card-header[b-chghasy8ny] {
+    background-color: transparent !important; /* Make the card header background transparent */
+    border-bottom: none !important; /* Remove the card header border */
+    height: 2.5rem !important;
+}
+
+.card-body[b-chghasy8ny] {
+    color: black !important; /* Ensure text color is visible on the background */
+}
+h2[b-chghasy8ny] {
+    color:orange;
 }
 /* _content/LoanApplictationApp/Components/Layout/MainLayout.razor.rz.scp.css */
 .page[b-78rsiozk5i] {
@@ -356,6 +458,34 @@ main[b-78rsiozk5i] {
 .fade-out[b-pe3kif3ybg] {
     opacity: 0;
 }
+button[b-pe3kif3ybg] {
+    border-radius: 0px !important;
+    height: 3rem;
+    background-color: black;
+    color: aliceblue;
+    font-weight: bold;
+    /*    outline: none !important;
+    border:none !important;*/
+}
+button:hover[b-pe3kif3ybg] {
+        background-color: darkseagreen;
+        color: whitesmoke;
+        transform: scale(1.01);
+}    
+button:focus[b-pe3kif3ybg] {
+        outline: none !important;
+}
+.remove-role:hover[b-pe3kif3ybg] {
+    background-color: red;
+    color: whitesmoke;
+    transform: scale(1.01);
+}
+.add:hover[b-pe3kif3ybg] {
+    background-color: blue;
+    color: whitesmoke;
+    transform: scale(1.01);
+}
+  
 /* _content/LoanApplictationApp/Components/Pages/Home.razor.rz.scp.css */
 body[b-nlbqh7o17r] {
 }
@@ -391,7 +521,7 @@ button:focus[b-nlbqh7o17r]{
     position: relative;
     /*   text-align: center; */
     color: black;
-    padding-top: 4rem;
+    padding-top: 0rem;
     display: flex; 
     flex-direction: column; 
     justify-content: flex-start; 

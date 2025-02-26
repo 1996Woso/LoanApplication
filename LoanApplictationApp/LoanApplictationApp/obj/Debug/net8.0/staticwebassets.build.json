@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "rut2Q/N8Bh9hrUBTJl8meTWrRENkwMAFy6BszVtaU1E=",
+  "Hash": "GLv0VQbK91YN/wptDSBlpmyaCm0N4ogmH+5kGYLou/k=",
   "Source": "LoanApplictationApp",
   "BasePath": "_content/LoanApplictationApp",
   "Mode": "Default",
@@ -31,8 +31,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "6suv790mz3",
-      "Integrity": "llhyn8I+XW47lWVGD2QeCA1/BXqy/XqiZD4cywX8wJ0=",
+      "Fingerprint": "w60mcm5d6b",
+      "Integrity": "eN4zIZo52ntlpph01GftdJeGHxEtuLcLkjBKNrJiQ80=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\LoanApplictationApp.styles.css"
@@ -52,8 +52,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "6suv790mz3",
-      "Integrity": "llhyn8I+XW47lWVGD2QeCA1/BXqy/XqiZD4cywX8wJ0=",
+      "Fingerprint": "w60mcm5d6b",
+      "Integrity": "eN4zIZo52ntlpph01GftdJeGHxEtuLcLkjBKNrJiQ80=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\LoanApplictationApp.bundle.scp.css"
@@ -73,8 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "6gusslkcfr",
-      "Integrity": "JtnUjac6cF1LsIOu4LuIdC7LekEvTU3WBFK5LNgPgzk=",
+      "Fingerprint": "sbgx7glz8m",
+      "Integrity": "GHhLJS8aWHSLgC5tTfYqtFhfrgSLIr64ReukJ7kOLuc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\app.css"
@@ -206,6 +206,27 @@
       "OriginalItemSpec": "wwwroot\\Images\\Assing Role.png"
     },
     {
+      "Identity": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\Images\\error-icon.jpg",
+      "SourceId": "LoanApplictationApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\",
+      "BasePath": "_content/LoanApplictationApp",
+      "RelativePath": "Images/error-icon#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "3pwci9ovh6",
+      "Integrity": "eXnNEKYKRUbPWWJWCp+O03O0U9WfQzY1aOU4k89GUZw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\error-icon.jpg"
+    },
+    {
       "Identity": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\Images\\House Hands.png",
       "SourceId": "LoanApplictationApp",
       "SourceType": "Discovered",
@@ -248,6 +269,27 @@
       "OriginalItemSpec": "wwwroot\\Images\\House.jpeg"
     },
     {
+      "Identity": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\Images\\info-icon.png",
+      "SourceId": "LoanApplictationApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\",
+      "BasePath": "_content/LoanApplictationApp",
+      "RelativePath": "Images/info-icon#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "iooafv1zhx",
+      "Integrity": "crbYK//j7FRQCEw51E/AvSTX4SMyiH0NIo9p/WDRQlI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\info-icon.png"
+    },
+    {
       "Identity": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\Images\\Remove Role.png",
       "SourceId": "LoanApplictationApp",
       "SourceType": "Discovered",
@@ -267,6 +309,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\Remove Role.png"
+    },
+    {
+      "Identity": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\Images\\success-icon.png",
+      "SourceId": "LoanApplictationApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\",
+      "BasePath": "_content/LoanApplictationApp",
+      "RelativePath": "Images/success-icon#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "p63jablti8",
+      "Integrity": "H4PBzW9bNi2WPcAMqKKMnhcGlcDls3rgQWZN7W7bc+A=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\success-icon.png"
     },
     {
       "Identity": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\Images\\Unauthorised.PNG",
@@ -292,51 +355,6 @@
   ],
   "Endpoints": [
     {
-      "Route": "app.6gusslkcfr.css",
-      "AssetFile": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\app.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5654"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"JtnUjac6cF1LsIOu4LuIdC7LekEvTU3WBFK5LNgPgzk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 04 Dec 2024 20:57:43 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "6gusslkcfr"
-        },
-        {
-          "Name": "label",
-          "Value": "app.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-JtnUjac6cF1LsIOu4LuIdC7LekEvTU3WBFK5LNgPgzk="
-        }
-      ]
-    },
-    {
       "Route": "app.css",
       "AssetFile": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\app.css",
       "Selectors": [],
@@ -347,7 +365,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5654"
+          "Value": "6072"
         },
         {
           "Name": "Content-Type",
@@ -355,11 +373,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"JtnUjac6cF1LsIOu4LuIdC7LekEvTU3WBFK5LNgPgzk=\""
+          "Value": "\"GHhLJS8aWHSLgC5tTfYqtFhfrgSLIr64ReukJ7kOLuc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Dec 2024 20:57:43 GMT"
+          "Value": "Thu, 20 Feb 2025 16:46:04 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -369,7 +387,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-JtnUjac6cF1LsIOu4LuIdC7LekEvTU3WBFK5LNgPgzk="
+          "Value": "sha256-GHhLJS8aWHSLgC5tTfYqtFhfrgSLIr64ReukJ7kOLuc="
+        }
+      ]
+    },
+    {
+      "Route": "app.sbgx7glz8m.css",
+      "AssetFile": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\app.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6072"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GHhLJS8aWHSLgC5tTfYqtFhfrgSLIr64ReukJ7kOLuc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 20 Feb 2025 16:46:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "sbgx7glz8m"
+        },
+        {
+          "Name": "label",
+          "Value": "app.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-GHhLJS8aWHSLgC5tTfYqtFhfrgSLIr64ReukJ7kOLuc="
         }
       ]
     },
@@ -866,6 +929,88 @@
       ]
     },
     {
+      "Route": "Images/error-icon.3pwci9ovh6.jpg",
+      "AssetFile": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\Images\\error-icon.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "23385"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eXnNEKYKRUbPWWJWCp+O03O0U9WfQzY1aOU4k89GUZw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 20 Feb 2025 16:40:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3pwci9ovh6"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/error-icon.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-eXnNEKYKRUbPWWJWCp+O03O0U9WfQzY1aOU4k89GUZw="
+        }
+      ]
+    },
+    {
+      "Route": "Images/error-icon.jpg",
+      "AssetFile": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\Images\\error-icon.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "23385"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eXnNEKYKRUbPWWJWCp+O03O0U9WfQzY1aOU4k89GUZw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 20 Feb 2025 16:40:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-eXnNEKYKRUbPWWJWCp+O03O0U9WfQzY1aOU4k89GUZw="
+        }
+      ]
+    },
+    {
       "Route": "Images/House Hands.msgcbaj7x2.png",
       "AssetFile": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\Images\\House Hands.png",
       "Selectors": [],
@@ -1030,6 +1175,88 @@
       ]
     },
     {
+      "Route": "Images/info-icon.iooafv1zhx.png",
+      "AssetFile": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\Images\\info-icon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "29518"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"crbYK//j7FRQCEw51E/AvSTX4SMyiH0NIo9p/WDRQlI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 20 Feb 2025 15:01:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "iooafv1zhx"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/info-icon.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-crbYK//j7FRQCEw51E/AvSTX4SMyiH0NIo9p/WDRQlI="
+        }
+      ]
+    },
+    {
+      "Route": "Images/info-icon.png",
+      "AssetFile": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\Images\\info-icon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "29518"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"crbYK//j7FRQCEw51E/AvSTX4SMyiH0NIo9p/WDRQlI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 20 Feb 2025 15:01:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-crbYK//j7FRQCEw51E/AvSTX4SMyiH0NIo9p/WDRQlI="
+        }
+      ]
+    },
+    {
       "Route": "Images/Remove Role.png",
       "AssetFile": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\Images\\Remove Role.png",
       "Selectors": [],
@@ -1108,6 +1335,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-nPyo+qjPeme18y+hLWhWJkLFWLtxUobOvcqeBD8Fz+w="
+        }
+      ]
+    },
+    {
+      "Route": "Images/success-icon.p63jablti8.png",
+      "AssetFile": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\Images\\success-icon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4025"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"H4PBzW9bNi2WPcAMqKKMnhcGlcDls3rgQWZN7W7bc+A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 20 Feb 2025 14:58:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "p63jablti8"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/success-icon.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-H4PBzW9bNi2WPcAMqKKMnhcGlcDls3rgQWZN7W7bc+A="
+        }
+      ]
+    },
+    {
+      "Route": "Images/success-icon.png",
+      "AssetFile": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\Images\\success-icon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4025"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"H4PBzW9bNi2WPcAMqKKMnhcGlcDls3rgQWZN7W7bc+A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 20 Feb 2025 14:58:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-H4PBzW9bNi2WPcAMqKKMnhcGlcDls3rgQWZN7W7bc+A="
         }
       ]
     },
@@ -1194,96 +1503,6 @@
       ]
     },
     {
-      "Route": "LoanApplictationApp.6suv790mz3.bundle.scp.css",
-      "AssetFile": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\LoanApplictationApp.bundle.scp.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "14911"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"llhyn8I+XW47lWVGD2QeCA1/BXqy/XqiZD4cywX8wJ0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 04 Dec 2024 22:28:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "6suv790mz3"
-        },
-        {
-          "Name": "label",
-          "Value": "LoanApplictationApp.bundle.scp.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-llhyn8I+XW47lWVGD2QeCA1/BXqy/XqiZD4cywX8wJ0="
-        }
-      ]
-    },
-    {
-      "Route": "LoanApplictationApp.6suv790mz3.styles.css",
-      "AssetFile": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\LoanApplictationApp.styles.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "14911"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"llhyn8I+XW47lWVGD2QeCA1/BXqy/XqiZD4cywX8wJ0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 04 Dec 2024 22:28:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "6suv790mz3"
-        },
-        {
-          "Name": "label",
-          "Value": "LoanApplictationApp.styles.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-llhyn8I+XW47lWVGD2QeCA1/BXqy/XqiZD4cywX8wJ0="
-        }
-      ]
-    },
-    {
       "Route": "LoanApplictationApp.bundle.scp.css",
       "AssetFile": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\LoanApplictationApp.bundle.scp.css",
       "Selectors": [],
@@ -1294,7 +1513,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "14911"
+          "Value": "18291"
         },
         {
           "Name": "Content-Type",
@@ -1302,11 +1521,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"llhyn8I+XW47lWVGD2QeCA1/BXqy/XqiZD4cywX8wJ0=\""
+          "Value": "\"eN4zIZo52ntlpph01GftdJeGHxEtuLcLkjBKNrJiQ80=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Dec 2024 22:28:20 GMT"
+          "Value": "Tue, 25 Feb 2025 12:20:39 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1316,7 +1535,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-llhyn8I+XW47lWVGD2QeCA1/BXqy/XqiZD4cywX8wJ0="
+          "Value": "sha256-eN4zIZo52ntlpph01GftdJeGHxEtuLcLkjBKNrJiQ80="
         }
       ]
     },
@@ -1331,7 +1550,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "14911"
+          "Value": "18291"
         },
         {
           "Name": "Content-Type",
@@ -1339,11 +1558,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"llhyn8I+XW47lWVGD2QeCA1/BXqy/XqiZD4cywX8wJ0=\""
+          "Value": "\"eN4zIZo52ntlpph01GftdJeGHxEtuLcLkjBKNrJiQ80=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Dec 2024 22:28:20 GMT"
+          "Value": "Tue, 25 Feb 2025 12:20:39 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1353,7 +1572,97 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-llhyn8I+XW47lWVGD2QeCA1/BXqy/XqiZD4cywX8wJ0="
+          "Value": "sha256-eN4zIZo52ntlpph01GftdJeGHxEtuLcLkjBKNrJiQ80="
+        }
+      ]
+    },
+    {
+      "Route": "LoanApplictationApp.w60mcm5d6b.bundle.scp.css",
+      "AssetFile": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\LoanApplictationApp.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18291"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eN4zIZo52ntlpph01GftdJeGHxEtuLcLkjBKNrJiQ80=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 25 Feb 2025 12:20:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "w60mcm5d6b"
+        },
+        {
+          "Name": "label",
+          "Value": "LoanApplictationApp.bundle.scp.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-eN4zIZo52ntlpph01GftdJeGHxEtuLcLkjBKNrJiQ80="
+        }
+      ]
+    },
+    {
+      "Route": "LoanApplictationApp.w60mcm5d6b.styles.css",
+      "AssetFile": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\LoanApplictationApp.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18291"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eN4zIZo52ntlpph01GftdJeGHxEtuLcLkjBKNrJiQ80=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 25 Feb 2025 12:20:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "w60mcm5d6b"
+        },
+        {
+          "Name": "label",
+          "Value": "LoanApplictationApp.styles.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-eN4zIZo52ntlpph01GftdJeGHxEtuLcLkjBKNrJiQ80="
         }
       ]
     }

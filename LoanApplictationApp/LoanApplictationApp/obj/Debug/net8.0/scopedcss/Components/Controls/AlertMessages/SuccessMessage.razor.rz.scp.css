@@ -13,3 +13,25 @@ body[b-jwt6g77h0x] {
     background-color: darkgray;  
     color: white;                
 }
+.alert-box[b-jwt6g77h0x] {
+    background-color: white;
+    border: 2px solid cadetblue;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.alert-icon[b-jwt6g77h0x] {
+    display: inline-block;
+    border: 2px solid cadetblue;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+    .alert-icon img[b-jwt6g77h0x] {
+        opacity: 0.7; /* Adjust transparency */
+    }
+
+.alert-message[b-jwt6g77h0x] {
+    font-size: small;
+    text-align: center;
+}

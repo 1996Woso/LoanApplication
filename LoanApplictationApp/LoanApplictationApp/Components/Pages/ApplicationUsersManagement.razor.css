@@ -11,3 +11,31 @@
 .fade-out {
     opacity: 0;
 }
+button {
+    border-radius: 0px !important;
+    height: 3rem;
+    background-color: black;
+    color: aliceblue;
+    font-weight: bold;
+    /*    outline: none !important;
+    border:none !important;*/
+}
+button:hover {
+        background-color: darkseagreen;
+        color: whitesmoke;
+        transform: scale(1.01);
+}    
+button:focus {
+        outline: none !important;
+}
+.remove-role:hover {
+    background-color: red;
+    color: whitesmoke;
+    transform: scale(1.01);
+}
+.add:hover {
+    background-color: blue;
+    color: whitesmoke;
+    transform: scale(1.01);
+}
+  

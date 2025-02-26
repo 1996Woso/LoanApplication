@@ -1,7 +1,25 @@
 
 label[b-chghasy8ny]{
     font-weight: bold !important;
+    font-size: small !important;
 }
 input[b-chghasy8ny]{
     background-color:ghostwhite !important;
+}
+.card[b-chghasy8ny] {
+    background-color: transparent !important; /* Make the card background transparent */
+    border: none !important; /* Remove the card border */
+    box-shadow: none !important; /* Remove the card shadow */
+}
+.card-header[b-chghasy8ny] {
+    background-color: transparent !important; /* Make the card header background transparent */
+    border-bottom: none !important; /* Remove the card header border */
+    height: 2.5rem !important;
+}
+
+.card-body[b-chghasy8ny] {
+    color: black !important; /* Ensure text color is visible on the background */
+}
+h2[b-chghasy8ny] {
+    color:orange;
 }

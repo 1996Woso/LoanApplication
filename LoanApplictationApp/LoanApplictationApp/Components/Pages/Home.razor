@@ -3,8 +3,8 @@
 
 <div class="bg-container mt-0 w-100">
     <div class="content">
-        <div class="row mb-3">
-            <div class="col-md-12" style="padding-left:10rem">
+        <div class="row">
+            <div class="col-md-12" style="padding-left:1rem">
                 <marquee>
                     <h1>Use our Home Loan Calculator to find out how much your home loan will cost.</h1>
                 </marquee>
@@ -16,22 +16,24 @@
         </div>
         <hr style="height: 0.2rem;background-color:azure" />
         <div class="card">
-            <div class="card-header-tabs mb-3">
+            <div class="card-header">
                 <div class="row justify-content-center border-1">
                     <button class="btn" style="font-size:small;min-width:12rem" @onclick="Repayable"> Repayable</button> &nbsp;&nbsp;
                     <button class="btn" style="font-size:small;min-width:12rem" @onclick="Affordable"> Affordability</button>
                 </div>
 
             </div>
-            <div class="card-body">
-                @if (IsRepayableClicked)
-                {
-                    <Repayment />
-                }
-                else if (IsAffordableClicked)
-                {
-                    <Affordability />
-                }
+            <div class="card-body p-0">
+                <div class="row justify-content-center">
+                    @if (IsRepayableClicked)
+                    {
+                        <Repayment />
+                    }
+                    else if (IsAffordableClicked)
+                    {
+                        <Affordability />
+                    }
+                </div>
             </div>
         </div>
     </div>

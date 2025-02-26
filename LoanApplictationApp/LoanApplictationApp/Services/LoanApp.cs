@@ -5,8 +5,8 @@ namespace LoanApplictationApp.Services
 {
     public class LoanApp
     {
-        private readonly ApplicationDbContext _context;
-        public LoanApp(ApplicationDbContext context)
+        private readonly IdentityContext _context;
+        public LoanApp(IdentityContext context)
         {
             _context = context;
         }

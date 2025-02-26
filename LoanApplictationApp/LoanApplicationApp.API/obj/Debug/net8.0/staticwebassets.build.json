@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "J4hRkGWW5ovkLKekZvnkHF1EJUubltRVMAIiJ41VyRs=",
+  "Source": "LoanApplicationApp.API",
+  "BasePath": "_content/LoanApplicationApp.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

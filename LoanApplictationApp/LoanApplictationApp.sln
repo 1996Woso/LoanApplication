@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35208.52
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoanApplictationApp", "LoanApplictationApp\LoanApplictationApp.csproj", "{F9E70548-3417-4FEE-921D-32E12EDAD876}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanApplicationApp.API", "LoanApplicationApp.API\LoanApplicationApp.API.csproj", "{3299E28E-C32A-472A-BF85-DCDE566276A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanApplictationApp", "LoanApplictationApp\LoanApplictationApp.csproj", "{3431D129-F91F-462E-B41C-D24820F67963}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F9E70548-3417-4FEE-921D-32E12EDAD876}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F9E70548-3417-4FEE-921D-32E12EDAD876}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F9E70548-3417-4FEE-921D-32E12EDAD876}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F9E70548-3417-4FEE-921D-32E12EDAD876}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3299E28E-C32A-472A-BF85-DCDE566276A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3299E28E-C32A-472A-BF85-DCDE566276A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3299E28E-C32A-472A-BF85-DCDE566276A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3299E28E-C32A-472A-BF85-DCDE566276A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3431D129-F91F-462E-B41C-D24820F67963}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3431D129-F91F-462E-B41C-D24820F67963}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3431D129-F91F-462E-B41C-D24820F67963}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3431D129-F91F-462E-B41C-D24820F67963}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

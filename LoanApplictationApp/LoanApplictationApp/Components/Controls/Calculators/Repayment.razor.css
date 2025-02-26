@@ -1,7 +1,25 @@
 ﻿
 label{
     font-weight: bold !important;
+    font-size: small !important;
 }
 input{
     background-color:ghostwhite !important;
+}
+.card {
+    background-color: transparent !important; /* Make the card background transparent */
+    border: none !important; /* Remove the card border */
+    box-shadow: none !important; /* Remove the card shadow */
+}
+.card-header {
+    background-color: transparent !important; /* Make the card header background transparent */
+    border-bottom: none !important; /* Remove the card header border */
+    height: 2.5rem !important;
+}
+
+.card-body {
+    color: black !important; /* Ensure text color is visible on the background */
+}
+h2 {
+    color:orange;
 }

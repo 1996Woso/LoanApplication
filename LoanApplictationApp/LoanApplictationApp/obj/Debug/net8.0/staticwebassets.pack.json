@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\LoanApplictationApp.bundle.scp.css",
-      "PackagePath": "staticwebassets\\LoanApplictationApp.6suv790mz3.bundle.scp.css"
+      "PackagePath": "staticwebassets\\LoanApplictationApp.w60mcm5d6b.bundle.scp.css"
     },
     {
       "Id": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\Images\\Access Denied.png",
@@ -31,6 +31,18 @@
     {
       "Id": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\Images\\Unauthorised.PNG",
       "PackagePath": "staticwebassets\\Images\\Unauthorised.PNG"
+    },
+    {
+      "Id": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\Images\\error-icon.jpg",
+      "PackagePath": "staticwebassets\\Images\\error-icon.jpg"
+    },
+    {
+      "Id": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\Images\\info-icon.png",
+      "PackagePath": "staticwebassets\\Images\\info-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\Images\\success-icon.png",
+      "PackagePath": "staticwebassets\\Images\\success-icon.png"
     },
     {
       "Id": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\app.css",
