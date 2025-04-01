@@ -1,0 +1,33 @@
+﻿@page "/all-applications"
+@using LoanApplictationApp.Models.DTO
+@using LoanApplictationApp.Services
+@inject IApplicationService applicationService
+@rendermode InteractiveServer
+@if(applications != null){
+	<div class="container mt-3">
+		<div class="card">
+			<div class="card-body px-0 py-0">
+				<Microsoft.AspNetCore.Components.QuickGrid.QuickGrid Class="table table-bordered table-striped" Items="applications.AsQueryable()" Pagination="paginationState">
+					<PropertyColumn Property="s => s.ApplicationNo" />
+					<PropertyColumn Property="s => s.LoanProcessorNo" />
+					<PropertyColumn Property="s => s.RefferenceNo" />
+				</Microsoft.AspNetCore.Components.QuickGrid.QuickGrid>
+			</div>
+			<div class="card-footer px-0 py-0">
+				<Paginator State="paginationState" />
+			</div>
+		</div>
+
+	</div> 
+
+}
+
+@code {
+	private List<ApplicationDTO>? applications;
+	private PaginationState paginationState = new PaginationState { ItemsPerPage = 2 };
+	protected override async Task OnInitializedAsync()
+	{
+		applications = (await applicationService.GetApplicationsAsync()).ToList();
+	}
+
+}

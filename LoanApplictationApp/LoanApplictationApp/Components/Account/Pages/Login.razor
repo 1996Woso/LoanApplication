@@ -12,8 +12,8 @@
 @inject IdentityRedirectManager RedirectManager
 
 <PageTitle>Log in</PageTitle>
-<div class="card mx-auto" style="max-width: 400px; margin-top: 50px;">
-    <div class="card-header text-center" style="background-color: floralwhite; color:black;">
+<div class="card small-box" style="font-size:small">
+    <div class="card-header heading-form">
         <h5>Log in</h5>
     </div>
     <div class="card-body">
@@ -21,9 +21,6 @@
             <StatusMessage Message="@errorMessage" />
             <EditForm Model="Input" method="post" OnValidSubmit="LoginUser" FormName="login">
                 <DataAnnotationsValidator />
-                <div class="text-center mb-2">
-                    <h6><u>Use a local account to log in.</u></h6>
-                </div>
                 <ValidationSummary class="text-danger" role="alert" />
                 <div class="form-floating mb-2">
                     <InputText @bind-Value="Input.Email"
@@ -49,11 +46,11 @@
                     </label>
                 </div>
                 <div>
-                    <button type="submit" class="w-100 btn btn-lg btn-primary" style="font-size:small;">
+                    <button type="submit" class="w-100 btn btn-lg btn-primary">
                         Log in
                     </button>
                 </div>
-                <div class="mt-2 text-center" style="font-size:small;">
+                <div class="mt-2 text-center">
                     <p>
                         Forgot your password?
                         <a href="Account/ForgotPassword">Reset</a>

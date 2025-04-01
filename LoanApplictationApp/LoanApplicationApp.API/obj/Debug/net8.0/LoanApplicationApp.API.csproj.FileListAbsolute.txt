@@ -6,9 +6,15 @@ C:\Users\eviwe\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplic
 C:\Users\eviwe\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplicationApp.API\bin\Debug\net8.0\LoanApplicationApp.API.runtimeconfig.json
 C:\Users\eviwe\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplicationApp.API\bin\Debug\net8.0\LoanApplicationApp.API.dll
 C:\Users\eviwe\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplicationApp.API\bin\Debug\net8.0\LoanApplicationApp.API.pdb
+C:\Users\eviwe\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplicationApp.API\bin\Debug\net8.0\AutoMapper.dll
 C:\Users\eviwe\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplicationApp.API\bin\Debug\net8.0\Azure.Core.dll
 C:\Users\eviwe\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplicationApp.API\bin\Debug\net8.0\Azure.Identity.dll
+C:\Users\eviwe\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplicationApp.API\bin\Debug\net8.0\BCrypt.Net-Next.dll
 C:\Users\eviwe\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplicationApp.API\bin\Debug\net8.0\Humanizer.dll
+C:\Users\eviwe\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplicationApp.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\eviwe\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplicationApp.API\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\eviwe\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplicationApp.API\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\eviwe\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplicationApp.API\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\eviwe\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplicationApp.API\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\eviwe\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplicationApp.API\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
 C:\Users\eviwe\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplicationApp.API\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
@@ -21,6 +27,9 @@ C:\Users\eviwe\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplic
 C:\Users\eviwe\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplicationApp.API\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\eviwe\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplicationApp.API\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\eviwe\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplicationApp.API\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\eviwe\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplicationApp.API\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\eviwe\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplicationApp.API\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\eviwe\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplicationApp.API\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
 C:\Users\eviwe\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplicationApp.API\bin\Debug\net8.0\Microsoft.Identity.Client.dll
 C:\Users\eviwe\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplicationApp.API\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
 C:\Users\eviwe\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplicationApp.API\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll

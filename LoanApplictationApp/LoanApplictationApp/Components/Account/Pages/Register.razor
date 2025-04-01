@@ -24,18 +24,15 @@
 @*Service to send email*@
 @inject Services.SmtpEmailSender emailService
 <PageTitle>Register</PageTitle>
-<div class="card mx-auto" style="max-width: 400px; margin-top: 50px;">
-    <div class="card-header text-center" style="background-color:floralwhite;color:black">
+<div class="card small-box">
+    <div class="card-header heading-form">
         <h5>Register</h5>
     </div>
-    <div class="card-body">
+    <div class="card-body" style="font-size:small">
         <section>
             <StatusMessage Message="@Message" />
             <EditForm Model="Input" asp-route-returnUrl="@ReturnUrl" method="post" OnValidSubmit="RegisterUser" FormName="register">
                 <DataAnnotationsValidator />
-                <div class="text-center">
-                    <h6><u>Create a new account.</u></h6>
-                </div>
                 @*  <ValidationSummary class="text-danger" role="alert" /> *@
                 <div class="form-floating mb-2">
                     <InputText @bind-Value="Input.Name" class="form-control" autocomplete="username" aria-required="true" placeholder="Lizo" />
@@ -73,10 +70,10 @@
                     <label for="confirm-password">Confirm Password</label>
                     <ValidationMessage For="() => Input.ConfirmPassword" class="text-danger" />
                 </div>
-                <button type="submit" class="w-100 btn btn-lg btn-primary" style="font-size:small;">
+                <button type="submit" class="w-100 btn btn-lg btn-primary">
                     <i class="bi bi-pencil"></i> Register
                 </button>
-                <div class="mt-2 text-center" style="font-size:small;">
+                <div class="mt-2 text-center">
                     <p>
                         Already have an account?
                         <a href="Account/Login">Log in</a>

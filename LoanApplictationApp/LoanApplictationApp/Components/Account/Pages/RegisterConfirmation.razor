@@ -12,11 +12,9 @@
 @inject IdentityRedirectManager RedirectManager
 
 <PageTitle>Register confirmation</PageTitle>
-<div class="card">
-    <div class="card-header" style="background-color:floralwhite;color:black">
-        <div class="col-md-12 text-md-center">
-            <h1>Register confirmation</h1>
-        </div>
+<div class="card small-box" style="font-size:small">
+    <div class="card-header heading-form">
+        <h5>Register confirmation</h5>
     </div>
     <div class="card-body">
         <p>Please check your email to confirm your account.</p>
@@ -28,8 +26,10 @@
             </span>
         </p>
     </div>
+    <br />
+    <StatusMessage Message="@statusMessage" />
 </div>
-<StatusMessage Message="@statusMessage" />
+
 
 @code {
     private string? emailConfirmationLink;

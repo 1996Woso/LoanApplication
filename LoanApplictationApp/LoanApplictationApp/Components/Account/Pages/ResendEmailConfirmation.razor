@@ -18,8 +18,8 @@
 @inject Services.SmtpEmailSender emailService
 <PageTitle>Resend email confirmation</PageTitle>
 
-<div class="card mx-auto" style="max-width:400px;margin-top:50px">
-    <div class="card-header text-center" style="background-color:floralwhite;color:black">
+<div class="card small-box" style="font-size:small">
+    <div class="card-header heading-form">
         <h5>Resend email confirmation</h5>
         <h6>Enter your email.</h6>
     </div>
@@ -39,8 +39,8 @@
             </EditForm>
        </section>
     </div>
-</div>
-@if (!string.IsNullOrEmpty(errorMessage))
+    <br />
+    @if (!string.IsNullOrEmpty(errorMessage))
 {
     <ErrorMessage Message="@errorMessage" IsDivDisplayed="true" />
 }
@@ -52,6 +52,8 @@ else if (!string.IsNullOrEmpty(successMessage))
 {
     <SuccessMessage Message="@successMessage" IsDivDisplayed ="true"/>
 }
+</div>
+
 
 
 

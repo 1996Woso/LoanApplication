@@ -1,0 +1,75 @@
+﻿@page "/new-application"
+@rendermode InteractiveServer
+@inject IApplicationService applicationService 
+@inject Calculations calculate
+
+<div class="container">
+	<EditForm Model="application" OnValidSubmit="HandleValidSubmit" FormName="NewApplication">
+		<DataAnnotationsValidator />
+		<ValidationSummary />
+		<div class="card mt-5">
+			<div class="card-header heading-form">
+				<h5>New application</h5>
+			</div>
+			<div class="card-body">
+				<div class="row">
+					<div class="col-md-6 mb-3">
+						<label><b>Salary</b></label>
+						<InputNumber @bind-Value="application.MonthlySalary" class="form-control"/>
+						<ValidationMessage For="() => application.MonthlySalary" />
+					</div>
+					<div class="col-md-6 mb-3">
+						<label><b>Credit Score</b></label>
+						<InputNumber @bind-Value="application.CreditScore" class="form-control" />
+						<ValidationMessage For="() => application.CreditScore" />
+					</div>
+					<div class="col-md-6 mb-3">
+						<label><b>Purchase Price</b></label>
+						<InputNumber @bind-Value="application.PurchasePrice" class="form-control" />
+						<ValidationMessage For="() => application.PurchasePrice" />
+					</div>
+					<div class="col-md-6 mb-3">
+						<label><b>Deposit</b></label>
+						<InputNumber @bind-Value="application.Deposit" class="form-control" />
+						<ValidationMessage For="() => application.Deposit" />
+					</div>
+					<button type="submit" class="btn btn-primary">Submit</button>
+				</div>
+			</div>
+		</div>
+	</EditForm>
+</div>
+
+@if (successMessage != null)
+{
+	<SuccessMessage Message="@successMessage" IsDivDisplayed="true" />
+}
+
+@if (errorMessage != null)
+{
+	<ErrorMessage Message="@errorMessage" IsDivDisplayed="true" />
+}
+
+@code {
+	private AddApplicationDTO application = new AddApplicationDTO();
+	private string applicantId = "234344323433"; // Collect applicantId
+	private string? successMessage = null;
+	private string? errorMessage = null;
+	private string? infoMessage = null;
+
+	private async Task HandleValidSubmit()
+	{
+		try
+		{
+			var result = await applicationService.AddApplicationAsync(application, applicantId);
+			successMessage = "Application added successfully!";
+			errorMessage = null;
+		}
+		catch (Exception ex)
+		{
+			successMessage = null;
+			errorMessage = $"Error: {ex.Message}";
+		}
+	}
+
+}

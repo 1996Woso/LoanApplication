@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LoanApplicationApp.API.Migrations
 {
     [DbContext(typeof(LoanApplicationDbContext))]
-    [Migration("20250225141410_CreateTables")]
+    [Migration("20250317130850_CreateTables")]
     partial class CreateTables
     {
         /// <inheritdoc />
@@ -33,19 +33,18 @@ namespace LoanApplicationApp.API.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("ApplicationNo"));
 
-                    b.Property<Guid>("ApplicantId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("BankStatementFilePath")
+                    b.Property<string>("ApplicantId")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("CreditScore")
                         .HasColumnType("int");
 
-                    b.Property<string>("IdCopyFilePath")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime>("DateOfCreation")
+                        .HasColumnType("datetime2");
+
+                    b.Property<double>("Deposit")
+                        .HasColumnType("float");
 
                     b.Property<long>("LoanProcessorNo")
                         .HasColumnType("bigint");
@@ -53,7 +52,10 @@ namespace LoanApplicationApp.API.Migrations
                     b.Property<double>("MonthlySalary")
                         .HasColumnType("float");
 
-                    b.Property<string>("PaySlipFilePath")
+                    b.Property<double>("PurchasePrice")
+                        .HasColumnType("float");
+
+                    b.Property<string>("RefferenceNo")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -68,6 +70,43 @@ namespace LoanApplicationApp.API.Migrations
                     b.ToTable("Applications");
                 });
 
+            modelBuilder.Entity("LoanApplicationApp.API.Models.Domain.Document", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("ApplicantId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("DateOfCreation")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("FileDescription")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FileExtension")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FileName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FilePath")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("FileSizeInBytes")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Documents");
+                });
+
             modelBuilder.Entity("LoanApplicationApp.API.Models.Domain.LoanProcessor", b =>
                 {
                     b.Property<long>("LoanProcessorNo")
@@ -76,8 +115,15 @@ namespace LoanApplicationApp.API.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("LoanProcessorNo"));
 
-                    b.Property<Guid>("ProcessorId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<DateTime>("DateOfCreation")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("ProcessorId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("LoanProcessorNo");
 

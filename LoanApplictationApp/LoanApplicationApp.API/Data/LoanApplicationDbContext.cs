@@ -11,6 +11,7 @@ namespace LoanApplicationApp.API.Data
         }
         public DbSet<Application> Applications { get; set; }
         public DbSet<LoanProcessor> LoanProcessors { get; set; }
+        public DbSet<Document> Documents { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -20,6 +21,12 @@ namespace LoanApplicationApp.API.Data
                 .WithOne(x => x.LoanProcessor)
                 .HasForeignKey(x => x.LoanProcessorNo)
                 .IsRequired();
+            ////Configure 1-many relation between DocumentTypes and Documents
+            //modelBuilder.Entity<DocumentType>()
+            //    .HasMany(x => x.Documents)
+            //    .WithOne(x => x.DocumentType)
+            //    .HasForeignKey(x => x.DocumentTypeId)
+            //    .IsRequired();  
         }
 
     }

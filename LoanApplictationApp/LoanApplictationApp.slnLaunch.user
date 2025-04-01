@@ -4,11 +4,13 @@
     "Projects": [
       {
         "Path": "LoanApplicationApp.API\\LoanApplicationApp.API.csproj",
-        "Action": "Start"
+        "Action": "Start",
+        "DebugTarget": "https"
       },
       {
         "Path": "LoanApplictationApp\\LoanApplictationApp.csproj",
-        "Action": "Start"
+        "Action": "Start",
+        "DebugTarget": "http"
       }
     ]
   }
