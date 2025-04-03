@@ -6,7 +6,7 @@
 
 @if (User != null)
 {
-    <nav class="navbar navbar-nav navbar-expand-lg navbar-light" style="background-color:lightseagreen;min-height:2rem;max-height:6rem;">
+    <nav class="navbar navbar-nav navbar-expand-lg navbar-light" style="background-color:rgba(0,0,0,0.6);min-height:2rem;max-height:6rem;">
         <div class="container-fluid">
             <div class="navbar-text text-white user-name-roles" style="font-weight: bold">
                 <p>
@@ -36,19 +36,19 @@
         <div class="top-row px-4">
             @if(User == null){
                 <a href="/" class="text-black">
-                    <span class="bi bi-house-door-fill"> Home</span>
+                    <span class="bi bi-house-door-fill"> <b>Home</b></span>
                 </a>
             }
-            <a href="" target="_blank" class="text-black">Apply for a loan</a>
-            <a href="https://learn.microsoft.com/aspnet/core/" class="text-black" target="_blank">About us?</a>
+            <a href="/new-application" class="text-black"><b>Apply for a loan</b></a>
+            <a href="https://learn.microsoft.com/aspnet/core/" class="text-black" target="_blank"><b>About us?</b></a>
             @if (User == null)
             {
                 <div class="btn-group">
                     <a href="/Account/Login" class="btn text-black">
-                        <span class="bi bi-person-fill"> Log in</span>
+                        <span class="bi bi-person-fill"> <b>Log in</b></span>
                     </a>
                     <a href="/Account/Register" class="btn text-black">
-                        <span class="bi bi-person-fill-add"> Sign up</span>
+                        <span class="bi bi-person-fill-add"> <b>Sign up</b></span>
                     </a>
                 </div>
                

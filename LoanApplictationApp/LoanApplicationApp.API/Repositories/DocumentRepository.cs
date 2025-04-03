@@ -30,9 +30,10 @@ namespace LoanApplicationApp.API.Repositories
             documentDM.FileExtension = Path.GetExtension(documentUploadRequestDTO.File.FileName);
             documentDM.FileSizeInBytes = documentUploadRequestDTO.File.Length;
             documentDM.FileName = documentUploadRequestDTO.File.FileName;
-            documentDM.FileDescription = documentUploadRequestDTO.FileDescription;
+            documentDM.DocumentType = documentUploadRequestDTO.DocumentType;
             documentDM.ApplicantId = "1edba7b4-7b63-4a15-940d-8f889bfca170";
             documentDM.FilePath = saveResult.FilePath;
+            documentDM.DateOfCreation = DateTime.Now;
 
             await loanApplicationDbContext.Documents.AddRangeAsync(documentDM);
             await loanApplicationDbContext.SaveChangesAsync();

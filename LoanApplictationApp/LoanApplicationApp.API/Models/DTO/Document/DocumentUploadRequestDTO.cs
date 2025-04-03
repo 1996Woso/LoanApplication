@@ -7,6 +7,6 @@ namespace LoanApplicationApp.API.Models.DTO.Document
         [Required]
         public IFormFile File { get; set; }
         [Required]
-        public string FileDescription { get; set; }
+        public string DocumentType { get; set; }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using System.Text;
 using System.Text.Json;
 using LoanApplictationApp.Models;
-using LoanApplictationApp.Models.DTO;
+using LoanApplictationApp.Models.DTO.Application;
 
 namespace LoanApplictationApp.Services
 {
@@ -18,7 +18,7 @@ namespace LoanApplictationApp.Services
 
         public async Task<Application> AddApplicationAsync(AddApplicationDTO application, string applicantId)
         {
-            string url = $"{configuration["AppSettings:ApplicationAPIUrl"]}?applicantId={Uri.EscapeDataString(applicantId)}" ;
+            string url = $"{configuration["AppSettings:LoanApplicationAPIUrl"]}/api/application?applicantId={Uri.EscapeDataString(applicantId)}" ;
             var client = httpClient.CreateClient();
             //This one works when api uses [FromBody] otherwise the values will not be passed to the api
             //var httpResponseMessage = await client.PostAsJsonAsync(url, application);
@@ -37,7 +37,7 @@ namespace LoanApplictationApp.Services
         public async Task<IEnumerable<ApplicationDTO>> GetApplicationsAsync()
         {
             List<ApplicationDTO> applications = new List<ApplicationDTO>();
-            string url = $"{configuration["AppSettings:ApplicationAPIUrl"]}";
+            string url = $"{configuration["AppSettings:LoanApplicationAPIUrl"]}/api/application";
             //Fetch applications
             var client = httpClient.CreateClient();
             var httpResponseMessage = await client.GetAsync(url);

@@ -229,8 +229,8 @@
             "multipart/form-data": {
               "schema": {
                 "required": [
-                  "File",
-                  "FileDescription"
+                  "DocumentType",
+                  "File"
                 ],
                 "type": "object",
                 "properties": {
@@ -238,7 +238,7 @@
                     "type": "string",
                     "format": "binary"
                   },
-                  "FileDescription": {
+                  "DocumentType": {
                     "type": "string"
                   }
                 }
@@ -247,7 +247,7 @@
                 "File": {
                   "style": "form"
                 },
-                "FileDescription": {
+                "DocumentType": {
                   "style": "form"
                 }
               }

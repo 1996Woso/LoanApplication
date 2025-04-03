@@ -585,7 +585,6 @@ C:\Users\eviwe\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplic
 C:\Users\eviwe\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplictationApp\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\eviwe\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplictationApp\obj\Debug\net8.0\scopedcss\Components\Controls\AlertMessages\ErrorMessage.razor.rz.scp.css
 C:\Users\eviwe\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplictationApp\obj\Debug\net8.0\scopedcss\Components\Controls\AlertMessages\InfoMessage.razor.rz.scp.css
-C:\Users\eviwe\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplictationApp\obj\Debug\net8.0\scopedcss\Components\Controls\AlertMessages\SuccessMessage.razor.rz.scp.css
 C:\Users\eviwe\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplictationApp\obj\Debug\net8.0\scopedcss\Components\Controls\Calculators\Affordability.razor.rz.scp.css
 C:\Users\eviwe\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplictationApp\obj\Debug\net8.0\scopedcss\Components\Controls\Calculators\Repayment.razor.rz.scp.css
 C:\Users\eviwe\source\repos\Eviwe\LoanApplication\LoanApplictationApp\LoanApplictationApp\obj\Debug\net8.0\scopedcss\Components\Layout\MainLayout.razor.rz.scp.css

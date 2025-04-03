@@ -1,5 +1,5 @@
 ﻿using LoanApplictationApp.Models;
-using LoanApplictationApp.Models.DTO;
+using LoanApplictationApp.Models.DTO.Application;
 
 namespace LoanApplictationApp.Services
 {

@@ -139,7 +139,7 @@
         "IsRequired": false
       },
       {
-        "Name": "FileDescription",
+        "Name": "DocumentType",
         "Type": "System.String",
         "IsRequired": false
       }
