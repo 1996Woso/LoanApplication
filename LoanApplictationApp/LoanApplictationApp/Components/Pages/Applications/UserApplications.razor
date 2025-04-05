@@ -1,0 +1,21 @@
+﻿@page "/user-applications"
+@attribute [Authorize]
+<br />
+<Applications />
+
+<br />
+<br />
+<br />
+<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+			<UploadDocument ReturnUrl="@returnUrl"/>
+		</div>
+		<div class="col-md-6">
+			<GetUserDocuments ReturnUrl="@returnUrl" />
+		</div>
+	</div>
+</div>
+@code {
+	public string returnUrl = "/user-applications";
+}

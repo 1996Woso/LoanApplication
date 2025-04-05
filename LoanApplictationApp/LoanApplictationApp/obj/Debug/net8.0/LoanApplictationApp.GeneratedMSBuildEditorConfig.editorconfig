@@ -196,12 +196,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBcHBsaWNhdGlvbnNcQWRkLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/eviwe/source/repos/Eviwe/LoanApplication/LoanApplictationApp/LoanApplictationApp/Components/Pages/Applications/AllApplications.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBcHBsaWNhdGlvbnNcQWxsQXBwbGljYXRpb25zLnJhem9y
+[C:/Users/eviwe/source/repos/Eviwe/LoanApplication/LoanApplictationApp/LoanApplictationApp/Components/Pages/Applications/Applications.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBcHBsaWNhdGlvbnNcQXBwbGljYXRpb25zLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eviwe/source/repos/Eviwe/LoanApplication/LoanApplictationApp/LoanApplictationApp/Components/Pages/Applications/GetUserDocuments.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBcHBsaWNhdGlvbnNcR2V0VXNlckRvY3VtZW50cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/eviwe/source/repos/Eviwe/LoanApplication/LoanApplictationApp/LoanApplictationApp/Components/Pages/Applications/UploadDocument.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBcHBsaWNhdGlvbnNcVXBsb2FkRG9jdW1lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eviwe/source/repos/Eviwe/LoanApplication/LoanApplictationApp/LoanApplictationApp/Components/Pages/Applications/UserApplications.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBcHBsaWNhdGlvbnNcVXNlckFwcGxpY2F0aW9ucy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/eviwe/source/repos/Eviwe/LoanApplication/LoanApplictationApp/LoanApplictationApp/Components/Pages/Auth.razor]

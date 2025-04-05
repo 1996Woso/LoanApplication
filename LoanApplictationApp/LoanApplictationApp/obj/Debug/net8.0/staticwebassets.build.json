@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Y9FbocDJNUN9yt6JVJRTZ4C5OszBl+OzcL6q4ZMf8Lg=",
+  "Hash": "Q0EhGdEAfaPSqH+kx26UiSO8DZoQsaGUMdPXI4kvQtM=",
   "Source": "LoanApplictationApp",
   "BasePath": "_content/LoanApplictationApp",
   "Mode": "Default",
@@ -2572,8 +2572,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "lsyzkcjwge",
-      "Integrity": "5Q7IQy45crtDJ9zxUmT9zdWhRup1Awq6Kvnu+O4uoXo=",
+      "Fingerprint": "jdhmhhncfc",
+      "Integrity": "ifkyZCQFYvy3hhJiCrzmfe5xEtWLMtVmCxQUclqQfEg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\LoanApplictationApp.styles.css"
@@ -2593,8 +2593,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "9qq88chmsu",
-      "Integrity": "r36PtMsOWM27PvooKMh2Dahcjjl7zwZbfrwUrMqi23s=",
+      "Fingerprint": "1c5p33n3da",
+      "Integrity": "QeYYVK5H3E09mCRqMkoO69NNDBU64HaQhjFWopvHhLA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\LoanApplictationApp.bundle.scp.css"
@@ -2614,8 +2614,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "pvkw66762w",
-      "Integrity": "S0AOZOVxeRmue7j4CaaKlX1fpfM5iH1XmBaWmgazUQA=",
+      "Fingerprint": "32frsebgqt",
+      "Integrity": "BTdyZKlgtVmk4ySBHVk9wxKi7X4K1gOKSa6QuXbxUNw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\app.css"
@@ -9981,6 +9981,51 @@
       ]
     },
     {
+      "Route": "app.32frsebgqt.css",
+      "AssetFile": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\app.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7000"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BTdyZKlgtVmk4ySBHVk9wxKi7X4K1gOKSa6QuXbxUNw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 04 Apr 2025 21:03:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "32frsebgqt"
+        },
+        {
+          "Name": "label",
+          "Value": "app.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-BTdyZKlgtVmk4ySBHVk9wxKi7X4K1gOKSa6QuXbxUNw="
+        }
+      ]
+    },
+    {
       "Route": "app.css",
       "AssetFile": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\app.css",
       "Selectors": [],
@@ -9991,7 +10036,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6881"
+          "Value": "7000"
         },
         {
           "Name": "Content-Type",
@@ -9999,11 +10044,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"S0AOZOVxeRmue7j4CaaKlX1fpfM5iH1XmBaWmgazUQA=\""
+          "Value": "\"BTdyZKlgtVmk4ySBHVk9wxKi7X4K1gOKSa6QuXbxUNw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 02 Apr 2025 20:38:14 GMT"
+          "Value": "Fri, 04 Apr 2025 21:03:39 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10013,52 +10058,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-S0AOZOVxeRmue7j4CaaKlX1fpfM5iH1XmBaWmgazUQA="
-        }
-      ]
-    },
-    {
-      "Route": "app.pvkw66762w.css",
-      "AssetFile": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\wwwroot\\app.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "6881"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"S0AOZOVxeRmue7j4CaaKlX1fpfM5iH1XmBaWmgazUQA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 02 Apr 2025 20:38:14 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "pvkw66762w"
-        },
-        {
-          "Name": "label",
-          "Value": "app.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-S0AOZOVxeRmue7j4CaaKlX1fpfM5iH1XmBaWmgazUQA="
+          "Value": "sha256-BTdyZKlgtVmk4ySBHVk9wxKi7X4K1gOKSa6QuXbxUNw="
         }
       ]
     },
@@ -11129,7 +11129,7 @@
       ]
     },
     {
-      "Route": "LoanApplictationApp.9qq88chmsu.bundle.scp.css",
+      "Route": "LoanApplictationApp.1c5p33n3da.bundle.scp.css",
       "AssetFile": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\LoanApplictationApp.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -11139,7 +11139,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "16007"
+          "Value": "16084"
         },
         {
           "Name": "Content-Type",
@@ -11147,11 +11147,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"r36PtMsOWM27PvooKMh2Dahcjjl7zwZbfrwUrMqi23s=\""
+          "Value": "\"QeYYVK5H3E09mCRqMkoO69NNDBU64HaQhjFWopvHhLA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 03 Apr 2025 07:36:55 GMT"
+          "Value": "Sat, 05 Apr 2025 15:15:48 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11161,7 +11161,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "9qq88chmsu"
+          "Value": "1c5p33n3da"
         },
         {
           "Name": "label",
@@ -11169,7 +11169,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-r36PtMsOWM27PvooKMh2Dahcjjl7zwZbfrwUrMqi23s="
+          "Value": "sha256-QeYYVK5H3E09mCRqMkoO69NNDBU64HaQhjFWopvHhLA="
         }
       ]
     },
@@ -11184,7 +11184,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "16007"
+          "Value": "16084"
         },
         {
           "Name": "Content-Type",
@@ -11192,11 +11192,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"r36PtMsOWM27PvooKMh2Dahcjjl7zwZbfrwUrMqi23s=\""
+          "Value": "\"QeYYVK5H3E09mCRqMkoO69NNDBU64HaQhjFWopvHhLA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 03 Apr 2025 07:36:55 GMT"
+          "Value": "Sat, 05 Apr 2025 15:15:48 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11206,12 +11206,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-r36PtMsOWM27PvooKMh2Dahcjjl7zwZbfrwUrMqi23s="
+          "Value": "sha256-QeYYVK5H3E09mCRqMkoO69NNDBU64HaQhjFWopvHhLA="
         }
       ]
     },
     {
-      "Route": "LoanApplictationApp.lsyzkcjwge.styles.css",
+      "Route": "LoanApplictationApp.jdhmhhncfc.styles.css",
       "AssetFile": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\LoanApplication\\LoanApplictationApp\\LoanApplictationApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\LoanApplictationApp.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -11225,7 +11225,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "16210"
+          "Value": "16287"
         },
         {
           "Name": "Content-Type",
@@ -11233,11 +11233,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"5Q7IQy45crtDJ9zxUmT9zdWhRup1Awq6Kvnu+O4uoXo=\""
+          "Value": "\"ifkyZCQFYvy3hhJiCrzmfe5xEtWLMtVmCxQUclqQfEg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 03 Apr 2025 07:36:55 GMT"
+          "Value": "Sat, 05 Apr 2025 15:15:48 GMT"
         },
         {
           "Name": "Link",
@@ -11247,11 +11247,11 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "lsyzkcjwge"
+          "Value": "jdhmhhncfc"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-5Q7IQy45crtDJ9zxUmT9zdWhRup1Awq6Kvnu+O4uoXo="
+          "Value": "sha256-ifkyZCQFYvy3hhJiCrzmfe5xEtWLMtVmCxQUclqQfEg="
         },
         {
           "Name": "label",
@@ -11274,7 +11274,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "16210"
+          "Value": "16287"
         },
         {
           "Name": "Content-Type",
@@ -11282,11 +11282,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"5Q7IQy45crtDJ9zxUmT9zdWhRup1Awq6Kvnu+O4uoXo=\""
+          "Value": "\"ifkyZCQFYvy3hhJiCrzmfe5xEtWLMtVmCxQUclqQfEg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 03 Apr 2025 07:36:55 GMT"
+          "Value": "Sat, 05 Apr 2025 15:15:48 GMT"
         },
         {
           "Name": "Link",
@@ -11296,7 +11296,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-5Q7IQy45crtDJ9zxUmT9zdWhRup1Awq6Kvnu+O4uoXo="
+          "Value": "sha256-ifkyZCQFYvy3hhJiCrzmfe5xEtWLMtVmCxQUclqQfEg="
         }
       ]
     }

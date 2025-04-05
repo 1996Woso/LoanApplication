@@ -2,11 +2,12 @@
 }
 button {
     border-radius: 0px !important;
-    width: 25%;
+    width: 100%;
     height: 3rem;
     background-color: black;
     color: aliceblue;
-    font-weight: bold;
+/*    min-width: 9.6rem;
+    max-width: 12.5rem;*/
 /*    outline: none !important;
     border:none !important;*/
 }

@@ -5,56 +5,64 @@
 /* _content/LoanApplictationApp/Components/Controls/AlertMessages/InfoMessage.razor.rz.scp.css */
 /* _content/LoanApplictationApp/Components/Controls/Calculators/Affordability.razor.rz.scp.css */
 
-label[b-26j9hufh6z] {
+/*label {
     font-weight: bold !important;
     font-size: small !important;
 }
 
-input[b-26j9hufh6z] {
+input {
     background-color: ghostwhite !important;
 }
-.card[b-26j9hufh6z] {
-    background-color: transparent !important; /* Make the card background transparent */
-    border: none !important; /* Remove the card border */
-    box-shadow: none !important; /* Remove the card shadow */
-}
-.card-header[b-26j9hufh6z] {
-    background-color: transparent !important; /* Make the card header background transparent */
-    border-bottom: none !important; /* Remove the card header border */
-    height: 2.5rem !important;
+.card {
+    background-color: transparent !important;*/ /* Make the card background transparent */
+    /*border: none !important;*/ /* Remove the card border */
+    /*box-shadow: none !important;*/ /* Remove the card shadow */
+/*}
+.card-header {
+    background-color: transparent !important;*/ /* Make the card header background transparent */
+    /*border-bottom: none !important;*/ /* Remove the card header border */
+    /*height: 2.5rem !important;
 }
 
-.card-body[b-26j9hufh6z] {
-    color: black !important; /* Ensure text color is visible on the background */
-}
-h2[b-26j9hufh6z]{
+.card-body {
+    color: black !important;*/ /* Ensure text color is visible on the background */
+/*}
+h2{
     color:orange;
+}*/
+p[b-26j9hufh6z]{
+    background-color: rgba(0,0,0,0.5);
+    color:white;
 }
 /* _content/LoanApplictationApp/Components/Controls/Calculators/Repayment.razor.rz.scp.css */
 
-label[b-chghasy8ny]{
+/*label{
     font-weight: bold !important;
     font-size: small !important;
 }
-input[b-chghasy8ny]{
+input{
     background-color:ghostwhite !important;
 }
-.card[b-chghasy8ny] {
-    background-color: transparent !important; /* Make the card background transparent */
-    border: none !important; /* Remove the card border */
-    box-shadow: none !important; /* Remove the card shadow */
-}
-.card-header[b-chghasy8ny] {
-    background-color: transparent !important; /* Make the card header background transparent */
-    border-bottom: none !important; /* Remove the card header border */
-    height: 2.5rem !important;
+.card {
+    background-color: transparent !important;*/ /* Make the card background transparent */
+    /*border: none !important;*/ /* Remove the card border */
+    /*box-shadow: none !important;*/ /* Remove the card shadow */
+/*}
+.card-header {
+    background-color: transparent !important;*/ /* Make the card header background transparent */
+    /*border-bottom: none !important;*/ /* Remove the card header border */
+    /*height: 2.5rem !important;
 }
 
-.card-body[b-chghasy8ny] {
-    color: black !important; /* Ensure text color is visible on the background */
-}
-h2[b-chghasy8ny] {
+.card-body {
+    color: black !important;*/ /* Ensure text color is visible on the background */
+/*}
+h2 {
     color:orange;
+}*/
+p[b-chghasy8ny]{
+    background-color: rgba(0,0,0,0.5);
+    color: white;
 }
 /* _content/LoanApplictationApp/Components/Layout/MainLayout.razor.rz.scp.css */
 .page[b-78rsiozk5i] {
@@ -387,11 +395,12 @@ body[b-nlbqh7o17r] {
 }
 button[b-nlbqh7o17r] {
     border-radius: 0px !important;
-    width: 25%;
+    width: 100%;
     height: 3rem;
     background-color: black;
     color: aliceblue;
-    font-weight: bold;
+/*    min-width: 9.6rem;
+    max-width: 12.5rem;*/
 /*    outline: none !important;
     border:none !important;*/
 }

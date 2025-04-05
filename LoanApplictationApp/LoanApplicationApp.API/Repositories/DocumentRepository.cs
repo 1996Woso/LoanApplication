@@ -1,9 +1,12 @@
-﻿using System.Text;
+﻿using System.Data;
+using System.Text;
 using AutoMapper;
 using LoanApplicationApp.API.Data;
 using LoanApplicationApp.API.Models.Domain;
 using LoanApplicationApp.API.Models.DTO;
 using LoanApplicationApp.API.Models.DTO.Document;
+using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.EntityFrameworkCore;
 
 namespace LoanApplicationApp.API.Repositories
 {
@@ -21,7 +24,7 @@ namespace LoanApplicationApp.API.Repositories
             this.configuration = configuration;
             this.mapper = mapper;
         }
-        public async Task<Document> Upload(DocumentUploadRequestDTO documentUploadRequestDTO)
+        public async Task<Document> UploadAsync(DocumentUploadRequestDTO documentUploadRequestDTO)
         {
             var saveResult = await SaveFileAsync(documentUploadRequestDTO.File);
             if (!saveResult.Success) throw new Exception(saveResult.Message);
@@ -29,7 +32,7 @@ namespace LoanApplicationApp.API.Repositories
             documentDM.File = documentUploadRequestDTO.File;
             documentDM.FileExtension = Path.GetExtension(documentUploadRequestDTO.File.FileName);
             documentDM.FileSizeInBytes = documentUploadRequestDTO.File.Length;
-            documentDM.FileName = documentUploadRequestDTO.File.FileName;
+            documentDM.FileName = saveResult.FileName;
             documentDM.DocumentType = documentUploadRequestDTO.DocumentType;
             documentDM.ApplicantId = "1edba7b4-7b63-4a15-940d-8f889bfca170";
             documentDM.FilePath = saveResult.FilePath;
@@ -68,13 +71,13 @@ namespace LoanApplicationApp.API.Repositories
 
             if (!allowedExtensions.Contains(fileExtension))
             {
-                return new FileSaveResult { Success = false, Message = "Unsupported file extension. Please upload JPG, JPEG, PDF or PNG files." };
+                return new FileSaveResult { Success = false, Message = "Unsupported file extension. Please upload JPG, JPEG, PDF or PNG files!" };
             }
 
             long maxFileSize = 2 * 1024 * 1024; // 2MB
             if (file.Length > maxFileSize)
             {
-                return new FileSaveResult { Success = false, Message = "File size exceeds 2MB limit." };
+                return new FileSaveResult { Success = false, Message = "File size exceeds 2MB limit!" };
             }
 
             var filePath = $"{configuration["AppSettings:FilesRoothPath"]}";
@@ -82,16 +85,90 @@ namespace LoanApplicationApp.API.Repositories
             {
                 Directory.CreateDirectory(filePath);
             }
+            StringBuilder fileName = new StringBuilder();
+            fileName.Append($"{Path.GetFileNameWithoutExtension(file.FileName)}-{DateTime.Now:yyyyMMddHHmmssff}");
+            //var fileName = await GetUniqueFileNameAsync(file.FileName);
 
-            var fileName = await GetUniqueFileNameAsync(file.FileName);
-            filePath = Path.Combine(filePath, fileName);
+            filePath = Path.Combine(filePath, fileName.Append(fileExtension).ToString());
 
             using (var stream = new FileStream(filePath, FileMode.Create))
             {
                 await file.CopyToAsync(stream);
             }
 
-            return new FileSaveResult { Success = true, FilePath = filePath };
+            return new FileSaveResult { Success = true, Message = "File uploaded successfully!", FilePath = filePath ,FileName = fileName.Replace($"{fileExtension}","").ToString()};
+        }
+
+        public async Task<IEnumerable<Document>> GetAllAsync(string? userId)
+        {
+            if (!string.IsNullOrEmpty(userId))
+            {
+                return await loanApplicationDbContext.Documents.Where(x => x.ApplicantId == userId).ToListAsync();
+            }
+            return await loanApplicationDbContext.Documents.ToListAsync();
+            
+        }
+
+        public async Task<Document> DeleteAsync(Guid id)
+        {
+            var document = await loanApplicationDbContext.Documents.FirstOrDefaultAsync(x => x.Id == id);
+            if(document == null)
+            {
+                return null;
+            }
+            var filePath = document.FilePath;
+            //Delete document from the server
+            if(System.IO.File.Exists(filePath))
+            {
+                System.IO.File.Delete(filePath);
+            }
+            //Remove document record from the databas
+            loanApplicationDbContext.Documents.Remove(document);
+            await loanApplicationDbContext.SaveChangesAsync();
+            return document;
+        }
+        public async Task<bool> IsDeletedAsync(Guid id)
+        {
+            var document = await loanApplicationDbContext.Documents.FirstOrDefaultAsync(x => x.Id == id);
+            if (document == null)
+            {
+                return false;
+            }
+            var filePath = document.FilePath;
+            //Delete document from the server
+            if (File.Exists(filePath))
+            {
+                File.Delete(filePath);
+            }
+            //Remove document record from the databas
+            loanApplicationDbContext.Documents.Remove(document);
+            await loanApplicationDbContext.SaveChangesAsync();
+            return true;
+        }
+        public async Task<Document> ReplaceAsync(DocumentUploadRequestDTO documentUploadRequestDTO,Guid id)
+        {
+            //Check if the document is savable (it saves it to the saver , so call SaveFileAsync and remove the file)
+            var saveResult = await SaveFileAsync(documentUploadRequestDTO.File);
+            if (!saveResult.Success) throw new Exception(saveResult.Message);
+            if (File.Exists(saveResult.FilePath))
+            {
+                File.Delete(saveResult.FilePath);
+            }
+            //Find the existing document
+            var existingDocument = await loanApplicationDbContext.Documents.FirstOrDefaultAsync(x => x.Id == id);
+            if(existingDocument == null)
+            {
+                throw new Exception("The document you are trying to replace is not found.");
+            }
+            //Delete existing document
+            await DeleteAsync(id);
+            //Upload new document
+            documentUploadRequestDTO.DocumentType = existingDocument.DocumentType;
+            await UploadAsync(documentUploadRequestDTO);
+
+
+            return mapper.Map<Document>(documentUploadRequestDTO);
+
         }
     }
 }

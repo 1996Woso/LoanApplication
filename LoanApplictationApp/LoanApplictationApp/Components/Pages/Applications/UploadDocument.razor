@@ -3,6 +3,7 @@
 @rendermode InteractiveServer
 @inject IDocumentService documentService
 @inject NavigationManager NavigationManager
+@attribute [Authorize]
 
 
 <style>
@@ -44,12 +45,26 @@
 
 
 <div class="card">
-	<div class="card-header heading-form">
+	<div class="card-header heading-form" style="height:0rem !important;">
 		<p>
 			Add documents to your application
 		</p>
 	</div>
 	<div class="card-body">
+		<hr />
+		@if (!string.IsNullOrEmpty(message.Info))
+		{
+			<InfoMessage Message="@message.Info" IsDivDisplayed="@isDisplyed" />
+		}
+		@if (!string.IsNullOrEmpty(message.Success))
+		{
+			<SuccessMessage Message="@message.Success" IsDivDisplayed="@isDisplyed" />
+		}
+		@if (!string.IsNullOrEmpty(message.Error))
+		{
+			<ErrorMessage Message="@message.Error" IsDivDisplayed="@isDisplyed" />
+		}
+		<br />
 		<EditForm Model="model" OnValidSubmit="UploadFile" FormName="UploadFile">
 			<DataAnnotationsValidator/>
 			<div class="row">
@@ -92,18 +107,6 @@
 		</EditForm>
 	</div>
 </div>
-@if(!string.IsNullOrEmpty(message.Info))
-{
-	<InfoMessage Message="@message.Info" IsDivDisplayed="@isDisplyed"/>
-}
-@if(!string.IsNullOrEmpty(message.Success))
-{
-	<SuccessMessage Message="@message.Success" IsDivDisplayed="@isDisplyed"/>
-}
-@if(!string.IsNullOrEmpty(message.Error))
-{
-	<ErrorMessage Message="@message.Error" IsDivDisplayed ="@isDisplyed"/>
-}
 
 
 @code {
@@ -114,7 +117,8 @@
 	private string buttonText = "Save";
 	private string selectedFileName = "Browse";
 	private bool isDisplyed = false;
-
+	[Parameter]
+	public string ReturnUrl { get; set; } = "/user-applications";
 	protected override async Task OnInitializedAsync()
 	{
 		docTypes = (await documentService.DocumentTypesAsync()).ToList();
@@ -141,14 +145,18 @@
 		isDisplyed = true;
 		buttonText = "Save";
 		StateHasChanged();
-		await Task.Delay(5000);// 5000ms = 5s
+		await Task.Delay(7000);// 5000ms = 5s
 		isDisplyed = false;
-		await CancelUpload();
+		if(!string.IsNullOrEmpty(message.Success))
+		{
+			await CancelUpload();
+		}
+	
 
 	}
 	private async Task CancelUpload()
 	{
 		await Task.Delay(1);
-		NavigationManager.NavigateTo($"/upload-document",forceLoad:true);
+		NavigationManager.NavigateTo($"{ReturnUrl}",forceLoad: true);
 	}
 }

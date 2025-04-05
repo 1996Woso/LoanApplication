@@ -1,7 +1,8 @@
 ﻿using System.Text;
 using System.Text.Json;
-using LoanApplictationApp.Models;
+using LoanApplictationApp.Models.Domain;
 using LoanApplictationApp.Models.DTO.Application;
+using Microsoft.Extensions.Primitives;
 
 namespace LoanApplictationApp.Services
 {
@@ -34,13 +35,23 @@ namespace LoanApplictationApp.Services
             return await httpResponseMessage.Content.ReadFromJsonAsync<Application>();
         }
 
-        public async Task<IEnumerable<ApplicationDTO>> GetApplicationsAsync()
+        public async Task<IEnumerable<ApplicationDTO>> GetApplicationsAsync(Guid? applicantId, long? loanProcessorNo)
         {
             List<ApplicationDTO> applications = new List<ApplicationDTO>();
-            string url = $"{configuration["AppSettings:LoanApplicationAPIUrl"]}/api/application";
+            StringBuilder url = new StringBuilder();
+            url.Append($"{configuration["AppSettings:LoanApplicationAPIUrl"]}/api/application");
+            if(applicantId != Guid.Empty  && loanProcessorNo == 0)
+            {
+                url.Append(applicantId);
+            }
+            else if(applicantId == Guid.Empty && loanProcessorNo != 0)
+            {
+                url.Append(loanProcessorNo);
+            }
+
             //Fetch applications
             var client = httpClient.CreateClient();
-            var httpResponseMessage = await client.GetAsync(url);
+            var httpResponseMessage = await client.GetAsync(url.ToString());
             applications.AddRange(await httpResponseMessage.Content.ReadFromJsonAsync<IEnumerable<ApplicationDTO>>());
             return applications;
         }

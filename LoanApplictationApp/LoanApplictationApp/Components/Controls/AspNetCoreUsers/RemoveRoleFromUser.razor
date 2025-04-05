@@ -1,69 +1,76 @@
 ﻿@inject UserManager<ApplicationUser> UserManager
 @inject RoleManager<IdentityRole> RoleManager
 @inject IJSRuntime IJSRuntime
+@inject IMessageService messageService
+@implements IDisposable
 
-
-<div class="row justify-content-center">
-    <div class="col-md-6">
-        <h6 class="text-center"><u>Remove Role From User</u></h6>
-        <EditForm Model="model" OnValidSubmit="RemoveRole" FormName="removeRole">
-            <DataAnnotationsValidator />
-            <div class="form-floating mb-3">
-                <InputSelect @bind-Value="model.Email" class="form-control" aria-required="true" placeholder="email" @onchange="ClearMessages">
-                    <option value="">Select Email</option>
-                    @foreach (var email in Emails)
-                    {
-                        <option value="@email">@email</option>
-                    }
-                </InputSelect>
-                <label for="Email">Email</label>
-                <ValidationMessage For="() => model.Email" class="text-danger" />
+<div class="container small-box">
+    @if(messageService.IsFormDisplayed)
+    {
+        <div class="card">
+            <div class="card-header heading-form">
+                <p>
+                    Remove Role From User
+                </p>
             </div>
-            <div class="form-floating mb-3">
-                <InputSelect @bind-Value="model.Role" class="form-control" aria-required="true" placeholder="role" @onchange = "ClearMessages">
-                    <option value="">Select Role</option>
-                    @foreach (var role in Roles)
-                    {
-                        <option value="@role">@role</option>
-                    }
-                </InputSelect>
-                <label for="Role">Role</label>
-                <ValidationMessage For="() => model.Role" class="text-danger" />
+            <div class="card-body">
+                <EditForm Model="model" OnValidSubmit="RemoveRole" FormName="removeRole">
+                    <DataAnnotationsValidator />
+                    <div class="form-floating mb-3">
+                        <InputSelect @bind-Value="model.Email" class="form-control" aria-required="true" placeholder="email">
+                            <option value="">Select Email</option>
+                            @foreach (var email in Emails)
+                            {
+                                <option value="@email">@email</option>
+                            }
+                        </InputSelect>
+                        <label for="Email">Email</label>
+                        <ValidationMessage For="() => model.Email" class="text-danger" />
+                    </div>
+                    <div class="form-floating mb-3">
+                        <InputSelect @bind-Value="model.Role" class="form-control" aria-required="true" placeholder="role">
+                            <option value="">Select Role</option>
+                            @foreach (var role in Roles)
+                            {
+                                <option value="@role">@role</option>
+                            }
+                        </InputSelect>
+                        <label for="Role">Role</label>
+                        <ValidationMessage For="() => model.Role" class="text-danger" />
+                    </div>
+                    <button class="btn btn-danger w-100" type="submit">
+                        <i class="bi bi-x-circle"></i> Remove Role
+                    </button>
+                </EditForm>
             </div>
-            <button class="btn btn-danger w-100" type="submit">
-                <i class="bi bi-x-circle"></i> Remove Role
-            </button>
-        </EditForm>
-        @if (!string.IsNullOrEmpty(ErrorMessage) && IsFormSubmitted)
-        {
-            <div class="fade-message w-100" id="error-div">
-               <ErrorMessage Message="@ErrorMessage" IsDivDisplayed ="true"/>
-            </div>
-        }
-        else if (!string.IsNullOrEmpty(SuccessMessage) && IsFormSubmitted)
-        {
-            <div class="fade-message w-100" id="success-div">
-                <SuccessMessage Message="@SuccessMessage" IsDivDisplayed ="true"/>
-            </div>
-        }
-        else if (!string.IsNullOrEmpty(InfoMessage) && IsFormSubmitted)
-        {
-            <div class="fade-message w-100" id="info-div">
-                <InfoMessage Message="@InfoMessage" IsDivDisplayed ="true"/>
-            </div>
-        }
-    </div>
+        </div>
+    }
+    @if (!string.IsNullOrEmpty(messageService.ErrorMessage))
+    {
+        <div class="fade-message w-100" id="error-div">
+            <ErrorMessage Message="@messageService.ErrorMessage" IsDivDisplayed="true" />
+        </div>
+    }
+    else if (!string.IsNullOrEmpty(messageService.SuccessMessage))
+    {
+        <div class="fade-message w-100" id="success-div">
+            <SuccessMessage Message="@messageService.SuccessMessage" IsDivDisplayed="true" />
+        </div>
+    }
+    else if (!string.IsNullOrEmpty(messageService.InfoMessage))
+    {
+        <div class="fade-message w-100" id="info-div">
+            <InfoMessage Message="@messageService.InfoMessage" IsDivDisplayed="true" />
+        </div>
+    }
 </div>
+
 
 @code {
     private RemoveRoleModel model = new();
     private ApplicationUser? User;
     private List<string> Roles = new();
     private List<string> Emails = new();
-    private string? ErrorMessage { get; set; }
-    private string? SuccessMessage { get; set; }
-    private string? InfoMessage { get; set; }
-    private bool IsFormSubmitted = false;
 
     protected override async Task OnInitializedAsync()
     {
@@ -76,6 +83,8 @@
             Roles = await RoleManager.Roles.Select(x => x.Name ?? "").ToListAsync();
         }
         Emails = await UserManager.Users.Select(x => x.UserName ?? "").ToListAsync();
+
+        messageService.Onchange += StateHasChanged;
     }
     // protected override async Task OnAfterRenderAsync(bool firsRender)
     // {
@@ -87,13 +96,11 @@
     // }
     private async Task RemoveRole()
     {
-        IsFormSubmitted = true;
         User = await UserManager.FindByEmailAsync(model.Email ?? "");
         if (!await UserManager.IsInRoleAsync(User, model.Role))
         {
-            InfoMessage = $"'{User.Name} {User.Surname}' is not in role '{model.Role}'.";
-            SuccessMessage = "";
-            ErrorMessage = "";
+            messageService.Show("", $"'{User.Name} {User.Surname}' is not in role '{model.Role}'.", "");
+            await messageService.HideAsync();
             return;
         }
         if(User != null && !string.IsNullOrEmpty(model.Role))
@@ -101,24 +108,22 @@
             var result = await UserManager.RemoveFromRoleAsync(User, model.Role);
             if (result.Succeeded)
             {
-                SuccessMessage = $"'{model.Role}' has been removed successfully from {User.Name} {User.Surname}.";
-                ErrorMessage = "";
-                InfoMessage = "";
-                return;
+                messageService.Show("", "", $"'{model.Role}' has been removed successfully from {User.Name} {User.Surname}.");
+                await messageService.HideAsync();
             }
             else
             {
-                ErrorMessage = result.Errors.ToString();
-                SuccessMessage = "";
-                InfoMessage = "";
+                messageService.Show(result.Errors.ToString(),"","");
+                await messageService.HideAsync();
                 return;
             }  
         }
+
     }
-    private void ClearMessages()
+
+    public void Dispose()
     {
-        InfoMessage = string.Empty;
-        SuccessMessage = string.Empty;
+        messageService.Onchange -= StateHasChanged;
     }
     public class RemoveRoleModel
     {

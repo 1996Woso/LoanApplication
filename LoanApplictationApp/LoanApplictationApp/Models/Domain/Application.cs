@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace LoanApplictationApp.Models
+namespace LoanApplictationApp.Models.Domain
 {
     public class Application
     {

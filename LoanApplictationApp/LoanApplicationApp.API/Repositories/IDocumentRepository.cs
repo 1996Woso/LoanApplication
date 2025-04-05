@@ -6,6 +6,10 @@ namespace LoanApplicationApp.API.Repositories
 {
     public interface IDocumentRepository
     {
-        Task<Document> Upload(DocumentUploadRequestDTO documentUploadRequestDTO);
+        Task<Document> UploadAsync(DocumentUploadRequestDTO documentUploadRequestDTO);
+        Task<IEnumerable<Document>> GetAllAsync(string? userId);
+        Task<Document> DeleteAsync(Guid id);
+        Task<Document> ReplaceAsync(DocumentUploadRequestDTO documentUploadRequestDTO,Guid id);
+        Task<bool> IsDeletedAsync(Guid id);
     }
 }

@@ -1,4 +1,8 @@
-﻿using System.Net.Http.Headers;
+﻿using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Numerics;
+using LoanApplicationApp.Models.Domain;
+using LoanApplicationApp.Models.DTO.Document;
 using LoanApplictationApp.Models.DTO.Document;
 using Microsoft.AspNetCore.Components.Forms;
 
@@ -8,17 +12,25 @@ namespace LoanApplictationApp.Services
     {
         private readonly HttpClient httpClient;
         private readonly IConfiguration configuration;
+        private readonly IHttpClientFactory httpClientFactory;
 
         public DocumentService(HttpClient httpClient
-            ,IConfiguration configuration)
+            ,IConfiguration configuration
+            ,IHttpClientFactory httpClientFactory)
         {
             this.httpClient = httpClient;
             this.configuration = configuration;
+            this.httpClientFactory = httpClientFactory;
         }
-
+        // Create a method to convert IBrowserFile to IFormFile
         public async Task<IFormFile> ConvertToIFormFile(IBrowserFile browserFile)
         {
-            var stream = browserFile.OpenReadStream(maxAllowedSize: 2 * 1024 * 1024);
+            long maxFileSize = 1000 * 1024 * 1024; ;
+            if(browserFile.Size > maxFileSize )
+            {
+                throw new IOException($"File size exceeds the maximum allowed limit of {maxFileSize / (1024 * 1024)}MB.");
+            }
+            var stream = browserFile.OpenReadStream(maxFileSize);
             var memoryStream = new MemoryStream();
             await stream.CopyToAsync(memoryStream);
             memoryStream.Position = 0;
@@ -31,28 +43,49 @@ namespace LoanApplictationApp.Services
             };
         }
 
+        public async Task<bool> DeleteAsync(Guid id)
+        {
+            try
+            {
+
+                string url = $"{configuration["AppSettings:LoanApplicationAPIUrl"]}/api/document/{id}";
+                var response = await httpClient.DeleteAsync(url) ;
+                if (response.IsSuccessStatusCode)
+                {
+                    return true ;
+                }
+                else
+                {
+                    return false ;
+                }
+            }
+            catch(Exception e)
+            {
+                throw;
+            }
+        }
+
         public async Task<IEnumerable<string>> DocumentTypesAsync()
         {
             List<string> types = new List<string> { "Id","Payslip","Bank Statement" };
 
             return types;
         }
-
-        // Create a method to convert IBrowserFile to IFormFile
-        //private async Task<IFormFile> ConvertToIFormFile(IBrowserFile browserFile)
-        //{
-        //    var stream = browserFile.OpenReadStream();
-        //    var memoryStream = new MemoryStream();
-        //    await stream.CopyToAsync(memoryStream);
-        //    memoryStream.Position = 0;
-
-        //    return new FormFile(memoryStream, 0, memoryStream.Length,
-        //                       browserFile.Name, browserFile.Name)
-        //    {
-        //        Headers = new HeaderDictionary(),
-        //        ContentType = browserFile.ContentType
-        //    };
-        //}
+        public async Task<IEnumerable<DocumentDTO>> GetUserDocumentsAsync(string? userId)
+        {
+            try
+            {
+                string url = $"{configuration["AppSettings:LoanApplicationAPIUrl"]}/api/document?userId={userId}";
+                var response = await httpClient.GetFromJsonAsync<IEnumerable<DocumentDTO>>(url);
+                return response ?? Enumerable.Empty<DocumentDTO>();
+            }
+            catch (HttpRequestException ex)
+            {
+                // Handle or log the error appropriately
+                Console.WriteLine($"Error fetching documents: {ex.Message}");
+                return Enumerable.Empty<DocumentDTO>();
+            }
+        }
 
         public async Task<FileMessage> UploadAsync(IBrowserFile file, string documentType)
         {
@@ -76,7 +109,7 @@ namespace LoanApplictationApp.Services
                 }
                 else
                 {
-                    message.Info = $"File upload failed " + await response.Content.ReadAsStringAsync();
+                    message.Info = $"File upload failed: " + await response.Content.ReadAsStringAsync();
                     return message;
                 }
             }

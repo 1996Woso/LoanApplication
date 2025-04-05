@@ -27,6 +27,7 @@ namespace LoanApplicationApp.API.Mappings
 
             //Mappings for Document
             CreateMap<DocumentUploadRequestDTO, Document>();
+            CreateMap<Document, DocumentDTO>().ReverseMap();
 
         }
     }
