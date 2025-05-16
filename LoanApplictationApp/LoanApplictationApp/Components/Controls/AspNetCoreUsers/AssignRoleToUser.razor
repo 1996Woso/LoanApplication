@@ -6,8 +6,8 @@
 @implements IDisposable 
 
 <div class="container small-box">
-    @if(messageService.IsFormDisplayed)
-    {
+    @* @if(messageService.IsFormDisplayed) *@
+    @* { *@
         <div class="card">
             <div class="card-header heading-form">
                 <p>
@@ -26,7 +26,7 @@
                             }
                         </InputSelect>
                         <label for="Email">Email</label>
-                        <ValidationMessage For="() => assignRoleModel.Email" class="text-danger" />
+                        <ValidationMessage For="() => assignRoleModel.Email" class="validation-msg-font"/>
                     </div>
                     <div class="form-floating mb-3">
                         <InputSelect @bind-Value="assignRoleModel.Role" class="form-control" aria-required="true" placeholder="role" id="role">
@@ -37,7 +37,7 @@
                             }
                         </InputSelect>
                         <label for="Role">Role</label>
-                        <ValidationMessage For="() => assignRoleModel.Role" class="text-danger" />
+                        <ValidationMessage For="() => assignRoleModel.Role" class="validation-msg-font"/>
                     </div>
                     <button class="btn btn-primary w-100" type="submit">
                         <i class="bi bi-plus-circle"></i> Assign Role
@@ -45,16 +45,16 @@
                 </EditForm>
             </div>
         </div>
-    }
+    @* } *@
     @if (!string.IsNullOrEmpty(messageService.InfoMessage))
     {
-        <div class="fade-message w-100" id="info-div">
+        <div class="overlay-alert">
             <InfoMessage Message="@messageService.InfoMessage" IsDivDisplayed="true" />
         </div>
     }
     else if (!string.IsNullOrEmpty(messageService.SuccessMessage))
     {
-        <div class="fade-message w-100" id="success-div">
+        <div class="overlay-alert">
             <SuccessMessage Message="@messageService.SuccessMessage" IsDivDisplayed="true" />
         </div>
     }
@@ -102,7 +102,7 @@
             }
             else
             {
-                messageService.Show("", $"'{assignRoleModel.Role}' has already  been assigned  to {user.Name} {user.Surname}.", "");
+                messageService.Show("", $"'{assignRoleModel.Role}' has already been assigned to {user.Name} {user.Surname}.", "");
                 await messageService.HideAsync();
             }
 

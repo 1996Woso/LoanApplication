@@ -16,7 +16,7 @@
                             @*  <input type="number" @bind="model.GrossIncome" @bind:event="oninput" class="form-control"/> *@
                             <InputNumber @bind-Value="model.GrossIncome" class="form-control" @oninput="@(e => calculate.OnInputDecimal(e,value => model.GrossIncome = value,model))" />
                             <label>Gross Monthly Income (R)</label>
-                            <ValidationMessage For="() => model.GrossIncome" class="text-danger" />
+                            <ValidationMessage For="() => model.GrossIncome" class="validation-msg-font"/>
                         </div>
                         <div class="mb-2 col-md-6 form-floating">
                             @* <input type="number" @bind="model.i" @bind:event="oninput" class="form-control" /> *@
@@ -27,7 +27,7 @@
                             @* <input type="number" @bind="model.n" @bind:event="oninput" class="form-control" /> *@
                             <InputNumber @bind-Value="model.n" class="form-control" @oninput="@(e => calculate.OnInputInteger(e,value => model.n = value,model))" />
                             <label>Period (Years)</label>
-                            <ValidationMessage For="() => model.n" class="text-danger" />
+                            <ValidationMessage For="() => model.n" class="validation-msg-font"/>
                         </div>
                     </div>
                     <div>

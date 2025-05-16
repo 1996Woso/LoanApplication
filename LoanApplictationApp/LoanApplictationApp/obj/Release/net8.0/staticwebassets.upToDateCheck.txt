@@ -5,7 +5,10 @@ wwwroot\favicon.png
 wwwroot\Images\Access Denied.png
 wwwroot\Images\Add Role.png
 wwwroot\Images\Assing Role.png
+wwwroot\Images\error-icon.jpg
 wwwroot\Images\House Hands.png
 wwwroot\Images\House.jpeg
+wwwroot\Images\info-icon.png
 wwwroot\Images\Remove Role.png
+wwwroot\Images\success-icon.png
 wwwroot\Images\Unauthorised.PNG

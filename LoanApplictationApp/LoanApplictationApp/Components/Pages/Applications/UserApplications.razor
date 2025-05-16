@@ -1,4 +1,7 @@
 ﻿@page "/user-applications"
+@inject IDocumentService documentService
+@inject IUserService userService
+@rendermode InteractiveServer
 @attribute [Authorize]
 <br />
 <Applications />
@@ -9,13 +12,26 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-6">
-			<UploadDocument ReturnUrl="@returnUrl"/>
+			<UploadDocument OnUploadSuccess = "RefresshDocumentsAsync"/>
 		</div>
 		<div class="col-md-6">
-			<GetUserDocuments ReturnUrl="@returnUrl" />
+			<GetUserDocuments Documents = "documents" />
 		</div>
 	</div>
 </div>
 @code {
-	public string returnUrl = "/user-applications";
+	private ApplicationUser User;
+	private List<DocumentDTO> documents = new();
+
+	protected override async Task OnInitializedAsync()
+	{
+		User = await userService.GetCurrentUserAsync();
+		await RefresshDocumentsAsync();
+	}
+
+	private async Task RefresshDocumentsAsync()
+	{
+		if(User != null) documents = (await documentService.GetUserDocumentsAsync(User.Id)).ToList();
+	}
+
 }

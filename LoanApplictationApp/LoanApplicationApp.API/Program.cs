@@ -15,7 +15,10 @@ var builder = WebApplication.CreateBuilder(args);
 // Add Data Protection (Fix for TokenProvider issue)
 builder.Services.AddDataProtection();
 // Add services to the container.
-builder.Services.AddDbContext<LoanApplicationDbContext>(options =>
+//builder.Services.AddDbContext<LoanApplicationDbContext>(options =>
+//options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddDbContextFactory<LoanApplicationDbContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddDbContext<IdentityContext>(options =>

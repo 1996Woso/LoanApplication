@@ -31,6 +31,9 @@ p[b-26j9hufh6z]{
     background-color: rgba(0,0,0,0.5);
     color:white;
 }
+.form-floating label[b-26j9hufh6z]{
+    padding-left: 1.5rem;
+}
 /* _content/LoanApplictationApp/Components/Controls/Calculators/Repayment.razor.rz.scp.css */
 
 /*label{
@@ -60,6 +63,9 @@ h2 {
 p[b-chghasy8ny]{
     background-color: rgba(0,0,0,0.5);
     color: white;
+}
+.form-floating label[b-chghasy8ny]{
+    padding-left: 1.5rem;
 }
 /* _content/LoanApplictationApp/Components/Layout/MainLayout.razor.rz.scp.css */
 .page[b-78rsiozk5i] {

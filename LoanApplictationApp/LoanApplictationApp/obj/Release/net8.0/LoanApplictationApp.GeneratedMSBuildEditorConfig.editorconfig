@@ -176,6 +176,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/eviwe/source/repos/Eviwe/LoanApplication/LoanApplictationApp/LoanApplictationApp/Components/Controls/AlertMessages/SuccessMessage.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDb250cm9sc1xBbGVydE1lc3NhZ2VzXFN1Y2Nlc3NNZXNzYWdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/eviwe/source/repos/Eviwe/LoanApplication/LoanApplictationApp/LoanApplictationApp/Components/Controls/AspNetCoreUsers/AddRoleToDb.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDb250cm9sc1xBc3BOZXRDb3JlVXNlcnNcQWRkUm9sZVRvRGIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -186,6 +190,26 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/eviwe/source/repos/Eviwe/LoanApplication/LoanApplictationApp/LoanApplictationApp/Components/Controls/AspNetCoreUsers/RemoveRoleFromUser.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDb250cm9sc1xBc3BOZXRDb3JlVXNlcnNcUmVtb3ZlUm9sZUZyb21Vc2VyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eviwe/source/repos/Eviwe/LoanApplication/LoanApplictationApp/LoanApplictationApp/Components/Pages/Applications/Add.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBcHBsaWNhdGlvbnNcQWRkLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eviwe/source/repos/Eviwe/LoanApplication/LoanApplictationApp/LoanApplictationApp/Components/Pages/Applications/Applications.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBcHBsaWNhdGlvbnNcQXBwbGljYXRpb25zLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eviwe/source/repos/Eviwe/LoanApplication/LoanApplictationApp/LoanApplictationApp/Components/Pages/Applications/GetUserDocuments.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBcHBsaWNhdGlvbnNcR2V0VXNlckRvY3VtZW50cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eviwe/source/repos/Eviwe/LoanApplication/LoanApplictationApp/LoanApplictationApp/Components/Pages/Applications/UploadDocument.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBcHBsaWNhdGlvbnNcVXBsb2FkRG9jdW1lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eviwe/source/repos/Eviwe/LoanApplication/LoanApplictationApp/LoanApplictationApp/Components/Pages/Applications/UserApplications.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBcHBsaWNhdGlvbnNcVXNlckFwcGxpY2F0aW9ucy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/eviwe/source/repos/Eviwe/LoanApplication/LoanApplictationApp/LoanApplictationApp/Components/Pages/Auth.razor]
@@ -215,10 +239,6 @@ build_metadata.AdditionalFiles.CssScope = b-8fbxsxx1ie
 [C:/Users/eviwe/source/repos/Eviwe/LoanApplication/LoanApplictationApp/LoanApplictationApp/Components/Controls/AlertMessages/InfoMessage.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDb250cm9sc1xBbGVydE1lc3NhZ2VzXEluZm9NZXNzYWdlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-s153zijqye
-
-[C:/Users/eviwe/source/repos/Eviwe/LoanApplication/LoanApplictationApp/LoanApplictationApp/Components/Controls/AlertMessages/SuccessMessage.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDb250cm9sc1xBbGVydE1lc3NhZ2VzXFN1Y2Nlc3NNZXNzYWdlLnJhem9y
-build_metadata.AdditionalFiles.CssScope = b-jwt6g77h0x
 
 [C:/Users/eviwe/source/repos/Eviwe/LoanApplication/LoanApplictationApp/LoanApplictationApp/Components/Controls/Calculators/Affordability.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDb250cm9sc1xDYWxjdWxhdG9yc1xBZmZvcmRhYmlsaXR5LnJhem9y

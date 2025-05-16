@@ -24,6 +24,7 @@ namespace LoanApplicationApp.API.Mappings
      
             CreateMap<AddLoanProcessorDTO, LoanProcessor>().ReverseMap();
             CreateMap<LoanProcessor, LoanProcessorDTO>().ReverseMap();
+            CreateMap<UpdateLoanProcessorRequestDTO, LoanProcessor>().ReverseMap();
 
             //Mappings for Document
             CreateMap<DocumentUploadRequestDTO, Document>();

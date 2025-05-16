@@ -3,6 +3,9 @@
 @rendermode InteractiveServer
 @inject IDocumentService documentService
 @inject NavigationManager NavigationManager
+@inject IMessageService messageService
+@inject IUserService userService
+@implements IDisposable
 @attribute [Authorize]
 
 
@@ -43,85 +46,99 @@
 	}
 </style>
 
-
-<div class="card">
-	<div class="card-header heading-form" style="height:0rem !important;">
-		<p>
-			Add documents to your application
-		</p>
-	</div>
-	<div class="card-body">
-		<hr />
-		@if (!string.IsNullOrEmpty(message.Info))
-		{
-			<InfoMessage Message="@message.Info" IsDivDisplayed="@isDisplyed" />
-		}
-		@if (!string.IsNullOrEmpty(message.Success))
-		{
-			<SuccessMessage Message="@message.Success" IsDivDisplayed="@isDisplyed" />
-		}
-		@if (!string.IsNullOrEmpty(message.Error))
-		{
-			<ErrorMessage Message="@message.Error" IsDivDisplayed="@isDisplyed" />
-		}
-		<br />
-		<EditForm Model="model" OnValidSubmit="UploadFile" FormName="UploadFile">
-			<DataAnnotationsValidator/>
-			<div class="row">
-				<div class="col-md-6 mb-3">
-					<label>
-						Document Type
-					</label>
-				</div>
-				<div class="col-md-6 mb-3">
-					<InputSelect @bind-Value="model.DocumentType" class="form-control form-select">
-						<option value="">
-							<b>---------- Select ---------- </b>
-						</option>
-						@foreach(var docType in docTypes)
-						{
-							<option value ="@docType">@docType</option>
-						}
-					</InputSelect>
-					<ValidationMessage For="()=> model.DocumentType"/>
-				</div>
-				<div class="col-md-6 mb-3">
-					<label>
-						Upload Document
-					</label>
-				</div>
-				<div class="col-md-6 mb-3">
-					<div class="custom-file">
-						<InputFile id="fileUpload" class="custom-file-input" OnChange="HandleFile" />
-						<label class="custom-file-label" for="fileUpload" style="font-weight:initial !important">
-							<i class="bi bi-file-earmark-image fs-6"></i> @selectedFileName
+<div class="container">
+	@* @if(messageService.IsFormDisplayed) *@
+	@* { *@
+		<div class="card">
+			<div class="card-header heading-form" style="height:0rem !important;">
+				<p>
+					Add documents to your application
+				</p>
+			</div>
+			<div class="card-body">
+				<hr />
+				<br />
+				<EditForm Model="model" OnValidSubmit="UploadFile" FormName="UploadFile">
+					<DataAnnotationsValidator />
+					<div class="row">
+						<div class="col-md-6 mb-3">
+							<label>
+								Document Type
+							</label>
+						</div>
+						<div class="col-md-6 mb-3">
+							<InputSelect @bind-Value="model.DocumentType" class="form-control form-select">
+								<option value="">
+									<b>---------- Select ---------- </b>
+								</option>
+								@foreach (var docType in docTypes)
+							{
+								<option value="@docType">@docType</option>
+							}
+						</InputSelect>
+						<ValidationMessage For="()=> model.DocumentType" class="validation-msg-font"/>
+					</div>
+					<div class="col-md-6 mb-3">
+						<label>
+							Upload Document
 						</label>
 					</div>
-					<ValidationMessage For="()=> model.File"/>
+					<div class="col-md-6 mb-3">
+						<div class="custom-file">
+							<InputFile id="fileUpload" class="custom-file-input form-control" OnChange="HandleFile" />
+							<label class="custom-file-label" for="fileUpload" style="font-weight:initial !important">
+								<i class="bi bi-file-earmark-image fs-6"></i> @selectedFileName
+							</label>
+						</div>
+						<ValidationMessage For="()=> model.File" class="validation-msg-font"/>
+					</div>
 				</div>
-			</div>
-			<hr />
-			<a class="btn btn-danger" style="width:10rem;" @onclick="CancelUpload">Cancel</a>
-			<button class="btn btn-dark" style="width:10rem;">@buttonText</button>
+				<hr />
+				<a class="btn btn-danger" style="width:10rem;" @onclick="CancelUpload">Cancel</a>
+				<button class="btn btn-dark" style="width:10rem;">@buttonText</button>
 
-		</EditForm>
+			</EditForm>
+		</div>
 	</div>
+
+	@* } *@
+	@if (!string.IsNullOrEmpty(messageService.InfoMessage))
+	{
+		<div class="overlay-alert">
+			<InfoMessage Message="@messageService.InfoMessage" IsDivDisplayed="true"/>
+		</div>
+	}
+	@if (!string.IsNullOrEmpty(messageService.SuccessMessage))
+	{
+		<div class="overlay-alert">
+			<SuccessMessage Message="@messageService.SuccessMessage" IsDivDisplayed="true" />
+		</div>
+	}
+	@if (!string.IsNullOrEmpty(messageService.ErrorMessage))
+	{
+		<div class="overlay-alert">
+			<ErrorMessage Message="@messageService.ErrorMessage" IsDivDisplayed="true" />
+		</div>
+	}
 </div>
 
 
 @code {
+	private ApplicationUser? User;
 	private DocumentUploadRequestDTO model = new();
 	private FileMessage message = new();
 	private IBrowserFile file;
 	private List<string> docTypes = new();
 	private string buttonText = "Save";
 	private string selectedFileName = "Browse";
-	private bool isDisplyed = false;
+
 	[Parameter]
-	public string ReturnUrl { get; set; } = "/user-applications";
+	public EventCallback OnUploadSuccess {get; set;}
 	protected override async Task OnInitializedAsync()
 	{
 		docTypes = (await documentService.DocumentTypesAsync()).ToList();
+
+		messageService.Onchange += StateHasChanged;
 	}
 
 	private async void HandleFile(InputFileChangeEventArgs e)
@@ -142,21 +159,29 @@
 		StateHasChanged();
 
 		message = await documentService.UploadAsync(file,model.DocumentType.ToString());
-		isDisplyed = true;
-		buttonText = "Save";
-		StateHasChanged();
-		await Task.Delay(7000);// 5000ms = 5s
-		isDisplyed = false;
-		if(!string.IsNullOrEmpty(message.Success))
-		{
-			await CancelUpload();
-		}
-	
 
+		if (!string.IsNullOrEmpty(message.Success))
+		{
+			messageService.Show("", "", message.Success);
+			await OnUploadSuccess.InvokeAsync();
+		}
+		if (!string.IsNullOrEmpty(message.Info)) messageService.Show("",message.Info,"");
+		if (!string.IsNullOrEmpty(message.Error)) messageService.Show(message.Error, "", "");
+
+		await messageService.HideAsync();
+		StateHasChanged();
+		await CancelUpload();
 	}
 	private async Task CancelUpload()
 	{
-		await Task.Delay(1);
-		NavigationManager.NavigateTo($"{ReturnUrl}",forceLoad: true);
+		model = new DocumentUploadRequestDTO();
+		file = null;
+		selectedFileName = "Browse";
+		buttonText = "Save";
+	}
+
+	public void Dispose()
+	{
+		messageService.Onchange -= StateHasChanged;
 	}
 }

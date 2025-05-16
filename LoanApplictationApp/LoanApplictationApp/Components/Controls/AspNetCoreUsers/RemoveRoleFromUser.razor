@@ -5,8 +5,8 @@
 @implements IDisposable
 
 <div class="container small-box">
-    @if(messageService.IsFormDisplayed)
-    {
+    @* @if(messageService.IsFormDisplayed) *@
+    @* { *@
         <div class="card">
             <div class="card-header heading-form">
                 <p>
@@ -25,7 +25,7 @@
                             }
                         </InputSelect>
                         <label for="Email">Email</label>
-                        <ValidationMessage For="() => model.Email" class="text-danger" />
+                        <ValidationMessage For="() => model.Email" class="validation-msg-font"/>
                     </div>
                     <div class="form-floating mb-3">
                         <InputSelect @bind-Value="model.Role" class="form-control" aria-required="true" placeholder="role">
@@ -36,7 +36,7 @@
                             }
                         </InputSelect>
                         <label for="Role">Role</label>
-                        <ValidationMessage For="() => model.Role" class="text-danger" />
+                        <ValidationMessage For="() => model.Role" class="validation-msg-font"/>
                     </div>
                     <button class="btn btn-danger w-100" type="submit">
                         <i class="bi bi-x-circle"></i> Remove Role
@@ -44,22 +44,22 @@
                 </EditForm>
             </div>
         </div>
-    }
+    @* } *@
     @if (!string.IsNullOrEmpty(messageService.ErrorMessage))
     {
-        <div class="fade-message w-100" id="error-div">
+        <div class="overlay-alert">
             <ErrorMessage Message="@messageService.ErrorMessage" IsDivDisplayed="true" />
         </div>
     }
     else if (!string.IsNullOrEmpty(messageService.SuccessMessage))
     {
-        <div class="fade-message w-100" id="success-div">
+        <div class="overlay-alert">
             <SuccessMessage Message="@messageService.SuccessMessage" IsDivDisplayed="true" />
         </div>
     }
     else if (!string.IsNullOrEmpty(messageService.InfoMessage))
     {
-        <div class="fade-message w-100" id="info-div">
+        <div class="overlay-alert">
             <InfoMessage Message="@messageService.InfoMessage" IsDivDisplayed="true" />
         </div>
     }

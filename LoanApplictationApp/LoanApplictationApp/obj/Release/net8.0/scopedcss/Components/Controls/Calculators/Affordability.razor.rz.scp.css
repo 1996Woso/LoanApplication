@@ -1,24 +1,33 @@
 
-label[b-26j9hufh6z] {
+/*label {
     font-weight: bold !important;
+    font-size: small !important;
 }
 
-input[b-26j9hufh6z] {
+input {
     background-color: ghostwhite !important;
 }
-.card[b-26j9hufh6z] {
-    background-color: transparent !important; /* Make the card background transparent */
-    border: none !important; /* Remove the card border */
-    box-shadow: none !important; /* Remove the card shadow */
-}
-.card-header[b-26j9hufh6z] {
-    background-color: transparent !important; /* Make the card header background transparent */
-    border-bottom: none !important; /* Remove the card header border */
+.card {
+    background-color: transparent !important;*/ /* Make the card background transparent */
+    /*border: none !important;*/ /* Remove the card border */
+    /*box-shadow: none !important;*/ /* Remove the card shadow */
+/*}
+.card-header {
+    background-color: transparent !important;*/ /* Make the card header background transparent */
+    /*border-bottom: none !important;*/ /* Remove the card header border */
+    /*height: 2.5rem !important;
 }
 
-.card-body[b-26j9hufh6z] {
-    color: black !important; /* Ensure text color is visible on the background */
-}
-h2[b-26j9hufh6z]{
+.card-body {
+    color: black !important;*/ /* Ensure text color is visible on the background */
+/*}
+h2{
     color:orange;
+}*/
+p[b-26j9hufh6z]{
+    background-color: rgba(0,0,0,0.5);
+    color:white;
+}
+.form-floating label[b-26j9hufh6z]{
+    padding-left: 1.5rem;
 }

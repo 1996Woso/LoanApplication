@@ -31,5 +31,20 @@ namespace LoanApplicationApp.API.Controllers
             return CreatedAtAction(nameof(Create), new {loanProcessorDTO.LoanProcessorNo}, loanProcessorDTO);
 
         }
+        //Update loanpreocesor
+        //PUT: https://localhost:portnumber/api/processor/{userId}
+        [HttpPut]
+        [Route("{id}")]
+        public async Task<IActionResult> Update([FromRoute] string id, [FromBody] UpdateLoanProcessorRequestDTO updateLoanProcessorRequestDTO)
+        {
+            var loanProcessorDM = mapper.Map<LoanProcessor>(updateLoanProcessorRequestDTO);
+            
+            loanProcessorDM = await loanProcessorRepository.UpdateAsync(id,loanProcessorDM);
+            if(loanProcessorDM == null)
+            {
+                return NotFound();
+            }
+            return Ok(mapper.Map<LoanProcessor>(loanProcessorDM));
+        }
     }
 }

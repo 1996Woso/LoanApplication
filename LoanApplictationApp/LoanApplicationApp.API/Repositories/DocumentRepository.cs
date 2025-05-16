@@ -12,17 +12,20 @@ namespace LoanApplicationApp.API.Repositories
 {
     public class DocumentRepository : IDocumentRepository
     {
-        private readonly LoanApplicationDbContext loanApplicationDbContext;
+        //private readonly LoanApplicationDbContext loanApplicationDbContext;
         private readonly IConfiguration configuration;
         private readonly IMapper mapper;
+        private readonly IDbContextFactory<LoanApplicationDbContext> dbContextFactory;
 
-        public DocumentRepository(LoanApplicationDbContext loanApplicationDbContext
-            ,IConfiguration configuration
-            ,IMapper mapper)
+        public DocumentRepository(/*LoanApplicationDbContext loanApplicationDbContext,*/
+            IConfiguration configuration
+            ,IMapper mapper
+            ,IDbContextFactory<LoanApplicationDbContext> dbContextFactory)
         {
-            this.loanApplicationDbContext = loanApplicationDbContext;
+            //this.loanApplicationDbContext = loanApplicationDbContext;
             this.configuration = configuration;
             this.mapper = mapper;
+            this.dbContextFactory = dbContextFactory;
         }
         public async Task<Document> UploadAsync(DocumentUploadRequestDTO documentUploadRequestDTO)
         {
@@ -38,8 +41,9 @@ namespace LoanApplicationApp.API.Repositories
             documentDM.FilePath = saveResult.FilePath;
             documentDM.DateOfCreation = DateTime.Now;
 
-            await loanApplicationDbContext.Documents.AddRangeAsync(documentDM);
-            await loanApplicationDbContext.SaveChangesAsync();
+            var context = await  dbContextFactory.CreateDbContextAsync();
+            await context.Documents.AddRangeAsync(documentDM);
+            await context.SaveChangesAsync();
             return documentDM;
         }
         public async Task<string> GetUniqueFileNameAsync(string fileName)
@@ -101,17 +105,19 @@ namespace LoanApplicationApp.API.Repositories
 
         public async Task<IEnumerable<Document>> GetAllAsync(string? userId)
         {
+            var context = await dbContextFactory.CreateDbContextAsync();
             if (!string.IsNullOrEmpty(userId))
             {
-                return await loanApplicationDbContext.Documents.Where(x => x.ApplicantId == userId).ToListAsync();
+                return await context.Documents.Where(x => x.ApplicantId == userId).ToListAsync();
             }
-            return await loanApplicationDbContext.Documents.ToListAsync();
+            return await context.Documents.ToListAsync();
             
         }
 
         public async Task<Document> DeleteAsync(Guid id)
         {
-            var document = await loanApplicationDbContext.Documents.FirstOrDefaultAsync(x => x.Id == id);
+            var context = await dbContextFactory.CreateDbContextAsync();
+            var document = await context.Documents.FirstOrDefaultAsync(x => x.Id == id);
             if(document == null)
             {
                 return null;
@@ -123,13 +129,14 @@ namespace LoanApplicationApp.API.Repositories
                 System.IO.File.Delete(filePath);
             }
             //Remove document record from the databas
-            loanApplicationDbContext.Documents.Remove(document);
-            await loanApplicationDbContext.SaveChangesAsync();
+            context.Documents.Remove(document);
+            await   context.SaveChangesAsync();
             return document;
         }
         public async Task<bool> IsDeletedAsync(Guid id)
         {
-            var document = await loanApplicationDbContext.Documents.FirstOrDefaultAsync(x => x.Id == id);
+            var context = await dbContextFactory.CreateDbContextAsync();
+            var document = await context.Documents.FirstOrDefaultAsync(x => x.Id == id);
             if (document == null)
             {
                 return false;
@@ -141,12 +148,13 @@ namespace LoanApplicationApp.API.Repositories
                 File.Delete(filePath);
             }
             //Remove document record from the databas
-            loanApplicationDbContext.Documents.Remove(document);
-            await loanApplicationDbContext.SaveChangesAsync();
+            context.Documents.Remove(document);
+            await context.SaveChangesAsync();
             return true;
         }
         public async Task<Document> ReplaceAsync(DocumentUploadRequestDTO documentUploadRequestDTO,Guid id)
         {
+            var context = await dbContextFactory.CreateDbContextAsync();
             //Check if the document is savable (it saves it to the saver , so call SaveFileAsync and remove the file)
             var saveResult = await SaveFileAsync(documentUploadRequestDTO.File);
             if (!saveResult.Success) throw new Exception(saveResult.Message);
@@ -155,7 +163,7 @@ namespace LoanApplicationApp.API.Repositories
                 File.Delete(saveResult.FilePath);
             }
             //Find the existing document
-            var existingDocument = await loanApplicationDbContext.Documents.FirstOrDefaultAsync(x => x.Id == id);
+            var existingDocument = await context.Documents.FirstOrDefaultAsync(x => x.Id == id);
             if(existingDocument == null)
             {
                 throw new Exception("The document you are trying to replace is not found.");
@@ -165,7 +173,6 @@ namespace LoanApplicationApp.API.Repositories
             //Upload new document
             documentUploadRequestDTO.DocumentType = existingDocument.DocumentType;
             await UploadAsync(documentUploadRequestDTO);
-
 
             return mapper.Map<Document>(documentUploadRequestDTO);
 

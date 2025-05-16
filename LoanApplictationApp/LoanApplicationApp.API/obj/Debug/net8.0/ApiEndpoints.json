@@ -221,6 +221,27 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "LoanApplicationApp.API.Controllers.ProcessorController",
+    "Method": "Update",
+    "RelativePath": "api/Processor/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateLoanProcessorRequestDTO",
+        "Type": "LoanApplicationApp.API.Models.DTO.LoanProcessor.UpdateLoanProcessorRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "LoanApplicationApp.API.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

@@ -10,19 +10,19 @@ namespace LoanApplicationApp.API.Repositories
 {
     public class ApplicationRepository : IApplicationRepository
     {
-        private readonly LoanApplicationDbContext loanApplicationDbContext;
+        private readonly IDbContextFactory<LoanApplicationDbContext> dbContextFactory;
         private readonly IConfiguration configuration;
         private readonly ILoanProcessorService loanProcessorService;
         private readonly IUsersService usersService;
         private readonly SmtpEmailSender smtpEmailSender;
 
-        public ApplicationRepository(LoanApplicationDbContext loanApplicationDbContext
+        public ApplicationRepository(IDbContextFactory<LoanApplicationDbContext> dbContextFactory
             ,IConfiguration configuration
             ,ILoanProcessorService loanProcessorService
             ,IUsersService usersService
             ,SmtpEmailSender smtpEmailSender)
         {
-            this.loanApplicationDbContext = loanApplicationDbContext;
+            this.dbContextFactory = dbContextFactory;
             this.configuration = configuration;
             this.loanProcessorService = loanProcessorService;
             this.usersService = usersService;
@@ -30,6 +30,7 @@ namespace LoanApplicationApp.API.Repositories
         }
         public async Task<Application> CreatAsync(Application application, string applicantId)
         {
+            var context = await dbContextFactory.CreateDbContextAsync();
             applicantId = "1edba7b4-7b63-4a15-940d-8f889bfca170";
             application.ApplicantId = "1edba7b4-7b63-4a15-940d-8f889bfca170";
             var loanProcessor = await loanProcessorService.FindLoanProcessorWithMinApplicationsAsync();
@@ -37,10 +38,10 @@ namespace LoanApplicationApp.API.Repositories
             application.DateOfCreation = DateTime.Now;
             application.Status = "Under Review";
             application.RefferenceNo = "";
-            await loanApplicationDbContext.AddAsync(application);
-            await loanApplicationDbContext.SaveChangesAsync();
+            await context.AddAsync(application);
+            await context.SaveChangesAsync();
             application.RefferenceNo = $"{application.ApplicantId.Substring(0,8)}-{application.ApplicationNo}";
-            await loanApplicationDbContext.SaveChangesAsync();
+            await context.SaveChangesAsync();
             //Send Emails to Loan Procesor and Aplicant
             var applicant = await usersService.GetApplicationUserByIdAsync(applicantId);
             var body = $@"Good day {applicant.Name} {applicant.Surname}, <br><br>
@@ -66,27 +67,30 @@ namespace LoanApplicationApp.API.Repositories
 
         public async Task<IEnumerable<Application>> GetAllAsync(string? ApplicantId, long? LoanProcesorNo)
         {
+            var context = await dbContextFactory.CreateDbContextAsync();
             //Applications per Applicant
             if (!string.IsNullOrEmpty(ApplicantId))
             {
-                return await loanApplicationDbContext.Applications.Where(x => x.ApplicantId == ApplicantId).ToListAsync();
+                return await context.Applications.Where(x => x.ApplicantId == ApplicantId).ToListAsync();
             }
             //Applicatiions per loan processor
             if (!string.IsNullOrEmpty(LoanProcesorNo.ToString()))
             {
-                return await loanApplicationDbContext.Applications.Where(x => x.LoanProcessorNo == LoanProcesorNo).ToListAsync();
+                return await context.Applications.Where(x => x.LoanProcessorNo == LoanProcesorNo).ToListAsync();
             }
-            return await loanApplicationDbContext.Applications.ToListAsync();
+            return await context.Applications.ToListAsync();
         }
 
         public async Task<Application> GetByIdAsync(long id)
         {
-            return await loanApplicationDbContext.Applications.FirstOrDefaultAsync(x => x.ApplicationNo == id);
+            var context = await dbContextFactory.CreateDbContextAsync();
+            return await context.Applications.FirstOrDefaultAsync(x => x.ApplicationNo == id);
         }
         public async Task<Application> UpdateAsync(long id, Application application)
         {
+            var context =   await dbContextFactory.CreateDbContextAsync();
             //Check if application exist
-            var existingApplication = await loanApplicationDbContext.Applications.FirstOrDefaultAsync(x => x.ApplicationNo == id);
+            var existingApplication = await context.Applications.FirstOrDefaultAsync(x => x.ApplicationNo == id);
             if(existingApplication == null)
             {
                 return null;
@@ -96,7 +100,7 @@ namespace LoanApplicationApp.API.Repositories
             existingApplication.CreditScore = application.CreditScore;
             existingApplication.Status = application.Status;
             //Save new changes
-            await loanApplicationDbContext.SaveChangesAsync();  
+            await context.SaveChangesAsync();  
             //return existing application back to the controller
             return existingApplication;
         }

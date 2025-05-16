@@ -14,24 +14,24 @@
 			<div class="card-body">
 				<div class="row">
 					<div class="col-md-6 mb-3">
-						<label>Salary</label>
+						<label>Monthly Salary</label>
 						<InputNumber @bind-Value="application.MonthlySalary" class="form-control"/>
-						<ValidationMessage For="() => application.MonthlySalary" />
+						<ValidationMessage For="() => application.MonthlySalary" class="validation-msg-font"/>
 					</div>
 					<div class="col-md-6 mb-3">
 						<label>Credit Score</label>
 						<InputNumber @bind-Value="application.CreditScore" class="form-control" />
-						<ValidationMessage For="() => application.CreditScore" />
+						<ValidationMessage For="() => application.CreditScore" class="validation-msg-font"/>
 					</div>
 					<div class="col-md-6 mb-3">
 						<label>Purchase Price</label>
 						<InputNumber @bind-Value="application.PurchasePrice" class="form-control" />
-						<ValidationMessage For="() => application.PurchasePrice" />
+						<ValidationMessage For="() => application.PurchasePrice" class="validation-msg-font"/>
 					</div>
 					<div class="col-md-6 mb-3">
 						<label>Deposit</label>
 						<InputNumber @bind-Value="application.Deposit" class="form-control" />
-						<ValidationMessage For="() => application.Deposit" />
+						<ValidationMessage For="() => application.Deposit" class="validation-msg-font"/>
 					</div>
 					<div class="col-md-12">
 						<button type="submit" class="btn btn-dark w-100">Submit</button>

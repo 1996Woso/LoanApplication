@@ -4,6 +4,7 @@
 @rendermode InteractiveServer
 @inject IDocumentService documentService
 @inject NavigationManager NavigationManager
+@inject IUserService userService
 @attribute [Authorize]
 
 <style>
@@ -18,67 +19,79 @@
 	<div class="card-body">
 		<hr />
 		@if (documents.Count() > 0)
-		{
-			<table class="table table-striped">
-				<thead>
-					<tr>
-						<th>Document Name</th>
-						<th>Type</th>
-						<th>Actions</th>
-					</tr>
-				</thead>
-				<tbody>
-					@foreach (var document in documents)
-					{
-						<tr>
-							<td>@document.FileName</td>
-							<td>@document.DocumentType</td>
-							<td>
-								<div class="hover-btn">
-									<button class="btn" @onclick="() => HandleDelete(document.Id)">
-										<i class="bi bi-trash" style="color:red;"></i>
-									</button>
-									<span>Delete</span>
-								</div>
-								&nbsp;&nbsp;
-								<div class="hover-btn">
-									<button class="btn hover-btn">
-										<i class="bi bi-recycle" style="color:forestgreen;"></i>
-									</button>
-									<span>Replace</span>
-								</div>
-							</td>
-						</tr>
-					}
-				</tbody>
-			</table>
-		}
-		@if(documents.Count() < 1)
-		{
-			<p >
-				<i class="bi bi-trash2"></i> <span class="text-danger">No documents uploaded!</span>
-			</p>
-		}
-	</div>
+        {
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Document Name</th>
+                        <th>Type</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var document in documents)
+                    {
+                        <tr>
+                            <td>@document.FileName</td>
+                            <td>@document.DocumentType</td>
+                            <td>
+                                <div class="hover-btn">
+                                    <button class="btn" @onclick="() => HandleDelete(document.Id)">
+                                        <i class="bi bi-trash" style="color:red;"></i>
+                                    </button>
+                                    <span>Delete</span>
+                                </div>
+                                &nbsp;&nbsp;
+                                <div class="hover-btn">
+                                    <button class="btn hover-btn">
+                                        <i class="bi bi-recycle" style="color:forestgreen;"></i>
+                                    </button>
+                                    <span>Replace</span>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        @if(documents.Count() < 1)
+        {
+            <p >
+                <i class="bi bi-trash2"></i> <span class="text-danger">No documents uploaded!</span>
+            </p>
+        }
+    </div>
 </div>
 
 @code {
-	private List<DocumentDTO>? documents = new();
-	private ApplicationUser? User;
-	private string userId = null;
-	private bool isDeleted = false;
-	[Parameter]
-	public string ReturnUrl { get; set; } = "user-documents";
+    public List<DocumentDTO>? documents = new();
+    private ApplicationUser? User;
+    private bool isDeleted = false;
 
-	protected override async Task OnInitializedAsync()
+    [Parameter]
+    public List<DocumentDTO>? Documents {get; set;} = new();
+    protected override async Task OnInitializedAsync()
+    {
+
+        User = await userService.GetCurrentUserAsync();
+        
+    }
+
+	protected override async Task OnParametersSetAsync()
 	{
-		var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
-		var user = authState.User;
-		if(user.Identity.IsAuthenticated)
-		{
-			User = await UserManager.GetUserAsync(user);
-		}
-		documents = (await documentService.GetUserDocumentsAsync(User.Id)).ToList();
+        if (User != null)
+        {
+            documents = (await documentService.GetUserDocumentsAsync(User.Id)).ToList();
+        }
+        else if(Documents.Count() > 0)
+        {
+            documents = Documents;
+        }
+        else
+        {
+            documents = null;
+        }
+        // documents = Documents ?? new List<DocumentDTO>();
 	}
 
 	private async Task HandleDelete(Guid id)
@@ -86,7 +99,8 @@
 		isDeleted = await documentService.DeleteAsync(id);
 		if(isDeleted)
 		{
-			NavigationManager.NavigateTo($"{ReturnUrl}",forceLoad:true);
+            documents = (await documentService.GetUserDocumentsAsync(User.Id)).ToList();
+            StateHasChanged();
 		}
 	}
 }

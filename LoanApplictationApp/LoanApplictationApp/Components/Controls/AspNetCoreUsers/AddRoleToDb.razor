@@ -3,8 +3,8 @@
 @inject IMessageService messageService
 @implements IDisposable
 <div class="container small-box">
-    @if(messageService.IsFormDisplayed)
-    {
+    @* @if(messageService.IsFormDisplayed) *@
+    @* { *@
         <div class="card">
             <div class="card-header heading-form">
                 <p>
@@ -18,7 +18,7 @@
 
                     <div class="input-group">
                         <InputText @bind-Value="Role.Name" class="form-control" placeholder="Role Name"/>
-                        <ValidationMessage For="() => Role.Name" class="text-danger" />
+                        <ValidationMessage For="() => Role.Name" class="validation-msg-font"/>
                         <button type="submit" class="btn btn-outline-primary">
                             <i class="bi bi-plus-circle"> Add Role</i>
                         </button>
@@ -27,24 +27,24 @@
 
             </div>
         </div>
-    }
+    @* } *@
     @if (!string.IsNullOrEmpty(messageService.ErrorMessage))
     {
-        <div class="fade-message w-100" id="error-div">
+        <div class="overlay-alert">
             <ErrorMessage Message="@messageService.ErrorMessage" IsDivDisplayed="true" />
         </div>
         @*  return; *@
     }
     else if (!string.IsNullOrEmpty(messageService.SuccessMessage))
     {
-        <div class="fade-message w-100" id="success-div">
+        <div class="overlay-alert">
             <SuccessMessage Message="@messageService.SuccessMessage" IsDivDisplayed="true" />
         </div>
         @*           return; *@
     }
     else if (!string.IsNullOrEmpty(messageService.InfoMessage))
     {
-        <div class="fade-message w-100" id="info-div">
+        <div class="overlay-alert">
             <InfoMessage Message="@messageService.InfoMessage" IsDivDisplayed="true" />
         </div>
         @*     return; *@
